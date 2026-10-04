@@ -1,0 +1,12 @@
+{
+  "name": "AKI-Academy",
+  "short_name": "AKI",
+  "description": "Aprendé a programar e idiomas a la argentina con AKI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#74ACDF",
+  "icons": [
+    { "src": "/img/aki-icon.jpg", "sizes": "1024x1024", "type": "image/jpeg", "purpose": "any" }
+  ]
+}

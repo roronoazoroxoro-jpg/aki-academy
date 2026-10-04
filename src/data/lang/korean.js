@@ -1,0 +1,36 @@
+export default {
+  id: 'korean',
+  title: 'Coreano',
+  kind: 'lang',
+  icon: '🇰🇷',
+  flag: 'kr',
+  color: '#2563EB',
+  lang: 'ko-KR',
+  desc: 'K-pop, dramas y tecnología: el coreano se lee más fácil de lo que parece.',
+  units: [
+    {
+      title: 'Hangul y saludos', level: 'Básico',
+      guide: { intro: 'El hangul es un alfabeto genial: se inventó para que cualquiera pudiera aprenderlo rápido. Cada bloque es una sílaba. 안녕하세요 es el saludo formal.', points: ['안녕하세요 = Hola (annyeonghaseyo)', '감사합니다 = Gracias (gamsahamnida)', '네 = sí, 아니요 = no', 'Hay formas formales e informales'] },
+      words: [['hola', '안녕하세요', 'annyeonghaseyo'], ['gracias', '감사합니다', 'gamsahamnida'], ['sí', '네', 'ne'], ['no', '아니요', 'aniyo'], ['perdón', '죄송합니다', 'joesonghamnida'], ['amigo', '친구', 'chingu'], ['adiós', '안녕히 가세요', 'annyeonghi gaseyo'], ['nombre', '이름', 'ireum']],
+      phrases: [['Me llamo Aki', '저는 아키 입니다', 'jeoneun Aki imnida'], ['Soy argentino', '저는 아르헨티나 사람 입니다', 'jeoneun Areuhentina saram imnida'], ['Mucho gusto', '반갑습니다', 'bangapseumnida'], ['¿Cómo estás?', '어떻게 지내세요', 'eotteoke jinaeseyo'], ['Estoy bien', '잘 지내요', 'jal jinaeyo']],
+    },
+    {
+      title: 'Comida coreana', level: 'Básico',
+      guide: { intro: 'La comida coreana es famosa: kimchi, bibimbap, bulgogi. Para pedir: …주세요 (juseyo = por favor dame). 맛있어요 (masisseoyo) = está rico.', points: ['물 = agua (mul)', '주세요 = por favor, dame', '맛있어요 = está rico', '밥 = arroz / comida'] },
+      words: [['agua', '물', 'mul'], ['arroz', '밥', 'bap'], ['carne', '고기', 'gogi'], ['kimchi', '김치', 'kimchi'], ['té', '차', 'cha'], ['rico', '맛있어요', 'masisseoyo'], ['comer', '먹다', 'meokda'], ['café', '커피', 'keopi']],
+      phrases: [['Agua, por favor', '물 주세요', 'mul juseyo'], ['Está muy rico', '정말 맛있어요', 'jeongmal masisseoyo'], ['Tengo hambre', '배고파요', 'baegopayo'], ['Un café, por favor', '커피 주세요', 'keopi juseyo'], ['Me gusta el kimchi', '김치 좋아해요', 'kimchi joahaeyo']],
+    },
+    {
+      title: 'Números y compras', level: 'Intermedio',
+      guide: { intro: 'El coreano tiene dos sistemas de números: uno nativo y otro de origen chino. Para precios se usa el chino-coreano. 얼마예요 (eolmayeyo) = ¿cuánto cuesta?', points: ['하나 둘 셋 = uno, dos, tres (nativo)', '일 이 삼 = uno, dos, tres (para precios)', '얼마예요 = ¿cuánto cuesta?', '원 (won) es la moneda'] },
+      words: [['uno', '하나', 'hana'], ['dos', '둘', 'dul'], ['tres', '셋', 'set'], ['dinero', '돈', 'don'], ['caro', '비싸요', 'bissayo'], ['barato', '싸요', 'ssayo'], ['comprar', '사다', 'sada'], ['negocio', '가게', 'gage']],
+      phrases: [['¿Cuánto cuesta?', '얼마예요', 'eolmayeyo'], ['Es muy caro', '너무 비싸요', 'neomu bissayo'], ['Quiero esto', '이거 주세요', 'igeo juseyo'], ['¿Dónde está el negocio?', '가게가 어디예요', 'gagega eodiyeyo']],
+    },
+    {
+      title: 'Viaje a Seúl', level: 'Avanzado',
+      guide: { intro: '어디예요 (eodiyeyo) pregunta dónde está algo. 모르겠어요 (몰라요) significa "no sé / no entiendo". El subte de Seúl es enorme y está muy bien señalizado.', points: ['어디예요 = ¿dónde está?', '몰라요 = no sé', '지하철 = subte', '가요 = voy'] },
+      words: [['subte', '지하철', 'jihacheol'], ['estación', '역', 'yeok'], ['hotel', '호텔', 'hotel'], ['baño', '화장실', 'hwajangsil'], ['dónde', '어디', 'eodi'], ['hoy', '오늘', 'oneul'], ['mañana', '내일', 'naeil'], ['Corea', '한국', 'hanguk']],
+      phrases: [['¿Dónde está el baño?', '화장실이 어디예요', 'hwajangsiri eodiyeyo'], ['No entiendo', '모르겠어요', 'moreugesseoyo'], ['Voy a Corea', '한국에 가요', 'hanguge gayo'], ['¿Hablás inglés?', '영어 하세요', 'yeongeo haseyo']],
+    },
+  ],
+}

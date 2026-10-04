@@ -1,0 +1,102 @@
+import { c, t, b, o, m, unit } from '../helpers'
+
+export default {
+  id: 'javascript',
+  title: 'JavaScript',
+  kind: 'code',
+  icon: '⚡',
+  color: '#E8B90C',
+  desc: 'El lenguaje de la web: páginas interactivas, apps y servidores.',
+  units: [
+    unit('Primeros pasos', 'Básico', {
+      intro: 'JavaScript corre en todos los navegadores. console.log() muestra mensajes en la consola, y cada instrucción puede terminar con punto y coma.',
+      points: ['console.log("Hola") muestra en consola', '// comentario de una línea', 'Los textos van entre comillas o backticks'],
+      code: '// Mi primer script\nconsole.log("¡Hola, mundo!");',
+    }, [
+      c('¿Qué muestra un mensaje en la consola?', ['console.log()', 'print()', 'echo()', 'System.out()']),
+      c('¿Cómo se escribe un comentario de una línea?', ['// comentario', '# comentario', '<!-- comentario -->', '-- comentario']),
+      t('Completá:', ['log'], 'console.___("Che, funciona")'),
+      c('¿Dónde corre JavaScript originalmente?', ['En el navegador', 'Solo en servidores', 'En Excel', 'En la impresora']),
+      b('Armá la instrucción', ['console.log(', '"Aguante JS"', ');'], ['print(', 'echo']),
+      m('Uní cada cosa', [['console.log', 'Mostrar en consola'], ['//', 'Comentario'], ['.js', 'Archivo JavaScript'], [';', 'Fin de instrucción']]),
+    ]),
+    unit('Variables y tipos', 'Básico', {
+      intro: 'Usá const para valores que no cambian y let para los que sí. Evitá var (es la forma vieja). Los template strings con backticks permiten meter variables con ${}.',
+      points: ['const pi = 3.14', 'let goles = 0', 'typeof x devuelve el tipo', '`Hola ${nombre}`'],
+      code: 'const nombre = "Aki";\nlet mates = 1;\nmates = mates + 1;\nconsole.log(`${nombre} tomó ${mates} mates`);',
+    }, [
+      c('¿Qué palabra declara una variable que NO se puede reasignar?', ['const', 'let', 'var', 'fixed']),
+      c('¿Qué muestra?', ['Aki tomó 2 mates', '${nombre} tomó ${mates} mates', 'Aki tomó 1 mates', 'Error'], 'const nombre = "Aki";\nlet mates = 1;\nmates++;\nconsole.log(`${nombre} tomó ${mates} mates`);'),
+      c('¿Qué devuelve typeof "10"?', ['"string"', '"number"', '"text"', '"int"']),
+      t('Completá para declarar una variable que va a cambiar:', ['let'], '___ puntos = 0;'),
+      c('¿Qué da "5" + 3 en JavaScript?', ['"53"', '8', 'Error', 'NaN'], undefined, 'Con un texto, + concatena.'),
+      c('¿Qué compara valor Y tipo?', ['===', '==', '=', '!=']),
+      m('Uní valor y tipo', [['true', 'boolean'], ['42', 'number'], ['"hola"', 'string'], ['null', 'nulo']]),
+    ]),
+    unit('Condicionales y funciones', 'Básico', {
+      intro: 'if/else decide qué hacer. Las funciones se pueden escribir con function o como funciones flecha (=>), que es lo más moderno.',
+      points: ['if (x > 0) { ... } else { ... }', 'function sumar(a, b) { return a + b }', 'const sumar = (a, b) => a + b', 'condicion ? siVerdad : siFalso'],
+      code: 'const esMayor = (edad) => edad >= 18;\nconsole.log(esMayor(20) ? "Pasá" : "No podés");',
+    }, [
+      c('¿Qué muestra?', ['Pasá', 'No podés', 'true', 'Error'], 'const esMayor = (edad) => edad >= 18;\nconsole.log(esMayor(20) ? "Pasá" : "No podés");'),
+      c('¿Cómo se llama la sintaxis () => {}?', ['Función flecha', 'Función lambda doble', 'Callback rápido', 'Arrow loop']),
+      t('Completá para devolver el resultado:', ['return'], 'function doble(n) {\n  ___ n * 2;\n}'),
+      c('¿Qué da el operador ternario?', ['Elige entre dos valores según una condición', 'Repite tres veces', 'Suma tres números', 'Crea un array']),
+      o('Ordená la función', ['function saludar(nombre) {', '  return `Hola ${nombre}`;', '}']),
+      b('Armá una función flecha que suma', ['const', 'sumar', '=', '(a, b)', '=>', 'a + b'], ['function', 'return']),
+      c('¿Qué muestra?', ['frío', 'calor', 'undefined', 'Error'], 'const temp = 10;\nif (temp > 25) {\n  console.log("calor");\n} else {\n  console.log("frío");\n}'),
+    ]),
+    unit('Arrays y objetos', 'Intermedio', {
+      intro: 'Los arrays guardan listas y los objetos guardan propiedades. Los métodos map, filter y reduce son la base del JavaScript moderno.',
+      points: ['arr.push(x) agrega', 'arr.map(f) transforma', 'arr.filter(f) filtra', 'obj.propiedad lee', 'const { a } = obj desestructura'],
+      code: 'const precios = [100, 250, 400];\nconst conIva = precios.map(p => p * 1.21);\nconst baratos = precios.filter(p => p < 300);\nconst jugador = { nombre: "Messi", numero: 10 };',
+    }, [
+      c('¿Qué devuelve [1, 2, 3].map(n => n * 2)?', ['[2, 4, 6]', '[1, 2, 3]', '12', '[3, 4, 5]']),
+      c('¿Qué devuelve [5, 12, 8].filter(n => n > 6)?', ['[12, 8]', '[5]', '[5, 12, 8]', 'true']),
+      t('Completá para agregar un elemento al final:', ['push'], 'equipo.___("Dibu");'),
+      c('¿Qué muestra?', ['Messi', 'nombre', 'undefined', '10'], 'const jugador = { nombre: "Messi", numero: 10 };\nconsole.log(jugador.nombre);'),
+      c('¿Qué hace const { numero } = jugador?', ['Saca la propiedad numero a una variable', 'Borra numero', 'Crea un objeto nuevo', 'Da error']),
+      c('¿Qué devuelve [1, 2, 3].reduce((a, b) => a + b, 0)?', ['6', '[1, 2, 3]', '0', '123']),
+      c('¿Qué hace el spread [...a, ...b]?', ['Une los dos arrays', 'Los resta', 'Los compara', 'Los ordena']),
+      m('Uní método y acción', [['map', 'Transforma cada elemento'], ['filter', 'Se queda con algunos'], ['find', 'Busca el primero'], ['length', 'Cantidad de elementos']]),
+    ]),
+    unit('El DOM y eventos', 'Intermedio', {
+      intro: 'El DOM es la página web vista desde JavaScript. Podés buscar elementos, cambiar su contenido y reaccionar a clics con eventos.',
+      points: ['document.querySelector("#id")', 'el.textContent = "nuevo"', 'el.addEventListener("click", fn)', 'el.classList.add("activo")'],
+      code: 'const boton = document.querySelector("#saludar");\nboton.addEventListener("click", () => {\n  document.querySelector("h1").textContent = "¡Hola, che!";\n});',
+    }, [
+      c('¿Qué método busca el primer elemento que coincide con un selector?', ['querySelector', 'getElement', 'findOne', 'selectFirst']),
+      t('Completá para escuchar clics:', ['addEventListener'], 'boton.___("click", saludar);'),
+      c('¿Qué propiedad cambia el texto de un elemento?', ['textContent', 'innerValue', 'text', 'content']),
+      c('¿Qué hace el.classList.toggle("oscuro")?', ['Pone o saca la clase', 'Siempre la agrega', 'Borra el elemento', 'Cambia el id']),
+      c('¿Qué significa DOM?', ['Document Object Model', 'Data Object Mode', 'Digital Online Map', 'Document Order Method']),
+      o('Ordená para cambiar el título al hacer clic', ['const btn = document.querySelector("button");', 'btn.addEventListener("click", () => {', '  document.title = "Clic!";', '});']),
+    ]),
+    unit('Asincronía y APIs', 'Avanzado', {
+      intro: 'Muchas cosas tardan: pedir datos a internet, leer archivos. Las Promesas y async/await te permiten esperar sin congelar la página. fetch() pide datos a una API.',
+      points: ['fetch(url) devuelve una Promise', 'await espera el resultado', 'Solo se usa await dentro de async (o en módulos)', 'try/catch atrapa errores'],
+      code: 'async function traerDolar() {\n  try {\n    const res = await fetch("https://dolarapi.com/v1/dolares/blue");\n    const datos = await res.json();\n    console.log(datos.venta);\n  } catch (e) {\n    console.error("Falló la conexión");\n  }\n}',
+    }, [
+      c('¿Qué devuelve fetch()?', ['Una Promise', 'Un string', 'Un número', 'undefined']),
+      t('Completá para esperar la respuesta:', ['await'], 'const res = ___ fetch(url);'),
+      c('¿Qué palabra hay que poner antes de function para usar await adentro?', ['async', 'await', 'promise', 'defer']),
+      c('¿Qué hace res.json()?', ['Convierte la respuesta en objeto JS', 'Envía datos', 'Cierra la conexión', 'Crea un archivo']),
+      c('¿Qué estados puede tener una Promise?', ['pending, fulfilled, rejected', 'on, off', 'start, stop, pause', 'true, false']),
+      o('Ordená la función asíncrona', ['async function cargar() {', '  const res = await fetch("/api/cursos");', '  const cursos = await res.json();', '  return cursos;', '}']),
+      c('¿Qué ejecuta varias promesas en paralelo y espera todas?', ['Promise.all', 'Promise.wait', 'await.all', 'Promise.every']),
+    ]),
+    unit('JavaScript moderno', 'Avanzado', {
+      intro: 'El JavaScript actual trae módulos (import/export), optional chaining (?.), nullish coalescing (??), clases y métodos nuevos como structuredClone o Object.groupBy.',
+      points: ['import { x } from "./mod.js"', 'user?.direccion?.calle', 'valor ?? "por defecto"', 'array.at(-1) da el último'],
+      code: 'import { formatear } from "./utils.js";\n\nconst calle = usuario?.direccion?.calle ?? "Sin calle";\nconst ultimo = [1, 2, 3].at(-1);',
+    }, [
+      c('¿Qué hace usuario?.nombre si usuario es null?', ['Devuelve undefined sin error', 'Tira error', 'Devuelve null', 'Devuelve ""']),
+      c('¿Qué devuelve null ?? "Aki"?', ['"Aki"', 'null', 'undefined', 'false']),
+      c('¿Qué devuelve [10, 20, 30].at(-1)?', ['30', '10', 'undefined', '-1']),
+      t('Completá para traer una función de otro archivo:', ['import'], '___ { sumar } from "./math.js";'),
+      c('¿Qué diferencia hay entre ?? y ||?', ['?? solo reemplaza null/undefined', 'Son iguales', '|| es más nuevo', '?? compara tipos']),
+      c('¿Qué palabra exporta algo de un módulo?', ['export', 'module', 'public', 'share']),
+      m('Uní cada sintaxis', [['?.', 'Optional chaining'], ['??', 'Valor por defecto'], ['...', 'Spread'], ['=>', 'Función flecha']]),
+    ]),
+  ],
+}
