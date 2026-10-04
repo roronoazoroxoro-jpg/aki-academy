@@ -40,6 +40,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
   const unlimited = hasUnlimitedHearts(s)
 
   const fail = useCallback((skipped) => {
+    if (!ex) return
     sfx.wrong()
     setStatus('bad')
     setMsg(skipped ? 'Salteada, la vemos de nuevo al final' : pickOne(OOPS))
@@ -116,6 +117,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
   }
 
   if (result) return <Result result={result} practice={practice} />
+  if (!ex) return null
 
   return (
     <div className="lesson">
@@ -126,7 +128,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
         <span className="stat heart" style={{ padding: 0 }}><span className="em">❤️</span>{practice || unlimited ? '∞' : s.hearts}</span>
       </div>
 
-      <div className={`lesson-body ${shake ? 'shake' : ''}`}>
+      <div className={`lesson-body ${shake ? 'shake' : ''}`} key={idx}>
         {practice && idx === 0 && status === 'idle' && <div className="ex-tag" style={{ marginBottom: 8 }}>🏋️ Práctica · No perdés vidas y ganás una al terminar</div>}
         {retried.has(ex.id) && idx >= total && <div className="ex-tag" style={{ color: 'var(--oro-2)', marginBottom: 6 }}>🔁 Error anterior</div>}
         <Exercise key={idx} ex={ex} answer={answer} setAnswer={setAnswer} status={status} onSubmit={check} />

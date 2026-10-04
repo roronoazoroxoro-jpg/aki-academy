@@ -13,30 +13,48 @@ import matematica from './sci/matematica'
 import fisica from './sci/fisica'
 import quimica from './sci/quimica'
 import biologia from './sci/biologia'
+import astronomia from './sci/astronomia'
+import economia from './sci/economia'
+import historia from './sci/historia'
 
 import english from './lang/english'
+import spanish from './lang/spanish'
 import italian from './lang/italian'
 import portuguese from './lang/portuguese'
 import french from './lang/french'
 import german from './lang/german'
+import catalan from './lang/catalan'
+import dutch from './lang/dutch'
+import swedish from './lang/swedish'
+import polish from './lang/polish'
 import japanese from './lang/japanese'
 import chinese from './lang/chinese'
 import korean from './lang/korean'
 import russian from './lang/russian'
+import ukrainian from './lang/ukrainian'
 import arabic from './lang/arabic'
+import hebrew from './lang/hebrew'
 import hindi from './lang/hindi'
+import turkish from './lang/turkish'
 import greek from './lang/greek'
 import latin from './lang/latin'
+import vietnamese from './lang/vietnamese'
+import thai from './lang/thai'
+import indonesian from './lang/indonesian'
 import quechua from './lang/quechua'
 
 export const CODE_COURSES = [python, javascript, web, react, typescript, sql, git, ai, robotica, cyber]
-export const SCI_COURSES = [matematica, fisica, quimica, biologia]
-export const LANG_COURSES = [english, italian, portuguese, french, german, japanese, chinese, korean, russian, arabic, hindi, greek, latin, quechua]
+export const SCI_COURSES = [matematica, fisica, quimica, biologia, astronomia, economia, historia]
+export const LANG_COURSES = [
+  english, spanish, italian, portuguese, french, german, catalan, dutch, swedish, polish,
+  japanese, chinese, korean, russian, ukrainian, arabic, hebrew, hindi, turkish, greek, latin,
+  vietnamese, thai, indonesian, quechua,
+]
 
 export const GROUPS = [
   { id: 'code', title: 'Programación y tecnología', icon: '💻', sub: 'De tu primera línea de código a publicar tu propia app.', courses: CODE_COURSES },
-  { id: 'sci', title: 'Ciencia y matemáticas', icon: '🔬', sub: 'Entendé cómo funciona el mundo, de los números al ADN.', courses: SCI_COURSES },
-  { id: 'lang', title: 'Idiomas', icon: '🌎', sub: 'Escuchá, traducí y hablá con 14 idiomas del planeta.', courses: LANG_COURSES },
+  { id: 'sci', title: 'Ciencia, números y el país', icon: '🔬', sub: 'Mate, física, química, biología, cielo, plata e historia argentina.', courses: SCI_COURSES },
+  { id: 'lang', title: 'Idiomas', icon: '🌎', sub: '25 idiomas con bandera, audio y escritura real.', courses: LANG_COURSES },
 ]
 
 export const COURSES = GROUPS.flatMap((g) => g.courses)
@@ -187,7 +205,15 @@ function langLesson(course, u, l) {
     }
     list = shuffle(list)
   }
-  return list.map((ex) => ({ ...ex, courseId: course.id, lang: course.lang }))
+  return list
+    .filter((ex) => {
+      if (!ex) return false
+      if (ex.type === 'match' && (!ex.pairs || ex.pairs.length < 2)) return false
+      if (ex.type === 'choice' && (!ex.options || ex.options.length < 2)) return false
+      if (ex.type === 'build' && (!ex.answer || ex.answer.length < 2)) return false
+      return true
+    })
+    .map((ex) => ({ ...ex, courseId: course.id, lang: course.lang }))
 }
 
 export function buildLesson(course, u, l) {

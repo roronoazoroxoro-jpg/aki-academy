@@ -226,6 +226,8 @@ export const ACHIEVEMENTS = [
   { id: 'coder', icon: '💻', title: 'Hacker criollo', desc: 'Ejecutá código en el Laboratorio', test: (s) => s.labRuns >= 1 },
   { id: 'solver', icon: '🧠', title: 'Resolvedor', desc: 'Resolvé 3 desafíos del Laboratorio', test: (s) => s.labSolved.length >= 3 },
   { id: 'perfect', icon: '💎', title: 'De diez', desc: 'Lección perfecta', test: (s) => s.quests.perfect >= 1 || s.achievements.includes('perfect') },
+  { id: 'scientist', icon: '🔬', title: 'Científico criollo', desc: 'Empezá un curso de ciencia', test: (s) => ['matematica', 'fisica', 'quimica', 'biologia', 'astronomia', 'economia', 'historia'].some((id) => s.progress[id]) },
+  { id: 'polyglot', icon: '🗣️', title: 'Políglota', desc: 'Empezá 5 cursos de idiomas', test: (s) => Object.keys(s.progress).filter((id) => ['english', 'spanish', 'italian', 'portuguese', 'french', 'german', 'catalan', 'dutch', 'swedish', 'polish', 'japanese', 'chinese', 'korean', 'russian', 'ukrainian', 'arabic', 'hebrew', 'hindi', 'turkish', 'greek', 'latin', 'vietnamese', 'thai', 'indonesian', 'quechua'].includes(id)).length >= 5 },
 ]
 
 export function checkAchievements() {

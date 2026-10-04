@@ -3,6 +3,7 @@ export default {
   title: 'Quechua',
   kind: 'lang',
   icon: '🏔️',
+  flag: 'bo',
   color: '#B45309',
   lang: 'es-PE',
   desc: 'Lengua originaria de los Andes, viva en el norte argentino y la Puna.',

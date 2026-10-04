@@ -3,6 +3,7 @@ export default {
   title: 'Latín',
   kind: 'lang',
   icon: '🏛️',
+  flag: 'va',
   color: '#A16207',
   lang: 'it-IT',
   desc: 'La raíz del español: entendé de dónde viene cada palabra que decís.',

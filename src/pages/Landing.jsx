@@ -20,8 +20,8 @@ function useReveal() {
 
 const FEATURES = [
   { pose: 'code', title: 'Programá de verdad, desde el navegador', text: 'Python, JavaScript, TypeScript, webs, apps con React, SQL, Git, Inteligencia Artificial, ciberseguridad y robótica. Con un Laboratorio donde ejecutás Python real y armás páginas en vivo, sin instalar nada.' },
-  { pose: 'languages', title: '14 idiomas, con audio y escritura real', text: 'Inglés, italiano, portugués, francés, alemán, japonés, chino, coreano, ruso, árabe, hindi, griego, latín y quechua. Escuchá la pronunciación, armá frases y escribí en su propio alfabeto.' },
-  { pose: 'mascot', title: 'Ciencia y matemáticas que se entienden', text: 'Matemáticas desde las fracciones hasta la probabilidad, física, química y biología. Explicado como te hubiera gustado que te lo expliquen en la escuela.' },
+  { pose: 'languages', title: '25 idiomas, con audio y su bandera', text: 'Desde inglés y japonés hasta hebreo, tailandés, ucraniano y quechua. Escuchá la pronunciación, armá frases y escribí en su propio alfabeto. También el español argentino: vos, che y lunfardo.' },
+  { pose: 'mascot', title: 'Ciencia, números e historia del país', text: 'Matemáticas, física, química, biología, astronomía, economía y la historia argentina. Explicado como te hubiera gustado que te lo cuenten en la escuela.' },
   { pose: 'streak', title: 'Mantené la racha, che', text: 'Sumá XP, cuidá tus vidas, ganá medialunas, abrí cofres, cumplí misiones diarias y subí de liga: del Potrero hasta Campeón del Mundo. Cinco minutos por día alcanzan.' },
 ]
 
@@ -64,8 +64,8 @@ export default function Landing() {
           </div>
           <div className="hero-stats">
             <div><b>{COURSES.length}</b><span>cursos</span></div>
-            <div><b>14</b><span>idiomas</span></div>
-            <div><b>+1.500</b><span>ejercicios</span></div>
+            <div><b>{GROUPS.find((g) => g.id === 'lang').courses.length}</b><span>idiomas</span></div>
+            <div><b>+2.000</b><span>ejercicios</span></div>
           </div>
         </div>
       </section>
