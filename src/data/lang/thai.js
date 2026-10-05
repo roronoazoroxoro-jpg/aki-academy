@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Bangkok', level: 'Avanzado',
       guide: { intro: '"อยู่ที่ไหน" pregunta dónde. El tren es "รถไฟ" y la estación "สถานี".', points: ['สถานีอยู่ที่ไหน?', 'วันนี้ / พรุ่งนี้ = hoy / mañana'] },
       words: [['estación', 'สถานี', 'sathani'], ['tren', 'รถไฟ', 'rot fai'], ['calle', 'ถนน', 'thanon'], ['ciudad', 'เมือง', 'mueang'], ['hoy', 'วันนี้', 'wan ni'], ['mañana', 'พรุ่งนี้', 'phrung ni'], ['hotel', 'โรงแรม', 'rong raem'], ['baño', 'ห้องน้ำ', 'hong nam']],
-      phrases: [['¿Dónde está la estación?', 'สถานี อยู่ ที่ ไหน', 'sathani yu thi nai'], ['Viajo mañana', 'พรุ่งนี้ ผม ไป', 'phrung ni phom pai'], ['El tren llega hoy', 'รถไฟ มา วันนี้', 'rot fai ma wan ni'], ['¿Dónde está el baño?', 'ห้องน้ำ อยู่ ที่ ไหน', 'hong nam yu thi nai']],
+      phrases: [['¿Dónde está la estación?', 'สถานี อยู่ ที่ ไหน', 'sathani yu thi nai'], ['Viajo mañana', 'พรุ่งนี้ ผม ไป', 'phrung ni phom pai'], ['El tren llega hoy', 'รถไฟ มา วันนี้', 'rot fai ma wan ni'], ['¿Dónde está el baño?', 'ห้องน้ำ อยู่ ที่ ไหน', 'hong nam yu thi nai'], ['El hotel está cerca', 'โรงแรม ใกล้', 'rong raem klai']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: เสื้อสีฟ้า. ผมใส่ = uso. ใหญ่เกินไป = demasiado grande.', points: ['แดง ฟ้า เขียว เหลือง', 'เสื้อ / รองเท้า', 'ผมใส่', 'ใหญ่เกินไป'] },
+      words: [['rojo', 'สีแดง', 'si daeng'], ['azul', 'สีฟ้า', 'si fa'], ['verde', 'สีเขียว', 'si khiao'], ['amarillo', 'สีเหลือง', 'si lueang'], ['negro', 'สีดำ', 'si dam'], ['blanco', 'สีขาว', 'si khao'], ['remera', 'เสื้อ', 'suea'], ['zapatos', 'รองเท้า', 'rong thao']],
+      phrases: [['Uso una remera azul', 'ผม ใส่ เสื้อ สีฟ้า', 'phom sai suea si fa'], ['Me gustan los zapatos negros', 'ผม ชอบ รองเท้า สีดำ', 'phom chop rong thao si dam'], ['Es demasiado grande', 'ใหญ่ เกินไป', 'yai koen pai'], ['¿De qué color es?', 'สี อะไร', 'si arai'], ['Quiero algo verde', 'ผม อยาก ได้ สีเขียว', 'phom yak dai si khiao']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = กี่โมงแล้ว? Las 3 = สามโมง. Y media = ครึ่ง.', points: ['กี่โมงแล้ว?', 'โมง = hora', 'นาที', 'ครึ่ง = y media'] },
+      words: [['uno', 'หนึ่ง', 'nueng'], ['dos', 'สอง', 'song'], ['tres', 'สาม', 'sam'], ['cinco', 'ห้า', 'ha'], ['diez', 'สิบ', 'sip'], ['hora', 'ชั่วโมง', 'chua mong'], ['minuto', 'นาที', 'nathi'], ['reloj', 'นาฬิกา', 'nalika']],
+      phrases: [['¿Qué hora es?', 'กี่ โมง แล้ว', 'ki mong laeo'], ['Son las tres', 'สาม โมง', 'sam mong'], ['Es la una y media', 'หนึ่ง โมง ครึ่ง', 'nueng mong khrueng'], ['Nos vemos a las diez', 'เจอกัน สิบ โมง', 'choe kan sip mong'], ['Tengo cinco minutos', 'ผม มี ห้า นาที', 'phom mi ha nathi']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: ฝนตก, หนาว. Sentimientos: ผมมีความสุข, ผมเหนื่อย.', points: ['ฝน / แดด / หนาว', 'มีความสุข / เหนื่อย / เศร้า', 'ผมรู้สึก'] },
+      words: [['lluvia', 'ฝน', 'fon'], ['sol', 'แดด', 'daet'], ['frío', 'หนาว', 'nao'], ['calor', 'ร้อน', 'ron'], ['feliz', 'มีความสุข', 'mi khwam suk'], ['cansado', 'เหนื่อย', 'nueai'], ['triste', 'เศร้า', 'sao'], ['viento', 'ลม', 'lom']],
+      phrases: [['Está lloviendo', 'ฝน ตก', 'fon tok'], ['Hace frío hoy', 'วันนี้ หนาว', 'wan ni nao'], ['Estoy feliz', 'ผม มี ความ สุข', 'phom mi khwam suk'], ['Estoy cansado', 'ผม เหนื่อย', 'phom nueai'], ['Me siento bien', 'ผม รู้สึก ดี', 'phom rusuek di']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: ผมตื่น, ผมเรียน. ทุกวัน = todos los días.', points: ['ผมตื่น', 'ทุกวัน', 'เช้า / คืน', 'เธอทำงาน'] },
+      words: [['despertarse', 'ตื่น', 'tuen'], ['desayunar', 'กินข้าวเช้า', 'kin khao chao'], ['estudiar', 'เรียน', 'rian'], ['dormir', 'นอน', 'non'], ['cocinar', 'ทำอาหาร', 'tham ahan'], ['limpiar', 'ทำความสะอาด', 'tham khwam sa-at'], ['mañana', 'เช้า', 'chao'], ['noche', 'คืน', 'khuen']],
+      phrases: [['Me despierto temprano', 'ผม ตื่น เช้า', 'phom tuen chao'], ['Desayuno a las ocho', 'ผม กิน ข้าว เช้า แปด โมง', 'phom kin khao chao paet mong'], ['Estudio todas las noches', 'ผม เรียน ทุก คืน', 'phom rian thuk khuen'], ['Ella trabaja en casa', 'เธอ ทำงาน ที่ บ้าน', 'thoe tham ngan thi ban'], ['Me duermo tarde', 'ผม นอน ดึก', 'phom non duek']],
     },
   ],
 }

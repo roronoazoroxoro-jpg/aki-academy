@@ -56,5 +56,49 @@ export default {
       c('¿Quién escribió "Rayuela"?', ['Julio Cortázar', 'Jorge Luis Borges', 'María Elena Walsh', 'José de San Martín']),
       m('Uní cada símbolo', [['Mate', 'Ritual social'], ['Tango', 'Música rioplatense'], ['Malvinas', 'Soberanía'], ['25 de mayo', 'Revolución de Mayo']]),
     ]),
+    unit('Pueblos originarios', 'Básico', {
+      intro: 'Antes de 1810 el territorio ya estaba habitado. Mapuche, qom, wichí, guaraní, diaguita, comechingón, selkʼnam y muchos más. La Conquista del Desierto (1879) fue un avance militar sobre territorios indígenas del sur.',
+      points: ['No era “desierto”: había pueblos', 'Lenguas originarias siguen vivas', 'La Constitución reconoce su preexistencia', 'Escuchar su historia es parte de la nuestra'],
+      code: 'preexistencia → conquista → resistencia → hoy',
+    }, [
+      c('¿El sur argentino estaba vacío antes de las campañas militares del XIX?', ['No: lo habitaban pueblos originarios', 'Sí, del todo', 'Solo había españoles', 'Solo pingüinos']),
+      c('¿Qué pueblo se asocia históricamente a la Patagonia y la Araucanía?', ['Mapuche', 'Azteca', 'Inuit', 'Maorí']),
+      t('¿Cómo se llama la campaña militar de 1879 hacia el sur?', ['conquista del desierto', 'la conquista del desierto']),
+      c('¿La Constitución argentina qué dice de los pueblos indígenas?', ['Reconoce su preexistencia étnica y cultural', 'Dice que no existen', 'Los declara extranjeros', 'No los menciona nunca']),
+      c('El quechua y el guaraní en el país son...', ['Lenguas originarias que todavía se hablan', 'Dialectos del italiano', 'Códigos secretos', 'Marcas de yerba']),
+    ]),
+    unit('Inmigración y conventillo', 'Intermedio', {
+      intro: 'Entre 1880 y 1930 llegaron millones, sobre todo de Italia y España. El conventillo era un convento de piezas: muchas familias, un patio. De ahí salieron tango, lunfardo y una Argentina nueva.',
+      points: ['Hotel de inmigrantes en Retiro', 'Campo y fábrica absorbieron mano de obra', 'Cocoliche: italiano + castellano', 'El “crisol” nunca fue tan simple: también hubo discriminación'],
+      code: 'barco → hotel de inmigrantes → conventillo / campo',
+    }, [
+      c('¿De qué países vino la mayoría de esa ola?', ['Italia y España', 'Japón y Canadá', 'Sudáfrica y Australia', 'Rusia solamente']),
+      c('¿Qué era un conventillo?', ['Una casa de muchas piezas y familias', 'Un palacio', 'Un barco', 'Una escuela rural']),
+      t('¿Cómo se llama la mezcla de italiano y castellano de esa época?', ['cocoliche']),
+      c('¿Dónde funcionó el Hotel de Inmigrantes más famoso?', ['Buenos Aires (Retiro)', 'Ushuaia', 'Mendoza ciudad', 'Salta capital']),
+      c('El lunfardo nació sobre todo en...', ['El Río de la Plata inmigrante', 'El Inca', 'Londres', 'El ejército de San Martín']),
+    ]),
+    unit('Perón, Evita y el voto', 'Intermedio', {
+      intro: 'El peronismo (desde 1946) marcó el siglo: derechos laborales, el voto femenino (ley 1947, primera elección 1951) y una grieta que todavía se discute. Evita fue un símbolo de ese momento.',
+      points: ['1946: Perón presidente', '1947: ley de voto femenino', '1951: votan las mujeres', '1955: golpe que lo derroca'],
+      code: '1946 Perón  →  1947 voto mujeres  →  1951 eligen  →  1955 derrocamiento',
+    }, [
+      c('¿En qué año se sancionó el voto femenino?', ['1947', '1912', '1983', '1955']),
+      c('¿Cuándo votaron por primera vez las mujeres en una nacional?', ['1951', '1947', '1912', '1983']),
+      t('¿Cómo se llamaba Eva Duarte de Perón, de forma popular?', ['evita']),
+      c('¿Qué golpe derrocó a Perón en 1955?', ['La “Revolución Libertadora”', 'El de 1930', 'El de 1976', 'El de 1810']),
+      c('La ley Sáenz Peña de 1912 era para...', ['Varones: voto secreto y obligatorio', 'Solo mujeres', 'Solo inmigrantes', 'Solo militares']),
+    ]),
+    unit('1983 a hoy', 'Avanzado', {
+      intro: 'Desde Alfonsín la democracia no se interrumpió. Hubo hiperinflación, convertibilidad, el 2001, el kirchnerismo, cambios de signo y una sociedad que discute en voz alta. El hilo: votar y no romper la regla del voto.',
+      points: ['1983: “Nunca más” en democracia', '1990s: convertibilidad 1 a 1', '2001: crisis y “que se vayan todos”', 'La Constitución se reforma en 1994 (reelección, etc.)'],
+      code: '1983 democracia continua → crisis y cambios → la regla: elecciones',
+    }, [
+      c('¿Qué presidente recuperó la democracia en 1983?', ['Raúl Alfonsín', 'Carlos Menem', 'Juan Perón', 'Jorge Videla']),
+      c('La convertibilidad de los 90 era, en criollo...', ['Un peso igual a un dólar (por ley)', 'Dolarizar los sueldos nomas', 'Prohibir el dólar', 'Cerrar el Banco Central']),
+      t('¿En qué año fue la crisis del “que se vayan todos”?', ['2001']),
+      c('La reforma constitucional de 1994, entre otras cosas...', ['Permitió la reelección inmediata y cambió reglas', 'Declaró la Independencia', 'Creó el ferrocarril', 'Prohibió votar']),
+      c('¿Qué no se interrumpió desde 1983?', ['La sucesión democrática por elecciones (con todas las crisis)', 'La inflación en 0', 'El 1 a 1', 'El servicio militar obligatorio']),
+    ]),
   ],
 }

@@ -59,5 +59,49 @@ export default {
       c('¿Qué hace git diff?', ['Muestra exactamente qué líneas cambiaron', 'Crea una rama', 'Borra el historial', 'Compara repositorios remotos']),
       c('Si querés volver un archivo a como estaba en el último commit, usás...', ['git restore archivo', 'git delete archivo', 'git add archivo', 'git branch archivo']),
     ]),
+    unit('El historial que se entiende', 'Intermedio', {
+      intro: 'Un buen commit cuenta una historia. Mensajes claros, commits chicos y un log limpio hacen que dentro de 6 meses sepas por qué cambió algo.',
+      points: ['Un commit = una idea', 'El mensaje dice el porqué', 'git log --oneline resume', 'git blame muestra quién tocó cada línea'],
+      code: 'git log --oneline\ngit show abc123\ngit blame src/app.js',
+    }, [
+      c('¿Cuál es mejor mensaje?', ['"Evita crash si el mail viene vacío"', '"asdf"', '"cambios"', '"wip final final2"']),
+      c('¿Qué muestra git log?', ['El historial de commits', 'Los archivos ignorados', 'El precio de GitHub', 'Los tests']),
+      t('Completá para ver un resumen corto:', ['oneline'], 'git log --___'),
+      c('¿Qué hace git blame?', ['Muestra qué commit tocó cada línea', 'Acusa al equipo', 'Borra autores', 'Cambia el mensaje']),
+      c('¿Por qué commits chicos?', ['Son más fáciles de revisar y revertir', 'Git no acepta grandes', 'Ocupan menos disco siempre', 'GitHub cobra extra']),
+    ]),
+    unit('Tags y releases', 'Intermedio', {
+      intro: 'Un tag marca un punto del historial: v1.0.0. Así sabés qué código estaba en producción. SemVer: MAJOR.MINOR.PATCH.',
+      points: ['git tag v1.0.0', 'git push --tags', 'MAJOR: rompe compatibilidad', 'PATCH: un bugfix'],
+      code: 'git tag -a v1.2.0 -m "Liga y misiones"\ngit push origin v1.2.0',
+    }, [
+      c('¿Para qué sirve un tag?', ['Marcar una versión publicada', 'Borrar una rama', 'Ignorar archivos', 'Crear un usuario']),
+      t('Completá para crear un tag:', ['tag'], 'git ___ v1.0.0'),
+      c('En 2.4.1, ¿qué número es el parche?', ['1', '2', '4', '241']),
+      c('Si rompés la API pública, ¿qué subís?', ['MAJOR', 'PATCH', 'el tag nomas', 'nada']),
+      m('Uní SemVer', [['MAJOR', 'Rompe compat'], ['MINOR', 'Suma features'], ['PATCH', 'Arregla bugs'], ['tag', 'Marca el punto']]),
+    ]),
+    unit('GitHub Actions (CI)', 'Avanzado', {
+      intro: 'CI (integración continua) corre tests solos en cada push. En GitHub se escribe un YAML en .github/workflows.',
+      points: ['on: push dispara el workflow', 'jobs → steps', 'Si el test falla, no mezcles a main', 'CI = máquina que prueba por vos'],
+      code: 'on: [push]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm test',
+    }, [
+      c('¿Qué es CI?', ['Correr tests automático en cada cambio', 'Un tipo de commit', 'Un hosting de fotos', 'Un lenguaje']),
+      t('¿En qué carpeta van los workflows de GitHub?', ['.github/workflows', '.github/workflows/']),
+      c('Si el CI está rojo, ¿qué hacés?', ['No mergear hasta que pase', 'Mergear igual siempre', 'Borrar Actions', 'Cambiar de rama y listo']),
+      c('¿Qué hace actions/checkout?', ['Baja tu código al runner', 'Publica en Vercel', 'Crea el repo', 'Paga el plan']),
+      c('¿Por qué CI ayuda al equipo?', ['Atrapa roturas antes de que lleguen a producción', 'Escribe el código', 'Reemplaza a Git', 'Diseña la UI']),
+    ]),
+    unit('Flujo de un equipo', 'Avanzado', {
+      intro: 'El flujo clásico: main protegida, una rama por feature, PR con review, merge. Nadie pushea a main a lo loco.',
+      points: ['main siempre desplegable', 'Una rama por tarea', 'Review de al menos una persona', 'Nunca force push a main'],
+      code: 'git checkout -b feat/login\n# ... commits\ngit push -u origin feat/login\n# abrís el Pull Request',
+    }, [
+      c('¿Por qué proteger main?', ['Para que no entre código sin revisión', 'Para que sea más lenta', 'Git lo exige', 'Porque no se puede branchar']),
+      c('¿Qué es un code review?', ['Que otra persona lea y comente tu PR', 'Correr prettier', 'Borrar comentarios', 'Renombrar archivos']),
+      t('Completá: no hagas force push en...', ['main', 'master']),
+      c('¿Una rama por feature sirve para...?', ['Aislar el trabajo y revisar de a una idea', 'Gastar más espacio nomas', 'Evitar commits', 'Saltarse tests']),
+      o('Ordená el flujo', ['Crear rama feat/...', 'Commits chicos', 'Push y Pull Request', 'Review y merge a main']),
+    ]),
   ],
 }

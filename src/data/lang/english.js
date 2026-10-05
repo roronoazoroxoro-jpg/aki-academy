@@ -38,5 +38,29 @@ export default {
       words: [['reunión', 'meeting'], ['computadora', 'computer'], ['trabajo', 'job'], ['equipo', 'team'], ['habilidad', 'skill'], ['fecha límite', 'deadline'], ['jefe', 'boss'], ['sueldo', 'salary']],
       phrases: [['Aprendí a programar', 'I have learned to code'], ['Tenemos una reunión hoy', 'We have a meeting today'], ['Ella terminó el proyecto', 'She has finished the project'], ['Trabajo en equipo', 'I work in a team'], ['Publicamos la app ayer', 'We deployed the app yesterday']],
     },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'Los colores van antes de la prenda: "a red shirt". "Wear" es usar ropa. Para preguntar talle: "What size are you?".', points: ['red, blue, green, yellow, black, white', 'shirt / pants / shoes', 'I am wearing... = Estoy usando...', 'too big / too small'] },
+      words: [['rojo', 'red'], ['azul', 'blue'], ['verde', 'green'], ['amarillo', 'yellow'], ['negro', 'black'], ['blanco', 'white'], ['remera', 'shirt'], ['zapatillas', 'sneakers']],
+      phrases: [['Uso una remera azul', 'I am wearing a blue shirt'], ['Me gustan los zapatos negros', 'I like black shoes'], ['Es demasiado grande', 'It is too big'], ['¿De qué color es?', 'What color is it?'], ['Quiero algo verde', 'I want something green']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: 'Para la hora: "It is three o\'clock" (en punto) y "It is half past two" (y media). "What time is it?" pregunta la hora.', points: ['What time is it?', 'o\'clock = en punto', 'half past = y media', 'quarter to = menos cuarto'] },
+      words: [['uno', 'one'], ['dos', 'two'], ['tres', 'three'], ['cinco', 'five'], ['diez', 'ten'], ['hora', 'hour'], ['minuto', 'minute'], ['reloj', 'clock']],
+      phrases: [['¿Qué hora es?', 'What time is it?'], ['Son las tres en punto', 'It is three o\'clock'], ['Es la una y media', 'It is half past one'], ['Nos vemos a las diez', 'See you at ten'], ['Tengo cinco minutos', 'I have five minutes']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'El clima se dice con "It is...": It is raining, It is cold. Los sentimientos van con "I am": I am tired, I am happy.', points: ['It is raining / sunny / cold', 'I am happy / tired / sad', 'I feel = Me siento'] },
+      words: [['lluvia', 'rain'], ['sol', 'sun'], ['frío', 'cold'], ['calor', 'hot'], ['feliz', 'happy'], ['cansado', 'tired'], ['triste', 'sad'], ['viento', 'wind']],
+      phrases: [['Está lloviendo', 'It is raining'], ['Hace frío hoy', 'It is cold today'], ['Estoy feliz', 'I am happy'], ['Estoy cansado', 'I am tired'], ['Me siento bien', 'I feel good']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Para hábitos usá el present simple: I wake up, I eat, I go. Con he/she el verbo lleva -s: she works.', points: ['I wake up = Me despierto', 'every day = todos los días', 'in the morning / at night', 'She works = Ella trabaja'] },
+      words: [['despertarse', 'wake up'], ['desayunar', 'have breakfast'], ['estudiar', 'study'], ['dormir', 'sleep'], ['cocinar', 'cook'], ['limpiar', 'clean'], ['mañana', 'morning'], ['noche', 'night']],
+      phrases: [['Me despierto temprano', 'I wake up early'], ['Desayuno a las ocho', 'I have breakfast at eight'], ['Estudio todas las noches', 'I study every night'], ['Ella trabaja en casa', 'She works at home'], ['Me duermo tarde', 'I go to sleep late']],
+    },
   ],
 }

@@ -38,5 +38,29 @@ export default {
       words: [['estación de tren', '火车站', 'huǒ chē zhàn'], ['aeropuerto', '机场', 'jī chǎng'], ['hotel', '酒店', 'jiǔ diàn'], ['baño', '厕所', 'cè suǒ'], ['dónde', '哪里', 'nǎ lǐ'], ['ir', '去', 'qù'], ['hoy', '今天', 'jīn tiān'], ['mañana', '明天', 'míng tiān']],
       phrases: [['¿Dónde está el baño?', '厕所 在 哪里', 'cè suǒ zài nǎ lǐ'], ['No entiendo', '我 不 懂', 'wǒ bù dǒng'], ['Quiero ir al hotel', '我 要 去 酒店', 'wǒ yào qù jiǔ diàn'], ['¿Hablás español?', '你 会 说 西班牙语 吗', 'nǐ huì shuō xī bān yá yǔ ma'], ['Mañana voy a Pekín', '明天 我 去 北京', 'míng tiān wǒ qù Běi jīng']],
     },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va antes: 蓝色的衣服. 穿 (chuān) es usar ropa. 太大 = demasiado grande.', points: ['红 蓝 绿 黄', '衣服 / 鞋', '我穿着 = estoy usando', '太大 / 太小'] },
+      words: [['rojo', '红色', 'hóng sè'], ['azul', '蓝色', 'lán sè'], ['verde', '绿色', 'lǜ sè'], ['amarillo', '黄色', 'huáng sè'], ['negro', '黑色', 'hēi sè'], ['blanco', '白色', 'bái sè'], ['ropa', '衣服', 'yī fu'], ['zapatos', '鞋', 'xié']],
+      phrases: [['Uso ropa azul', '我 穿 蓝色 衣服', 'wǒ chuān lán sè yī fu'], ['Me gustan los zapatos negros', '我 喜欢 黑 鞋', 'wǒ xǐ huan hēi xié'], ['Es demasiado grande', '太 大 了', 'tài dà le'], ['¿De qué color es?', '什么 颜色', 'shén me yán sè'], ['Quiero algo verde', '我 要 绿色 的', 'wǒ yào lǜ sè de']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = 几点了. Las 3 = 三点. Y media = 半.', points: ['几点了 = ¿qué hora es?', '点 = hora en punto', '分 = minutos', '半 = y media'] },
+      words: [['una', '一点', 'yī diǎn'], ['dos', '两点', 'liǎng diǎn'], ['tres', '三点', 'sān diǎn'], ['cinco', '五点', 'wǔ diǎn'], ['diez', '十点', 'shí diǎn'], ['hora', '点', 'diǎn'], ['minuto', '分', 'fēn'], ['reloj', '钟', 'zhōng']],
+      phrases: [['¿Qué hora es?', '现在 几 点', 'xiàn zài jǐ diǎn'], ['Son las tres', '三 点 了', 'sān diǎn le'], ['Es la una y media', '一 点 半', 'yī diǎn bàn'], ['Nos vemos a las diez', '十 点 见', 'shí diǎn jiàn'], ['Tengo cinco minutos', '我 有 五 分钟', 'wǒ yǒu wǔ fēn zhōng']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: 下雨了, 很冷. Sentimientos: 我很开心, 我累了.', points: ['下雨 / 晴天 / 冷', '开心 / 累 / 难过', '我觉得 = me siento'] },
+      words: [['lluvia', '雨', 'yǔ'], ['sol', '太阳', 'tài yáng'], ['frío', '冷', 'lěng'], ['calor', '热', 'rè'], ['feliz', '开心', 'kāi xīn'], ['cansado', '累', 'lèi'], ['triste', '难过', 'nán guò'], ['viento', '风', 'fēng']],
+      phrases: [['Está lloviendo', '下雨 了', 'xià yǔ le'], ['Hace frío hoy', '今天 很 冷', 'jīn tiān hěn lěng'], ['Estoy feliz', '我 很 开心', 'wǒ hěn kāi xīn'], ['Estoy cansado', '我 累 了', 'wǒ lèi le'], ['Me siento bien', '我 觉得 很 好', 'wǒ jué de hěn hǎo']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: 我起床, 我学习. El verbo no cambia. 每天 = todos los días.', points: ['起床 = levantarse', '每天 = todos los días', '早上 / 晚上', '她工作'] },
+      words: [['despertarse', '起床', 'qǐ chuáng'], ['desayunar', '吃早饭', 'chī zǎo fàn'], ['estudiar', '学习', 'xué xí'], ['dormir', '睡觉', 'shuì jiào'], ['cocinar', '做饭', 'zuò fàn'], ['limpiar', '打扫', 'dǎ sǎo'], ['mañana', '早上', 'zǎo shang'], ['noche', '晚上', 'wǎn shang']],
+      phrases: [['Me despierto temprano', '我 很 早 起床', 'wǒ hěn zǎo qǐ chuáng'], ['Desayuno a las ocho', '我 八 点 吃 早饭', 'wǒ bā diǎn chī zǎo fàn'], ['Estudio todas las noches', '我 每天 晚上 学习', 'wǒ měi tiān wǎn shang xué xí'], ['Ella trabaja en casa', '她 在 家 工作', 'tā zài jiā gōng zuò'], ['Me duermo tarde', '我 很 晚 睡觉', 'wǒ hěn wǎn shuì jiào']],
+    },
   ],
 }

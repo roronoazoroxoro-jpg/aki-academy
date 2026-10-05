@@ -98,5 +98,38 @@ export default {
       c('¿Qué palabra exporta algo de un módulo?', ['export', 'module', 'public', 'share']),
       m('Uní cada sintaxis', [['?.', 'Optional chaining'], ['??', 'Valor por defecto'], ['...', 'Spread'], ['=>', 'Función flecha']]),
     ]),
+    unit('Clases y this', 'Intermedio', {
+      intro: 'Aunque hoy se usan mucho las funciones, las clases siguen en el lenguaje y en muchos códigos viejos. this es el objeto que está ejecutando el método.',
+      points: ['class Persona { constructor() {} }', 'new Persona() crea la instancia', 'this.nombre es el dato del objeto', 'Los métodos de flecha no cambian el this'],
+      code: 'class Contador {\n  constructor() { this.n = 0; }\n  sumar() { this.n += 1; }\n}\nconst c = new Contador();\nc.sumar();',
+    }, [
+      c('¿Qué palabra crea una instancia?', ['new', 'make', 'create', 'instance']),
+      c('¿Dónde se inicializan los datos de la clase?', ['constructor', 'destructor', 'setup', 'main']),
+      t('Completá para guardar el nombre:', ['this'], 'this.nombre = nombre; → ___ .nombre'),
+      c('¿Qué pasa si olvidás new?', ['this no apunta al objeto nuevo (y puede fallar)', 'Funciona igual', 'Crea dos objetos', 'Borra la clase']),
+      o('Ordená la clase', ['class Perro {', '  constructor(nombre) {', '    this.nombre = nombre;', '  }', '}']),
+    ]),
+    unit('JSON y el almacenamiento', 'Intermedio', {
+      intro: 'JSON es texto con forma de objeto. JSON.stringify lo convierte para guardarlo; JSON.parse lo vuelve objeto. localStorage guarda strings en el navegador.',
+      points: ['JSON.stringify(obj)', 'JSON.parse(texto)', 'localStorage.setItem(clave, valor)', 'Solo strings: parseá al leer'],
+      code: 'const user = { nombre: "Aki", xp: 10 };\nlocalStorage.setItem("user", JSON.stringify(user));\nconst leido = JSON.parse(localStorage.getItem("user"));',
+    }, [
+      c('¿Qué hace JSON.stringify?', ['Convierte un objeto en texto', 'Lo manda a un servidor', 'Lo encripta', 'Lo borra']),
+      t('Completá para volver al objeto:', ['parse'], 'JSON.___(texto)'),
+      c('¿Qué guarda localStorage?', ['Strings (texto)', 'Funciones', 'Componentes React', 'Archivos .exe']),
+      c('¿Los datos de localStorage se van al cerrar la pestaña?', ['No: quedan en el dispositivo', 'Sí, siempre', 'Solo en Safari', 'Solo si hay error']),
+      m('Uní cada método', [['stringify', 'Objeto → texto'], ['parse', 'Texto → objeto'], ['setItem', 'Guardar'], ['getItem', 'Leer']]),
+    ]),
+    unit('Manejo de errores en JS', 'Avanzado', {
+      intro: 'try/catch atrapa errores para que la app no se caiga. throw lanza uno propio. En async, un await que falla cae al catch si está dentro del try.',
+      points: ['try { ... } catch (e) { ... }', 'throw new Error("mensaje")', 'e.message es el texto', 'finally corre siempre'],
+      code: 'try {\n  const data = JSON.parse(texto);\n} catch (e) {\n  console.error("JSON inválido", e.message);\n}',
+    }, [
+      c('¿Qué bloque atrapa el error?', ['catch', 'except', 'rescue', 'fail']),
+      t('Completá para lanzar un error:', ['throw'], '___ new Error("falta el mail")'),
+      c('¿finally se ejecuta si no hubo error?', ['Sí, siempre', 'No', 'Solo en Chrome', 'Solo con throw']),
+      c('Si un await falla dentro de un try, ¿adónde va?', ['Al catch', 'Se ignora', 'Cierra el navegador', 'Al finally nomas y listo']),
+      o('Ordená el try/catch', ['try {', '  JSON.parse(texto);', '} catch (e) {', '  console.error(e.message);', '}']),
+    ]),
   ],
 }

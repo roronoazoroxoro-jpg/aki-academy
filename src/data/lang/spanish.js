@@ -32,5 +32,29 @@ export default {
       words: [['bus', 'colectivo'], ['metro', 'subte'], ['acera', 'vereda'], ['departamento', 'depto'], ['nevera', 'heladera'], ['computadora', 'compu'], ['celular', 'celu'], ['camiseta', 'remera']],
       phrases: [['¿A qué hora pasa el bondi?', '¿A qué hora pasa el bondi?'], ['Bajame en la esquina', 'Bajame en la esquina'], ['Estoy en la vereda', 'Estoy en la vereda'], ['¿Me prestás el celu?', '¿Me prestás el celu?'], ['Vivo en un depto', 'Vivo en un depto']],
     },
+    {
+      title: 'Colores y ropa criolla', level: 'Básico',
+      guide: { intro: 'Acá decimos remera (no camiseta), zapatillas, jean y buzo. "Estoy en ojotas" es un estado del alma.', points: ['remera / jean / buzo / ojotas', 'Estoy usando...', 'Me queda grande / chico', '¿De qué color es?'] },
+      words: [['rojo', 'rojo'], ['celeste', 'celeste'], ['verde', 'verde'], ['amarillo', 'amarillo'], ['negro', 'negro'], ['blanco', 'blanco'], ['remera', 'remera'], ['ojotas', 'ojotas']],
+      phrases: [['Uso una remera celeste', 'Uso una remera celeste'], ['Me quedan grandes', 'Me quedan grandes'], ['Estoy en ojotas', 'Estoy en ojotas'], ['¿De qué color es el buzo?', '¿De qué color es el buzo?'], ['Quiero algo negro', 'Quiero algo negro']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: 'En Argentina decimos "las tres" y "la una y media". "¿Qué hora es?" y "a las diez en punto".', points: ['¿Qué hora es?', 'en punto / y media / menos cuarto', 'Son las tres', 'Nos vemos a las diez'] },
+      words: [['uno', 'uno'], ['dos', 'dos'], ['tres', 'tres'], ['cinco', 'cinco'], ['diez', 'diez'], ['hora', 'hora'], ['minuto', 'minuto'], ['reloj', 'reloj']],
+      phrases: [['¿Qué hora es?', '¿Qué hora es?'], ['Son las tres en punto', 'Son las tres en punto'], ['Es la una y media', 'Es la una y media'], ['Nos vemos a las diez', 'Nos vemos a las diez'], ['Dame cinco minutos', 'Dame cinco minutos']],
+    },
+    {
+      title: 'Clima y cómo andás', level: 'Intermedio',
+      guide: { intro: 'El clima rioplatense: humedad, sudestada y "está para adentro". Para el ánimo: "estoy al palo", "estoy destruido", "estoy de diez".', points: ['Está lloviendo / hace un frío de locos', 'Estoy de diez / destruido / bajón', 'Hay viento / está pesado el día'] },
+      words: [['lluvia', 'lluvia'], ['sol', 'sol'], ['frío', 'frío'], ['calor', 'calor'], ['feliz', 'contento'], ['cansado', 'destruido'], ['triste', 'bajón'], ['viento', 'viento']],
+      phrases: [['Está lloviendo', 'Está lloviendo'], ['Hace un frío de locos', 'Hace un frío de locos'], ['Estoy de diez', 'Estoy de diez'], ['Estoy destruido', 'Estoy destruido'], ['Ando con un bajón', 'Ando con un bajón']],
+    },
+    {
+      title: 'La rutina argentina', level: 'Intermedio',
+      guide: { intro: 'Nos levantamos, cebamos mate, laburamos y a la noche a veces hay fútbol o una peli. El "después de comer" puede ser a las 22.', points: ['Me levanto / cebamos mate', 'Voy al laburo', 'A la noche / a la mañana', 'Me duermo tarde'] },
+      words: [['despertarse', 'levantarse'], ['desayunar', 'desayunar'], ['estudiar', 'estudiar'], ['dormir', 'dormir'], ['cocinar', 'cocinar'], ['limpiar', 'limpiar'], ['mañana', 'mañana'], ['noche', 'noche']],
+      phrases: [['Me levanto temprano', 'Me levanto temprano'], ['Cebamos mate a la mañana', 'Cebamos mate a la mañana'], ['Estudio de noche', 'Estudio de noche'], ['Ella labura desde casa', 'Ella labura desde casa'], ['Me duermo re tarde', 'Me duermo re tarde']],
+    },
   ],
 }

@@ -57,5 +57,49 @@ export default {
       c('¿Qué porcentaje de la Tierra está cubierto de agua, más o menos?', ['70%', '30%', '10%', '95%']),
       m('Uní cada idea', [['Big Bang', 'Origen del universo'], ['Nebulosa', 'Cuna de estrellas'], ['Agujero negro', 'Gravedad extrema'], ['Exoplaneta', 'Planeta de otra estrella']]),
     ]),
+    unit('Observar el cielo desde Argentina', 'Básico', {
+      intro: 'Desde el sur se ve la Cruz del Sur, no la Osa Mayor. En un cielo oscuro (campo, montaña) aparecen la Vía Láctea y las Magallanes. La contaminación lumínica tapa estrellas.',
+      points: ['Hemisferio sur ≠ norte', 'Menos luz = más estrellas', 'La Luna llena “apaga” el fondo', 'Una app de cielo ayuda a reconocer'],
+      code: 'campo oscuro  →  Vía Láctea visible\nciudad  →  pocas estrellas',
+    }, [
+      c('¿Qué constelación usamos acá para hallar el sur?', ['Cruz del Sur', 'Osa Mayor', 'Casiopea', 'Polaris']),
+      c('¿Por qué en la ciudad se ven menos estrellas?', ['Contaminación lumínica', 'No hay cielo', 'El smog las borra del universo', 'Las estrellas se apagan']),
+      t('¿Cómo se llama nuestra galaxia vista de canto en noches oscuras?', ['vía láctea', 'via lactea']),
+      c('¿La Estrella Polar se ve desde Buenos Aires?', ['No (está en el norte)', 'Sí, siempre', 'Solo en verano', 'Solo con telescopio']),
+      c('¿Las Nubes de Magallanes qué son?', ['Galaxias enanas vecinas, visibles desde el sur', 'Nubes de lluvia', 'Planetas', 'Satélites de Starlink nomas']),
+    ]),
+    unit('Telescopios y luz', 'Intermedio', {
+      intro: 'Un telescopio junta luz. Más diámetro = más detalle. Hay ópticos, radio e infrarrojos. Cada “color” (longitud de onda) cuenta otra historia.',
+      points: ['Apertura: tamaño del espejo/lente', 'Hubble: óptico en órbita', 'Webb: infrarrojo', 'Un binocular ya abre el cielo'],
+      code: 'más apertura → más fotones → más detalle',
+    }, [
+      c('¿Qué es más importante en un telescopio de aficionado?', ['El diámetro (apertura)', 'Que sea dorado', 'El zoom del ocular nomas', 'Que tenga Bluetooth']),
+      c('James Webb observa sobre todo en...', ['Infrarrojo', 'Sonido', 'Rayos X nomas', 'Ondas de radio AM']),
+      t('¿Cómo se llama el telescopio espacial clásico de los 90?', ['hubble']),
+      c('¿Por qué poner telescopios en el espacio?', ['Evitan la atmósfera que distorsiona y filtra', 'Están más cerca de las estrellas (mucho)', 'No necesitan energía', 'No hay Luna']),
+      c('¿Un binocular sirve para astronomía?', ['Sí: Luna, Júpiter y cúmulos se ven muy bien', 'No, nunca', 'Solo de día', 'Solo en el polo']),
+    ]),
+    unit('Marte y la exploración', 'Avanzado', {
+      intro: 'Robots (Curiosity, Perseverance) recorren Marte. Hay hielo, cauces secos y una atmósfera finísima de CO₂. Ir y volver con personas es un problema de radiación, vida y política.',
+      points: ['Rovers: laboratorios con ruedas', 'Marte: un día ≈ 24,6 h', 'Sin campo magnético fuerte como el nuestro', 'El agua líquida estable en superficie hoy casi no existe'],
+      code: 'Tierra 1 ua del Sol · Marte ~1,5 ua',
+    }, [
+      c('¿Qué es un rover?', ['Un robot que se mueve y analiza el suelo', 'Un satélite fijo', 'Un astronauta', 'Un cometa']),
+      c('La atmósfera de Marte es principalmente...', ['CO₂ muy delgada', 'Oxígeno como la Tierra', 'Hidrógeno líquido', 'Nitrógeno a 1 atm']),
+      t('¿Qué planeta rojo exploran Curiosity y Perseverance?', ['marte']),
+      c('¿Por qué es difícil una misión tripulada a Marte?', ['Radiación, duración, vida y volver', 'No se sabe dónde está', 'No hay noches', 'Es más cerca que la Luna']),
+      m('Uní', [['Rover', 'Robot móvil'], ['Marte', 'Planeta rojo'], ['CO₂', 'Su aire'], ['Radiación', 'Riesgo humano']]),
+    ]),
+    unit('Tiempo y calendarios', 'Intermedio', {
+      intro: 'El día viene de la rotación, el año de la traslación, el mes (más o menos) de la Luna. Los husos horarios recortan el mundo en franjas. Argentina suele estar en UTC−3.',
+      points: ['Rotación → día', 'Traslación → año', 'Año bisiesto: +1 día cada 4 (con excepciones)', 'UTC: reloj de referencia'],
+      code: 'Argentina ≈ UTC−3',
+    }, [
+      c('¿Qué movimiento define el día?', ['Rotación', 'Traslación', 'La Luna nomas', 'Las mareas nomas']),
+      c('¿Para qué es el año bisiesto?', ['Para ajustar el calendario al año real (~365,24 días)', 'Para las vacaciones', 'Porque febrero es corto de humor', 'Por la Luna llena']),
+      t('¿En qué huso suele estar Argentina? (escribí utc-3 o -3)', ['utc-3', 'utc−3', '-3', '−3']),
+      c('¿Un mes del calendario coincide exacto con la Luna?', ['No del todo: por eso hay desfasajes', 'Sí, siempre 28', 'Sí, 31', 'La Luna no tiene período']),
+      c('Si en Tokio es de día y acá de noche, es por...', ['La Tierra es redonda y rota (husos)', 'Tokío tiene otro sol', 'Un error del celu', 'Las estaciones invertidas nomas']),
+    ]),
   ],
 }

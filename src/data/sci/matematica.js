@@ -100,5 +100,39 @@ export default {
       t('Al tirar un dado, ¿qué probabilidad hay de sacar un número par? Escribí la fracción simplificada', ['1/2']),
       c('Si una probabilidad vale 0, significa que el evento...', ['Es imposible', 'Es seguro', 'Pasa la mitad de las veces', 'No se puede medir']),
     ]),
+    unit('Funciones y gráficos', 'Intermedio', {
+      intro: 'Una función relaciona una entrada con una salida. y = 2x + 1 es una recta: pendiente 2 y ordenada 1. Graficar es ver esa relación.',
+      points: ['f(x) = 2x + 1', 'Pendiente: cuánto sube al avanzar 1', 'Si la pendiente es 0, es horizontal', 'Un punto de la recta cumple la ecuación'],
+      code: 'y = 2x + 1\nx=0 → y=1\nx=3 → y=7',
+    }, [
+      c('Si y = 2x + 1 y x = 3, ¿cuánto es y?', ['7', '6', '5', '4']),
+      c('¿Qué es la pendiente de y = 2x + 1?', ['2', '1', '0', '3']),
+      t('Si la pendiente es 0, la recta es...', ['horizontal', 'horizontal.']),
+      c('¿f(0) en f(x) = 2x + 1?', ['1', '0', '2', '−1']),
+      c('Una recta que baja de izquierda a derecha tiene pendiente...', ['Negativa', 'Positiva', 'Cero siempre', 'Infinita siempre']),
+      m('Uní', [['Pendiente', 'Inclinación'], ['Ordenada', 'Corta el eje y'], ['f(x)', 'Salida'], ['x', 'Entrada']]),
+    ]),
+    unit('Sistemas de ecuaciones', 'Avanzado', {
+      intro: 'Dos ecuaciones, dos incógnitas. La solución es el punto donde se cruzan las dos rectas. Se puede resolver por sustitución o igualación.',
+      points: ['x + y = 10 y x − y = 2 → x=6, y=4', 'Si son paralelas, no hay solución', 'Si son la misma recta, hay infinitas'],
+      code: 'x + y = 10\nx − y = 2\n→  2x = 12  →  x = 6, y = 4',
+    }, [
+      c('En x + y = 10 y x − y = 2, ¿cuánto es x?', ['6', '4', '8', '2']),
+      c('Si dos rectas son paralelas distintas, el sistema...', ['No tiene solución', 'Tiene una', 'Tiene infinitas', 'Es imposible de escribir']),
+      t('¿Cómo se llama reemplazar una incógnita despejada en la otra ecuación?', ['sustitución', 'sustitucion']),
+      c('x + y = 5 y 2x + 2y = 10 es...', ['Infinitas soluciones (la misma recta)', 'Sin solución', 'Solo (0,0)', 'Solo (5,0)']),
+      c('¿La solución de un sistema 2×2 es...?', ['Un par (x, y)', 'Solo x', 'Un triángulo', 'Una potencia']),
+    ]),
+    unit('Notación científica', 'Intermedio', {
+      intro: 'Para números enormes o minúsculos usamos potencias de 10: 3 × 10⁸ m/s (luz). Mover la coma cambia el exponente.',
+      points: ['3 000 = 3 × 10³', '0,002 = 2 × 10⁻³', 'Multiplicar: sumá exponentes', 'La luz ≈ 3 × 10⁸ m/s'],
+      code: '150 000 000 km → 1,5 × 10⁸ km',
+    }, [
+      c('¿Cómo se escribe 3 000 en notación científica?', ['3 × 10³', '3 × 10²', '30 × 10³', '3 × 10⁻³']),
+      c('0,002 es...', ['2 × 10⁻³', '2 × 10³', '2 × 10⁻²', '20 × 10⁻³']),
+      t('¿Cuánto es (10³) × (10²)? Escribí 10^…', ['10^5', '10⁵', '100000']),
+      c('¿Para qué sirve esta notación?', ['Escribir números muy grandes o chicos sin mil ceros', 'Reemplazar las fracciones', 'Medir ángulos', 'Calcular áreas nomas']),
+      c('Si pasás de 3,2 × 10⁴ a 32 000, ¿moviste la coma...?', ['4 lugares a la derecha', '4 a la izquierda', '2 a la derecha', 'Ninguno']),
+    ]),
   ],
 }

@@ -71,5 +71,38 @@ export default {
       t('¿Cómo se llama el proceso que da color y sabor a la carne dorada? (apellido del químico)', ['maillard']),
       c('¿Por qué se oxida el hierro?', ['Reacciona con el oxígeno y la humedad', 'Por el calor del sol', 'Porque pierde protones', 'Por la presión del aire']),
     ]),
+    unit('Enlaces', 'Intermedio', {
+      intro: 'Los átomos se unen para completar su “capa” de electrones. Iónico: se prestan (sal). Covalente: se comparten (agua). Metálico: mar de electrones.',
+      points: ['NaCl: iónico', 'H₂O: covalente', 'Los metales conducen porque los electrones se mueven', 'Un enlace más fuerte cuesta más romper'],
+      code: 'Na (cede e⁻) + Cl (acepta e⁻) → NaCl',
+    }, [
+      c('¿Qué tipo de enlace hay en la sal de mesa?', ['Iónico', 'Covalente puro', 'Metálico', 'No tiene enlace']),
+      c('En el agua, los átomos...', ['Comparten electrones (covalente)', 'Se prestan iones nomas', 'Flotan sin unirse', 'Se magnetizan']),
+      t('¿Qué partícula se comparte o se transfiere en un enlace?', ['electrón', 'electron', 'electrones']),
+      c('¿Por qué el cobre conduce?', ['Tiene electrones que se pueden mover', 'Es naranja', 'Es líquido', 'Tiene cloro']),
+      m('Uní', [['Iónico', 'Se prestan e⁻'], ['Covalente', 'Se comparten'], ['Metálico', 'Mar de e⁻'], ['NaCl', 'Sal']]),
+    ]),
+    unit('Mezclas y soluciones', 'Básico', {
+      intro: 'Una mezcla se puede separar (agua y arena). Una solución es homogénea: el azúcar desaparece a la vista. Soluto + solvente.',
+      points: ['Soluto: lo que se disuelve', 'Solvente: lo que disuelve (suele ser agua)', 'Saturada: no entra más', 'Filtrar, decantar, destilar'],
+      code: 'agua (solvente) + azúcar (soluto) → solución',
+    }, [
+      c('En el mate, la yerba es más bien el...', ['Soluto (lo que se extrae al agua)', 'Solvente', 'Un gas noble', 'Un metal']),
+      c('¿Qué es una solución saturada?', ['Ya no entra más soluto a esa temperatura', 'Está vacía', 'Es un elemento puro', 'Hierve siempre']),
+      t('¿Cómo se llama el líquido que disuelve?', ['solvente', 'disolvente']),
+      c('¿Agua y aceite se mezclan bien?', ['No: forman dos fases', 'Sí, siempre', 'Solo si está fría', 'Solo con sal']),
+      c('Destilar sirve para...', ['Separar por punto de ebullición', 'Filtrar arena nomas', 'Congelar', 'Medir pH']),
+    ]),
+    unit('Estequiometría', 'Avanzado', {
+      intro: 'Las ecuaciones balanceadas te dicen “cuánto de cada cosa”. 2 H₂ + O₂ → 2 H₂O: dos de hidrógeno por cada una de oxígeno.',
+      points: ['Los coeficientes son las “recetas”', 'Un mol es 6,02 × 10²³ entidades', 'Masa molar: gramos por mol', 'No se inventan átomos'],
+      code: '2 H₂ + O₂ → 2 H₂O\n2 moléculas de H₂ por 1 de O₂',
+    }, [
+      c('En 2 H₂ + O₂ → 2 H₂O, ¿cuántas moléculas de agua salen?', ['2', '1', '3', '4']),
+      c('¿Por qué hay un 2 delante de H₂?', ['Hacen falta 2 para balancear los H', 'El hidrógeno es más pesado', 'Es un error', 'Porque es gas']),
+      t('¿Cómo se llama 6,02 × 10²³ partículas?', ['mol', 'un mol']),
+      c('Si te falta un reactivo, la reacción...', ['Para cuando se acaba el limitante', 'Sigue igual para siempre', 'Crea átomos', 'Cambia los productos mágicamente']),
+      c('La masa molar se mide en...', ['g/mol', 'litros', 'voltios', '°C']),
+    ]),
   ],
 }

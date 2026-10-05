@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Grecia', level: 'Avanzado',
       guide: { intro: 'Πού είναι (pu íne) pregunta dónde está algo. Δεν καταλαβαίνω (den katalavéno) significa "no entiendo". Imprescindibles para las islas.', points: ['Πού είναι = ¿dónde está?', 'Δεν καταλαβαίνω = no entiendo', 'Θάλασσα = mar', 'Νησί = isla'] },
       words: [['mar', 'Θάλασσα', 'thálasa'], ['isla', 'Νησί', 'nisí'], ['hotel', 'Ξενοδοχείο', 'xenodhojío'], ['playa', 'Παραλία', 'paralía'], ['dónde', 'Πού', 'pu'], ['hoy', 'Σήμερα', 'símera'], ['mañana', 'Αύριο', 'ávrio'], ['barco', 'Πλοίο', 'plío']],
-      phrases: [['¿Dónde está el hotel?', 'Πού είναι το ξενοδοχείο', 'pu íne to xenodhojío'], ['No entiendo', 'Δεν καταλαβαίνω', 'den katalavéno'], ['Quiero ir a la playa', 'Θέλω να πάω στην παραλία', 'thélo na páo stin paralía'], ['¿Hablás inglés?', 'Μιλάτε αγγλικά', 'miláte angliká']],
+      phrases: [['¿Dónde está el hotel?', 'Πού είναι το ξενοδοχείο', 'pu íne to xenodhojío'], ['No entiendo', 'Δεν καταλαβαίνω', 'den katalavéno'], ['Quiero ir a la playa', 'Θέλω να πάω στην παραλία', 'thélo na páo stin paralía'], ['¿Hablás inglés?', 'Μιλάτε αγγλικά', 'miláte angliká'], ['El barco sale hoy', 'Το πλοίο φεύγει σήμερα', 'to plío févgi símera']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color concuerda: μπλε μπλούζα. Φοράω = uso. Πολύ μεγάλο = demasiado grande.', points: ['κόκκινο μπλε πράσινο κίτρινο', 'μπλούζα / παπούτσια', 'Φοράω', 'πολύ μεγάλο'] },
+      words: [['rojo', 'κόκκινο', 'kókkino'], ['azul', 'μπλε', 'ble'], ['verde', 'πράσινο', 'prásino'], ['amarillo', 'κίτρινο', 'kítrino'], ['negro', 'μαύρο', 'mávro'], ['blanco', 'άσπρο', 'áspro'], ['remera', 'μπλούζα', 'blúza'], ['zapatos', 'παπούτσια', 'papútsia']],
+      phrases: [['Uso una remera azul', 'Φοράω μια μπλε μπλούζα', 'foráo mia ble blúza'], ['Me gustan los zapatos negros', 'Μου αρέσουν τα μαύρα παπούτσια', 'mu arésun ta mávra papútsia'], ['Es demasiado grande', 'Είναι πολύ μεγάλο', 'íne polí megálo'], ['¿De qué color es?', 'Τι χρώμα είναι', 'ti jróma íne'], ['Quiero algo verde', 'Θέλω κάτι πράσινο', 'thélo káti prásino']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = Τι ώρα είναι; Las 3 = τρεις η ώρα. Y media = και μισή.', points: ['Τι ώρα είναι;', 'ώρα', 'λεπτό', 'και μισή'] },
+      words: [['uno', 'ένα', 'éna'], ['dos', 'δύο', 'dío'], ['tres', 'τρία', 'tría'], ['cinco', 'πέντε', 'pénde'], ['diez', 'δέκα', 'déka'], ['hora', 'ώρα', 'óra'], ['minuto', 'λεπτό', 'leptó'], ['reloj', 'ρολόι', 'rolói']],
+      phrases: [['¿Qué hora es?', 'Τι ώρα είναι', 'ti óra íne'], ['Son las tres', 'Είναι τρεις η ώρα', 'íne tris i óra'], ['Es la una y media', 'Είναι μία και μισή', 'íne mía ke misí'], ['Nos vemos a las diez', 'Τα λέμε στις δέκα', 'ta léme stis déka'], ['Tengo cinco minutos', 'Έχω πέντε λεπτά', 'ékho pénde leptá']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: Βρέχει, Κάνει κρύο. Sentimientos: Είμαι χαρούμενος, Είμαι κουρασμένος.', points: ['βρέχει / ήλιος / κρύο', 'χαρούμενος / κουρασμένος / λυπημένος', 'νιώθω'] },
+      words: [['lluvia', 'βροχή', 'vrojí'], ['sol', 'ήλιος', 'ílios'], ['frío', 'κρύο', 'krío'], ['calor', 'ζέστη', 'zésti'], ['feliz', 'χαρούμενος', 'jarúmenos'], ['cansado', 'κουρασμένος', 'kurasménos'], ['triste', 'λυπημένος', 'lipiménos'], ['viento', 'αέρας', 'aéras']],
+      phrases: [['Está lloviendo', 'Βρέχει', 'vréji'], ['Hace frío hoy', 'Κάνει κρύο σήμερα', 'káni krío símera'], ['Estoy feliz', 'Είμαι χαρούμενος', 'íme jarúmenos'], ['Estoy cansado', 'Είμαι κουρασμένος', 'íme kurasménos'], ['Me siento bien', 'Νιώθω καλά', 'niótho kalá']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: Ξυπνάω, Διαβάζω. Κάθε μέρα = todos los días.', points: ['Ξυπνάω', 'κάθε μέρα', 'το πρωί / το βράδυ', 'Δουλεύει'] },
+      words: [['despertarse', 'ξυπνάω', 'xipnáo'], ['desayunar', 'πρωινό', 'proinó'], ['estudiar', 'διαβάζω', 'diavázo'], ['dormir', 'κοιμάμαι', 'kimáme'], ['cocinar', 'μαγειρεύω', 'mayirévo'], ['limpiar', 'καθαρίζω', 'katharízo'], ['mañana', 'πρωί', 'proí'], ['noche', 'βράδυ', 'vrádi']],
+      phrases: [['Me despierto temprano', 'Ξυπνάω νωρίς', 'xipnáo norís'], ['Desayuno a las ocho', 'Τρώω πρωινό στις οκτώ', 'tróo proinó stis októ'], ['Estudio todas las noches', 'Διαβάζω κάθε βράδυ', 'diavázo káthe vrádi'], ['Ella trabaja en casa', 'Δουλεύει στο σπίτι', 'dulévi sto spíti'], ['Me duermo tarde', 'Κοιμάμαι αργά', 'kimáme argá']],
     },
   ],
 }

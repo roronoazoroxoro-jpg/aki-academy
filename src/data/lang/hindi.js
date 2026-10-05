@@ -30,7 +30,31 @@ export default {
       title: 'De viaje por India', level: 'Avanzado',
       guide: { intro: 'कहाँ (kahaan) pregunta dónde está algo. मुझे समझ नहीं आया significa "no entendí". El tren es el medio más usado para recorrer India.', points: ['कहाँ है = ¿dónde está?', 'स्टेशन = estación', 'मुझे समझ नहीं आया = no entendí', 'जाना = ir'] },
       words: [['estación', 'स्टेशन', 'station'], ['tren', 'ट्रेन', 'train'], ['hotel', 'होटल', 'hotel'], ['baño', 'शौचालय', 'shauchalay'], ['dónde', 'कहाँ', 'kahaan'], ['hoy', 'आज', 'aaj'], ['mañana', 'कल', 'kal'], ['dinero', 'पैसा', 'paisa']],
-      phrases: [['¿Dónde está la estación?', 'स्टेशन कहाँ है', 'station kahaan hai'], ['No entendí', 'मुझे समझ नहीं आया', 'mujhe samajh nahin aaya'], ['¿Hablás inglés?', 'क्या आप अंग्रेज़ी बोलते हैं', 'kya aap angrezi bolte hain'], ['Quiero ir al hotel', 'मुझे होटल जाना है', 'mujhe hotel jaana hai']],
+      phrases: [['¿Dónde está la estación?', 'स्टेशन कहाँ है', 'station kahaan hai'], ['No entendí', 'मुझे समझ नहीं आया', 'mujhe samajh nahin aaya'], ['¿Hablás inglés?', 'क्या आप अंग्रेज़ी बोलते हैं', 'kya aap angrezi bolte hain'], ['Quiero ir al hotel', 'मुझे होटल जाना है', 'mujhe hotel jaana hai'], ['El tren llega hoy', 'ट्रेन आज आती है', 'train aaj aati hai']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va antes: नीला कपड़ा. मैं पहनता हूँ = uso. बहुत बड़ा = demasiado grande.', points: ['लाल नीला हरा पीला', 'कपड़े / जूते', 'मैं पहनता हूँ', 'बहुत बड़ा / छोटा'] },
+      words: [['rojo', 'लाल', 'laal'], ['azul', 'नीला', 'neela'], ['verde', 'हरा', 'hara'], ['amarillo', 'पीला', 'peela'], ['negro', 'काला', 'kaala'], ['blanco', 'सफेद', 'safed'], ['ropa', 'कपड़े', 'kapde'], ['zapatos', 'जूते', 'joote']],
+      phrases: [['Uso ropa azul', 'मैं नीले कपड़े पहनता हूँ', 'main neele kapde pahanta hun'], ['Me gustan los zapatos negros', 'मुझे काले जूते पसंद हैं', 'mujhe kaale joote pasand hain'], ['Es demasiado grande', 'यह बहुत बड़ा है', 'yah bahut bada hai'], ['¿De qué color es?', 'यह किस रंग का है', 'yah kis rang ka hai'], ['Quiero algo verde', 'मुझे हरा चाहिए', 'mujhe hara chahiye']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = कितने बजे हैं? Las 3 = तीन बजे. Y media = साढ़े.', points: ['कितने बजे हैं?', 'बजे = hora', 'मिनट', 'साढ़े = y media'] },
+      words: [['uno', 'एक', 'ek'], ['dos', 'दो', 'do'], ['tres', 'तीन', 'teen'], ['cinco', 'पाँच', 'paanch'], ['diez', 'दस', 'das'], ['hora', 'घंटा', 'ghanta'], ['minuto', 'मिनट', 'minute'], ['reloj', 'घड़ी', 'ghadi']],
+      phrases: [['¿Qué hora es?', 'कितने बजे हैं', 'kitne baje hain'], ['Son las tres', 'तीन बजे हैं', 'teen baje hain'], ['Es la una y media', 'डेढ़ बजे हैं', 'dedh baje hain'], ['Nos vemos a las diez', 'दस बजे मिलते हैं', 'das baje milte hain'], ['Tengo cinco minutos', 'मेरे पास पाँच मिनट हैं', 'mere paas paanch minute hain']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: बारिश हो रही है, ठंड है. Sentimientos: मैं खुश हूँ, मैं थक गया हूँ.', points: ['बारिश / धूप / ठंड', 'खुश / थका / उदास', 'मुझे लगता है'] },
+      words: [['lluvia', 'बारिश', 'baarish'], ['sol', 'धूप', 'dhoop'], ['frío', 'ठंड', 'thand'], ['calor', 'गर्मी', 'garmi'], ['feliz', 'खुश', 'khush'], ['cansado', 'थका', 'thaka'], ['triste', 'उदास', 'udaas'], ['viento', 'हवा', 'hawa']],
+      phrases: [['Está lloviendo', 'बारिश हो रही है', 'baarish ho rahi hai'], ['Hace frío hoy', 'आज ठंड है', 'aaj thand hai'], ['Estoy feliz', 'मैं खुश हूँ', 'main khush hun'], ['Estoy cansado', 'मैं थक गया हूँ', 'main thak gaya hun'], ['Me siento bien', 'मैं अच्छा महसूस करता हूँ', 'main achha mahsoos karta hun']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: मैं उठता हूँ, मैं पढ़ता हूँ. हर दिन = todos los días.', points: ['मैं उठता हूँ', 'हर दिन', 'सुबह / रात', 'वह काम करती है'] },
+      words: [['despertarse', 'उठना', 'uthna'], ['desayunar', 'नाश्ता', 'nashta'], ['estudiar', 'पढ़ना', 'padhna'], ['dormir', 'सोना', 'sona'], ['cocinar', 'खाना बनाना', 'khana banana'], ['limpiar', 'साफ़ करना', 'saaf karna'], ['mañana', 'सुबह', 'subah'], ['noche', 'रात', 'raat']],
+      phrases: [['Me despierto temprano', 'मैं जल्दी उठता हूँ', 'main jaldi uthata hun'], ['Desayuno a las ocho', 'मैं आठ बजे नाश्ता करता हूँ', 'main aath baje nashta karta hun'], ['Estudio todas las noches', 'मैं हर रात पढ़ता हूँ', 'main har raat padhta hun'], ['Ella trabaja en casa', 'वह घर पर काम करती है', 'vah ghar par kaam karti hai'], ['Me duermo tarde', 'मैं देर से सोता हूँ', 'main der se sota hun']],
     },
   ],
 }

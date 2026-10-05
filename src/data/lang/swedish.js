@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Estocolmo', level: 'Avanzado',
       guide: { intro: '"Var är...?" pregunta dónde está algo. El tren es "tåg" y la estación "station".', points: ['Var är stationen?', 'Jag åker = Yo viajo / voy', 'Idag / imorgon = hoy / mañana'] },
       words: [['estación', 'station'], ['tren', 'tåg'], ['calle', 'gata'], ['ciudad', 'stad'], ['hoy', 'idag'], ['mañana', 'imorgon'], ['hotel', 'hotell'], ['baño', 'toalett']],
-      phrases: [['¿Dónde está la estación?', 'Var är stationen?'], ['Viajo mañana', 'Jag åker imorgon'], ['El tren llega hoy', 'Tåget kommer idag'], ['¿Dónde está el baño?', 'Var är toaletten?']],
+      phrases: [['¿Dónde está la estación?', 'Var är stationen?'], ['Viajo mañana', 'Jag åker imorgon'], ['El tren llega hoy', 'Tåget kommer idag'], ['¿Dónde está el baño?', 'Var är toaletten?'], ['El hotel está cerca', 'Hotellet är nära']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: en blå tröja. "Jag har på mig" es "estoy usando".', points: ['röd, blå, grön, gul', 'tröja / byxor / skor', 'Jag har på mig...', 'för stor / för liten'] },
+      words: [['rojo', 'röd'], ['azul', 'blå'], ['verde', 'grön'], ['amarillo', 'gul'], ['negro', 'svart'], ['blanco', 'vit'], ['remera', 'tröja'], ['zapatillas', 'sneakers']],
+      phrases: [['Uso una remera azul', 'Jag har på mig en blå tröja'], ['Me gustan los zapatos negros', 'Jag gillar svarta skor'], ['Es demasiado grande', 'Den är för stor'], ['¿De qué color es?', 'Vilken färg är det?'], ['Quiero algo verde', 'Jag vill ha något grönt']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Vad är klockan?" pregunta la hora. "Klockan är tre" y "Klockan är halv två".', points: ['Vad är klockan?', 'Klockan är tre', 'halv = y media', 'kvart i'] },
+      words: [['uno', 'ett'], ['dos', 'två'], ['tres', 'tre'], ['cinco', 'fem'], ['diez', 'tio'], ['hora', 'timme'], ['minuto', 'minut'], ['reloj', 'klocka']],
+      phrases: [['¿Qué hora es?', 'Vad är klockan?'], ['Son las tres', 'Klockan är tre'], ['Es la una y media', 'Klockan är halv två'], ['Nos vemos a las diez', 'Vi ses klockan tio'], ['Tengo cinco minutos', 'Jag har fem minuter']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Det regnar", "Det är kallt". Sentimientos: "Jag är trött", "Jag är glad".', points: ['Det regnar / Det är soligt / Det är kallt', 'Jag är glad / trött / ledsen', 'Jag känner mig = Me siento'] },
+      words: [['lluvia', 'regn'], ['sol', 'sol'], ['frío', 'kallt'], ['calor', 'varmt'], ['feliz', 'glad'], ['cansado', 'trött'], ['triste', 'ledsen'], ['viento', 'vind']],
+      phrases: [['Está lloviendo', 'Det regnar'], ['Hace frío hoy', 'Det är kallt idag'], ['Estoy feliz', 'Jag är glad'], ['Estoy cansado', 'Jag är trött'], ['Me siento bien', 'Jag känner mig bra']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Jag vaknar", "Jag pluggar". Con hon: "hon jobbar".', points: ['Jag vaknar = Me despierto', 'varje dag', 'på morgonen / på kvällen', 'Hon jobbar'] },
+      words: [['despertarse', 'vakna'], ['desayunar', 'äta frukost'], ['estudiar', 'plugga'], ['dormir', 'sova'], ['cocinar', 'laga mat'], ['limpiar', 'städa'], ['mañana', 'morgon'], ['noche', 'kväll']],
+      phrases: [['Me despierto temprano', 'Jag vaknar tidigt'], ['Desayuno a las ocho', 'Jag äter frukost klockan åtta'], ['Estudio todas las noches', 'Jag pluggar varje kväll'], ['Ella trabaja en casa', 'Hon jobbar hemma'], ['Me duermo tarde', 'Jag somnar sent']],
     },
   ],
 }

@@ -38,5 +38,29 @@ export default {
       words: [['trabajo', 'trabalho'], ['reunión', 'reunião'], ['plazo', 'prazo'], ['equipo', 'equipe'], ['sueldo', 'salário'], ['jefe', 'chefe'], ['oficina', 'escritório'], ['archivo', 'arquivo']],
       phrases: [['Tenemos una reunión hoy', 'Temos uma reunião hoje'], ['Trabajo en una empresa', 'Trabalho numa empresa'], ['El plazo es mañana', 'O prazo é amanhã'], ['El cliente está contento', 'O cliente está contente'], ['Mi oficina es grande', 'Meu escritório é grande']],
     },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'Los colores van después: "uma camiseta azul". "Estou usando" es "estoy usando".', points: ['vermelho, azul, verde, amarelo', 'camiseta / calça / tênis', 'Estou usando... = Estoy usando...', 'grande demais / pequeno demais'] },
+      words: [['rojo', 'vermelho'], ['azul', 'azul'], ['verde', 'verde'], ['amarillo', 'amarelo'], ['negro', 'preto'], ['blanco', 'branco'], ['remera', 'camiseta'], ['zapatillas', 'tênis']],
+      phrases: [['Uso una remera azul', 'Estou usando uma camiseta azul'], ['Me gustan los zapatos negros', 'Eu gosto de sapatos pretos'], ['Es demasiado grande', 'É grande demais'], ['¿De qué color es?', 'De que cor é?'], ['Quiero algo verde', 'Quero algo verde']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Que horas são?" pregunta la hora. "São três horas" y "É uma e meia".', points: ['Que horas são?', 'São três horas', 'e meia = y media', 'menos um quarto'] },
+      words: [['uno', 'um'], ['dos', 'dois'], ['tres', 'três'], ['cinco', 'cinco'], ['diez', 'dez'], ['hora', 'hora'], ['minuto', 'minuto'], ['reloj', 'relógio']],
+      phrases: [['¿Qué hora es?', 'Que horas são?'], ['Son las tres', 'São três horas'], ['Es la una y media', 'É uma e meia'], ['Nos vemos a las diez', 'A gente se vê às dez'], ['Tengo cinco minutos', 'Tenho cinco minutos']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Está chovendo", "Está frio". Sentimientos: "Estou feliz", "Estou cansado".', points: ['Está chovendo / sol / frio', 'Estou feliz / cansado / triste', 'Eu me sinto = Me siento'] },
+      words: [['lluvia', 'chuva'], ['sol', 'sol'], ['frío', 'frio'], ['calor', 'calor'], ['feliz', 'feliz'], ['cansado', 'cansado'], ['triste', 'triste'], ['viento', 'vento']],
+      phrases: [['Está lloviendo', 'Está chovendo'], ['Hace frío hoy', 'Está frio hoje'], ['Estoy feliz', 'Estou feliz'], ['Estoy cansado', 'Estou cansado'], ['Me siento bien', 'Eu me sinto bem']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Eu acordo", "Estudo", "Trabalho". Con ele/ela: "trabalha".', points: ['Eu acordo = Me despierto', 'todo dia = todos los días', 'de manhã / à noite', 'Ela trabalha = Ella trabaja'] },
+      words: [['despertarse', 'acordar'], ['desayunar', 'tomar café da manhã'], ['estudiar', 'estudar'], ['dormir', 'dormir'], ['cocinar', 'cozinhar'], ['limpiar', 'limpar'], ['mañana', 'manhã'], ['noche', 'noite']],
+      phrases: [['Me despierto temprano', 'Eu acordo cedo'], ['Desayuno a las ocho', 'Tomo café da manhã às oito'], ['Estudio todas las noches', 'Estudo toda noite'], ['Ella trabaja en casa', 'Ela trabalha em casa'], ['Me duermo tarde', 'Eu durmo tarde']],
+    },
   ],
 }

@@ -30,7 +30,31 @@ export default {
       title: 'Viaje', level: 'Avanzado',
       guide: { intro: '"איפה...?" pregunta dónde. El tren es "רכבת" y la estación "תחנה".', points: ['איפה התחנה?', 'היום / מחר = hoy / mañana'] },
       words: [['estación', 'תחנה', 'tachana'], ['tren', 'רכבת', 'rakevet'], ['calle', 'רחוב', 'rechov'], ['ciudad', 'עיר', 'ir'], ['hoy', 'היום', 'hayom'], ['mañana', 'מחר', 'machar'], ['hotel', 'מלון', 'malon'], ['baño', 'שירותים', 'sherutim']],
-      phrases: [['¿Dónde está la estación?', 'איפה  התחנה', 'eifo hatachana'], ['Viajo mañana', 'אני  נוסע  מחר', 'ani nosea machar'], ['El tren llega hoy', 'הרכבת  מגיעה  היום', 'harakevet megia hayom'], ['¿Dónde está el baño?', 'איפה  השירותים', 'eifo hasherutim']],
+      phrases: [['¿Dónde está la estación?', 'איפה  התחנה', 'eifo hatachana'], ['Viajo mañana', 'אני  נוסע  מחר', 'ani nosea machar'], ['El tren llega hoy', 'הרכבת  מגיעה  היום', 'harakevet megia hayom'], ['¿Dónde está el baño?', 'איפה  השירותים', 'eifo hasherutim'], ['El hotel está cerca', 'המלון  קרוב', 'hamalon karov']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: חולצה כחולה. אני לובש = uso. גדול מדי = demasiado grande.', points: ['אדום כחול ירוק צהוב', 'חולצה / נעליים', 'אני לובש', 'גדול מדי'] },
+      words: [['rojo', 'אדום', 'adom'], ['azul', 'כחול', 'kakhol'], ['verde', 'ירוק', 'yarok'], ['amarillo', 'צהוב', 'tsahov'], ['negro', 'שחור', 'shakhor'], ['blanco', 'לבן', 'lavan'], ['remera', 'חולצה', 'hulza'], ['zapatos', 'נעליים', 'naalayim']],
+      phrases: [['Uso una remera azul', 'אני  לובש  חולצה  כחולה', 'ani lovesh hulza kehula'], ['Me gustan los zapatos negros', 'אני  אוהב  נעליים  שחורות', 'ani ohev naalayim shhorot'], ['Es demasiado grande', 'זה  גדול  מדי', 'ze gadol midai'], ['¿De qué color es?', 'איזה  צבע  זה', 'eize tseva ze'], ['Quiero algo verde', 'אני  רוצה  משהו  ירוק', 'ani rotse mashehu yarok']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = מה השעה? Las 3 = שלוש. Y media = וחצי.', points: ['מה השעה?', 'שעה', 'דקה', 'וחצי'] },
+      words: [['uno', 'אחת', 'ahat'], ['dos', 'שתיים', 'shtayim'], ['tres', 'שלוש', 'shalosh'], ['cinco', 'חמש', 'hamesh'], ['diez', 'עשר', 'eser'], ['hora', 'שעה', 'sha'], ['minuto', 'דקה', 'daka'], ['reloj', 'שעון', 'shaon']],
+      phrases: [['¿Qué hora es?', 'מה  השעה', 'ma hashaa'], ['Son las tres', 'השעה  שלוש', 'hashaa shalosh'], ['Es la una y media', 'השעה  אחת  וחצי', 'hashaa ahat vahatsi'], ['Nos vemos a las diez', 'ניפגש  בעשר', 'nipagesh beeser'], ['Tengo cinco minutos', 'יש  לי  חמש  דקות', 'yesh li hamesh dakot']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: יורד גשם, קר. Sentimientos: אני שמח, אני עייף.', points: ['גשם / שמש / קר', 'שמח / עייף / עצוב', 'אני מרגיש'] },
+      words: [['lluvia', 'גשם', 'geshem'], ['sol', 'שמש', 'shemesh'], ['frío', 'קר', 'kar'], ['calor', 'חם', 'kham'], ['feliz', 'שמח', 'sameakh'], ['cansado', 'עייף', 'ayef'], ['triste', 'עצוב', 'atsuv'], ['viento', 'רוח', 'ruakh']],
+      phrases: [['Está lloviendo', 'יורד  גשם', 'yored geshem'], ['Hace frío hoy', 'קר  היום', 'kar hayom'], ['Estoy feliz', 'אני  שמח', 'ani sameakh'], ['Estoy cansado', 'אני  עייף', 'ani ayef'], ['Me siento bien', 'אני  מרגיש  טוב', 'ani margish tov']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: אני קם, אני לומד. כל יום = todos los días.', points: ['אני קם', 'כל יום', 'בבוקר / בערב', 'היא עובדת'] },
+      words: [['despertarse', 'לקום', 'lakum'], ['desayunar', 'לאכול בוקר', 'leekhol boker'], ['estudiar', 'ללמוד', 'lilmod'], ['dormir', 'לישון', 'lishon'], ['cocinar', 'לבשל', 'levashel'], ['limpiar', 'לנקות', 'lenakot'], ['mañana', 'בוקר', 'boker'], ['noche', 'ערב', 'erev']],
+      phrases: [['Me despierto temprano', 'אני  קם  מוקדם', 'ani kam mukdam'], ['Desayuno a las ocho', 'אני  אוכל  בוקר  בשמונה', 'ani okhel boker bishmone'], ['Estudio todas las noches', 'אני  לומד  כל  ערב', 'ani lomed kol erev'], ['Ella trabaja en casa', 'היא  עובדת  בבית', 'hi ovedet babayit'], ['Me duermo tarde', 'אני  הולך  לישון  מאוחר', 'ani holekh lishon meuhar']],
     },
   ],
 }

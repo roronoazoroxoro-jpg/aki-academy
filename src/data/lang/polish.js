@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Varsovia', level: 'Avanzado',
       guide: { intro: '"Gdzie jest...?" pregunta dónde. El tren es "pociąg" y la estación "dworzec".', points: ['Gdzie jest dworzec?', 'Dzisiaj / jutro = hoy / mañana'] },
       words: [['estación', 'dworzec'], ['tren', 'pociąg'], ['calle', 'ulica'], ['ciudad', 'miasto'], ['hoy', 'dzisiaj'], ['mañana', 'jutro'], ['hotel', 'hotel'], ['baño', 'toaleta']],
-      phrases: [['¿Dónde está la estación?', 'Gdzie jest dworzec?'], ['Viajo mañana', 'Jutro podróżuję'], ['El tren llega hoy', 'Pociąg przyjeżdża dzisiaj'], ['¿Dónde está el baño?', 'Gdzie jest toaleta?']],
+      phrases: [['¿Dónde está la estación?', 'Gdzie jest dworzec?'], ['Viajo mañana', 'Jutro podróżuję'], ['El tren llega hoy', 'Pociąg przyjeżdża dzisiaj'], ['¿Dónde está el baño?', 'Gdzie jest toaleta?'], ['El hotel está cerca', 'Hotel jest blisko']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color concuerda: niebieska koszulka. "Nosię" es "uso / llevo puesto".', points: ['czerwony, niebieski, zielony, żółty', 'koszulka / spodnie / buty', 'Nosię... = Estoy usando...', 'za duży / za mały'] },
+      words: [['rojo', 'czerwony'], ['azul', 'niebieski'], ['verde', 'zielony'], ['amarillo', 'żółty'], ['negro', 'czarny'], ['blanco', 'biały'], ['remera', 'koszulka'], ['zapatillas', 'buty']],
+      phrases: [['Uso una remera azul', 'Nosię niebieską koszulkę'], ['Me gustan los zapatos negros', 'Lubię czarne buty'], ['Es demasiado grande', 'To jest za duże'], ['¿De qué color es?', 'Jakiego to jest koloru?'], ['Quiero algo verde', 'Chcę coś zielonego']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Która jest godzina?" pregunta la hora. "Jest trzecia" y "Jest wpół do drugiej".', points: ['Która jest godzina?', 'Jest trzecia', 'wpół do = y media', 'za kwadrans'] },
+      words: [['uno', 'jeden'], ['dos', 'dwa'], ['tres', 'trzy'], ['cinco', 'pięć'], ['diez', 'dziesięć'], ['hora', 'godzina'], ['minuto', 'minuta'], ['reloj', 'zegar']],
+      phrases: [['¿Qué hora es?', 'Która jest godzina?'], ['Son las tres', 'Jest trzecia'], ['Es la una y media', 'Jest wpół do drugiej'], ['Nos vemos a las diez', 'Widzimy się o dziesiątej'], ['Tengo cinco minutos', 'Mam pięć minut']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Pada deszcz", "Jest zimno". Sentimientos: "Jestem zmęczony", "Jestem szczęśliwy".', points: ['Pada deszcz / Jest słonecznie / Jest zimno', 'Jestem szczęśliwy / zmęczony / smutny', 'Czuję się = Me siento'] },
+      words: [['lluvia', 'deszcz'], ['sol', 'słońce'], ['frío', 'zimno'], ['calor', 'gorąco'], ['feliz', 'szczęśliwy'], ['cansado', 'zmęczony'], ['triste', 'smutny'], ['viento', 'wiatr']],
+      phrases: [['Está lloviendo', 'Pada deszcz'], ['Hace frío hoy', 'Dziś jest zimno'], ['Estoy feliz', 'Jestem szczęśliwy'], ['Estoy cansado', 'Jestem zmęczony'], ['Me siento bien', 'Czuję się dobrze']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Budzę się", "Uczę się". Con ona: "pracuje".', points: ['Budzę się = Me despierto', 'codziennie', 'rano / wieczorem', 'Ona pracuje'] },
+      words: [['despertarse', 'budzić się'], ['desayunar', 'jeść śniadanie'], ['estudiar', 'uczyć się'], ['dormir', 'spać'], ['cocinar', 'gotować'], ['limpiar', 'sprzątać'], ['mañana', 'rano'], ['noche', 'wieczór']],
+      phrases: [['Me despierto temprano', 'Budzę się wcześnie'], ['Desayuno a las ocho', 'Jem śniadanie o ósmej'], ['Estudio todas las noches', 'Uczę się co wieczór'], ['Ella trabaja en casa', 'Ona pracuje w domu'], ['Me duermo tarde', 'Kładę się spać późno']],
     },
   ],
 }

@@ -30,7 +30,31 @@ export default {
       title: 'Viaje y trabajo', level: 'Avanzado',
       guide: { intro: 'En alemán el verbo va en segundo lugar en la oración. "Wo ist...?" pregunta dónde está algo.', points: ['Wo ist der Bahnhof? = ¿Dónde está la estación?', 'Ich arbeite = Trabajo', 'Die Arbeit = El trabajo'] },
       words: [['estación', 'Bahnhof'], ['trabajo', 'Arbeit'], ['ciudad', 'Stadt'], ['calle', 'Straße'], ['tren', 'Zug'], ['hoy', 'heute'], ['mañana', 'morgen'], ['empresa', 'Firma']],
-      phrases: [['¿Dónde está la estación?', 'Wo ist der Bahnhof?'], ['Trabajo en Berlín', 'Ich arbeite in Berlin'], ['El tren llega hoy', 'Der Zug kommt heute'], ['Mañana viajo', 'Morgen reise ich']],
+      phrases: [['¿Dónde está la estación?', 'Wo ist der Bahnhof?'], ['Trabajo en Berlín', 'Ich arbeite in Berlin'], ['El tren llega hoy', 'Der Zug kommt heute'], ['Mañana viajo', 'Morgen reise ich'], ['La empresa está cerca', 'Die Firma ist nah']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después y se declina: ein blaues T-Shirt. "Ich trage" es "uso / llevo puesto".', points: ['rot, blau, grün, gelb', 'T-Shirt / Hose / Schuhe', 'Ich trage... = Estoy usando...', 'zu groß / zu klein'] },
+      words: [['rojo', 'rot'], ['azul', 'blau'], ['verde', 'grün'], ['amarillo', 'gelb'], ['negro', 'schwarz'], ['blanco', 'weiß'], ['remera', 'T-Shirt'], ['zapatillas', 'Turnschuhe']],
+      phrases: [['Uso una remera azul', 'Ich trage ein blaues T-Shirt'], ['Me gustan los zapatos negros', 'Ich mag schwarze Schuhe'], ['Es demasiado grande', 'Es ist zu groß'], ['¿De qué color es?', 'Welche Farbe hat es?'], ['Quiero algo verde', 'Ich will etwas Grünes']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Wie spät ist es?" pregunta la hora. "Es ist drei Uhr" y "Es ist halb zwei" (la una y media).', points: ['Wie spät ist es?', 'Es ist drei Uhr', 'halb = y media (ojo: una hora menos)', 'Viertel vor'] },
+      words: [['uno', 'eins'], ['dos', 'zwei'], ['tres', 'drei'], ['cinco', 'fünf'], ['diez', 'zehn'], ['hora', 'Stunde'], ['minuto', 'Minute'], ['reloj', 'Uhr']],
+      phrases: [['¿Qué hora es?', 'Wie spät ist es?'], ['Son las tres', 'Es ist drei Uhr'], ['Es la una y media', 'Es ist halb zwei'], ['Nos vemos a las diez', 'Wir sehen uns um zehn'], ['Tengo cinco minutos', 'Ich habe fünf Minuten']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Es regnet", "Es ist kalt". Sentimientos: "Ich bin müde", "Ich bin glücklich".', points: ['Es regnet / Es ist sonnig / Es ist kalt', 'Ich bin glücklich / müde / traurig', 'Ich fühle mich = Me siento'] },
+      words: [['lluvia', 'Regen'], ['sol', 'Sonne'], ['frío', 'kalt'], ['calor', 'heiß'], ['feliz', 'glücklich'], ['cansado', 'müde'], ['triste', 'traurig'], ['viento', 'Wind']],
+      phrases: [['Está lloviendo', 'Es regnet'], ['Hace frío hoy', 'Es ist heute kalt'], ['Estoy feliz', 'Ich bin glücklich'], ['Estoy cansado', 'Ich bin müde'], ['Me siento bien', 'Ich fühle mich gut']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Ich stehe auf", "Ich lerne". Con er/sie: "sie arbeitet".', points: ['Ich stehe auf = Me levanto', 'jeden Tag = todos los días', 'am Morgen / am Abend', 'Sie arbeitet'] },
+      words: [['despertarse', 'aufwachen'], ['desayunar', 'frühstücken'], ['estudiar', 'lernen'], ['dormir', 'schlafen'], ['cocinar', 'kochen'], ['limpiar', 'putzen'], ['mañana', 'Morgen'], ['noche', 'Abend']],
+      phrases: [['Me despierto temprano', 'Ich wache früh auf'], ['Desayuno a las ocho', 'Ich frühstücke um acht'], ['Estudio todas las noches', 'Ich lerne jeden Abend'], ['Ella trabaja en casa', 'Sie arbeitet zu Hause'], ['Me duermo tarde', 'Ich gehe spät schlafen']],
     },
   ],
 }

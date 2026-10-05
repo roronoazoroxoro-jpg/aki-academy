@@ -38,5 +38,29 @@ export default {
       words: [['sello', 'timbro'], ['certificado', 'certificato'], ['municipio', 'comune'], ['cita', 'appuntamento'], ['ciudadanía', 'cittadinanza'], ['bisabuelo', 'bisnonno'], ['apellido', 'cognome'], ['oficina', 'ufficio']],
       phrases: [['¿Podría ayudarme?', 'Potrebbe aiutarmi?'], ['Tengo una cita', 'Ho un appuntamento'], ['Mi bisabuelo nació en Italia', 'Il mio bisnonno è nato in Italia'], ['Necesito un certificado', 'Ho bisogno di un certificato'], ['¿Dónde está la oficina?', "Dov'è l'ufficio?"]],
     },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'Los colores concuerdan: una camicia rossa, un cappello nero. "Indosso" es "uso / llevo puesto".', points: ['rosso, blu, verde, giallo', 'maglietta / pantaloni / scarpe', 'Indosso... = Estoy usando...', 'troppo grande / troppo piccolo'] },
+      words: [['rojo', 'rosso'], ['azul', 'blu'], ['verde', 'verde'], ['amarillo', 'giallo'], ['negro', 'nero'], ['blanco', 'bianco'], ['remera', 'maglietta'], ['zapatillas', 'scarpe']],
+      phrases: [['Uso una remera azul', 'Indosso una maglietta blu'], ['Me gustan los zapatos negros', 'Mi piacciono le scarpe nere'], ['Es demasiado grande', 'È troppo grande'], ['¿De qué color es?', 'Di che colore è?'], ['Quiero algo verde', 'Voglio qualcosa di verde']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: 'Para la hora: "Che ore sono?" y "Sono le tre". La una es "È l\'una".', points: ['Che ore sono?', 'Sono le tre = Son las tres', 'e mezza = y media', 'meno un quarto = menos cuarto'] },
+      words: [['uno', 'uno'], ['dos', 'due'], ['tres', 'tre'], ['cinco', 'cinque'], ['diez', 'dieci'], ['hora', 'ora'], ['minuto', 'minuto'], ['reloj', 'orologio']],
+      phrases: [['¿Qué hora es?', 'Che ore sono?'], ['Son las tres', 'Sono le tre'], ['Es la una y media', "È l'una e mezza"], ['Nos vemos a las diez', 'Ci vediamo alle dieci'], ['Tengo cinco minutos', 'Ho cinque minuti']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'El clima: "Fa freddo", "Piove". Los sentimientos: "Sono stanco", "Sono felice".', points: ['Piove / C\'è il sole / Fa freddo', 'Sono felice / stanco / triste', 'Mi sento = Me siento'] },
+      words: [['lluvia', 'pioggia'], ['sol', 'sole'], ['frío', 'freddo'], ['calor', 'caldo'], ['feliz', 'felice'], ['cansado', 'stanco'], ['triste', 'triste'], ['viento', 'vento']],
+      phrases: [['Está lloviendo', 'Piove'], ['Hace frío hoy', 'Oggi fa freddo'], ['Estoy feliz', 'Sono felice'], ['Estoy cansado', 'Sono stanco'], ['Me siento bien', 'Mi sento bene']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Para hábitos: "Mi alzo", "Studio", "Lavoro". Con lui/lei el verbo cambia: "lavora".', points: ['Mi alzo = Me levanto', 'ogni giorno = todos los días', 'la mattina / la sera', 'Lavora = Trabaja'] },
+      words: [['despertarse', 'svegliarsi'], ['desayunar', 'fare colazione'], ['estudiar', 'studiare'], ['dormir', 'dormire'], ['cocinar', 'cucinare'], ['limpiar', 'pulire'], ['mañana', 'mattina'], ['noche', 'sera']],
+      phrases: [['Me despierto temprano', 'Mi sveglio presto'], ['Desayuno a las ocho', 'Faccio colazione alle otto'], ['Estudio todas las noches', 'Studio ogni sera'], ['Ella trabaja en casa', 'Lei lavora a casa'], ['Me duermo tarde', 'Vado a dormire tardi']],
+    },
   ],
 }

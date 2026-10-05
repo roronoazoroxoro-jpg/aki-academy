@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Seúl', level: 'Avanzado',
       guide: { intro: '어디예요 (eodiyeyo) pregunta dónde está algo. 모르겠어요 (몰라요) significa "no sé / no entiendo". El subte de Seúl es enorme y está muy bien señalizado.', points: ['어디예요 = ¿dónde está?', '몰라요 = no sé', '지하철 = subte', '가요 = voy'] },
       words: [['subte', '지하철', 'jihacheol'], ['estación', '역', 'yeok'], ['hotel', '호텔', 'hotel'], ['baño', '화장실', 'hwajangsil'], ['dónde', '어디', 'eodi'], ['hoy', '오늘', 'oneul'], ['mañana', '내일', 'naeil'], ['Corea', '한국', 'hanguk']],
-      phrases: [['¿Dónde está el baño?', '화장실이 어디예요', 'hwajangsiri eodiyeyo'], ['No entiendo', '모르겠어요', 'moreugesseoyo'], ['Voy a Corea', '한국에 가요', 'hanguge gayo'], ['¿Hablás inglés?', '영어 하세요', 'yeongeo haseyo']],
+      phrases: [['¿Dónde está el baño?', '화장실이 어디예요', 'hwajangsiri eodiyeyo'], ['No entiendo', '모르겠어요', 'moreugesseoyo'], ['Voy a Corea', '한국에 가요', 'hanguge gayo'], ['¿Hablás inglés?', '영어 하세요', 'yeongeo haseyo'], ['El hotel está cerca', '호텔이 가까워요', 'hoteri gakkawoyo']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va antes: 파란 티셔츠. 입고 있어요 = estoy usando. 너무 커요 = demasiado grande.', points: ['빨강 파랑 초록 노랑', '티셔츠 / 신발', '입고 있어요', '너무 커요 / 작아요'] },
+      words: [['rojo', '빨강', 'ppalgang'], ['azul', '파랑', 'parang'], ['verde', '초록', 'chorok'], ['amarillo', '노랑', 'norang'], ['negro', '검정', 'geomjeong'], ['blanco', '하양', 'hayang'], ['remera', '티셔츠', 'tisyeocheu'], ['zapatos', '신발', 'sinbal']],
+      phrases: [['Uso una remera azul', '파란 티셔츠 입고 있어요', 'paran tisyeocheu ipgo isseoyo'], ['Me gustan los zapatos negros', '검은 신발이 좋아요', 'geomeun sinbari joayo'], ['Es demasiado grande', '너무 커요', 'neomu keoyo'], ['¿De qué color es?', '무슨 색이에요', 'museun saegieyo'], ['Quiero algo verde', '초록색이 좋아요', 'choroksaegi joayo']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = 몇 시예요? Las 3 = 세 시. Y media = 반. Las horas usan números nativos.', points: ['몇 시예요?', '시 = hora', '분 = minutos', '반 = y media'] },
+      words: [['una', '한 시', 'han si'], ['dos', '두 시', 'du si'], ['tres', '세 시', 'se si'], ['cinco', '다섯 시', 'daseot si'], ['diez', '열 시', 'yeol si'], ['hora', '시', 'si'], ['minuto', '분', 'bun'], ['reloj', '시계', 'sigye']],
+      phrases: [['¿Qué hora es?', '지금 몇 시예요', 'jigeum myeot siyeyo'], ['Son las tres', '세 시예요', 'se siyeyo'], ['Es la una y media', '한 시 반이에요', 'han si banieyo'], ['Nos vemos a las diez', '열 시에 봐요', 'yeol sie bwayo'], ['Tengo cinco minutos', '오 분 있어요', 'o bun isseoyo']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: 비가 와요, 추워요. Sentimientos: 행복해요, 피곤해요.', points: ['비 / 맑아요 / 추워요', '행복해요 / 피곤해요 / 슬퍼요', '기분이 좋아요'] },
+      words: [['lluvia', '비', 'bi'], ['sol', '해', 'hae'], ['frío', '추워요', 'chuwoyo'], ['calor', '더워요', 'deowoyo'], ['feliz', '행복해요', 'haengbokhaeyo'], ['cansado', '피곤해요', 'pigonhaeyo'], ['triste', '슬퍼요', 'seulpeoyo'], ['viento', '바람', 'baram']],
+      phrases: [['Está lloviendo', '비가 와요', 'biga wayo'], ['Hace frío hoy', '오늘 추워요', 'oneul chuwoyo'], ['Estoy feliz', '행복해요', 'haengbokhaeyo'], ['Estoy cansado', '피곤해요', 'pigonhaeyo'], ['Me siento bien', '기분이 좋아요', 'gibuni joayo']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: 일어나요, 공부해요. 매일 = todos los días. 아침 / 밤.', points: ['일어나요 = me levanto', '매일 = todos los días', '아침 / 밤', '일해요 = trabaja'] },
+      words: [['despertarse', '일어나요', 'ireonayo'], ['desayunar', '아침 먹어요', 'achim meogeoyo'], ['estudiar', '공부해요', 'gongbuhaeyo'], ['dormir', '자요', 'jayo'], ['cocinar', '요리해요', 'yorihaeyo'], ['limpiar', '청소해요', 'cheongsohaeyo'], ['mañana', '아침', 'achim'], ['noche', '밤', 'bam']],
+      phrases: [['Me despierto temprano', '일찍 일어나요', 'iljjik ireonayo'], ['Desayuno a las ocho', '여덟 시에 아침 먹어요', 'yeodeol sie achim meogeoyo'], ['Estudio todas las noches', '매일 밤에 공부해요', 'maeil bame gongbuhaeyo'], ['Ella trabaja en casa', '그녀는 집에서 일해요', 'geunyeoneun jibeseo ilhaeyo'], ['Me duermo tarde', '늦게 자요', 'neutge jayo']],
     },
   ],
 }

@@ -35,7 +35,7 @@ export function Courses() {
   }
   return (
     <>
-      <Head pose="mascot" title="Cursos" sub={`${COURSES.length} cursos gratis, de básico a avanzado. Tu progreso se guarda en cada uno.`} />
+      <Head pose="mascot" title="Cursos" sub={`${COURSES.length} cursos gratis, de 8 a 12 unidades cada uno. Tu progreso se guarda en cada uno.`} />
       {GROUPS.map((g) => (
         <section key={g.id}>
           <div className="group-title">{g.icon} {g.title}</div>

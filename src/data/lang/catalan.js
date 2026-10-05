@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Barcelona', level: 'Avanzado',
       guide: { intro: '"On és...?" pregunta dónde. El tren es "tren" y la estación "estació".', points: ['On és l\'estació?', 'Avui / demà = hoy / mañana'] },
       words: [['estación', 'estació'], ['tren', 'tren'], ['calle', 'carrer'], ['ciudad', 'ciutat'], ['hoy', 'avui'], ['mañana', 'demà'], ['hotel', 'hotel'], ['baño', 'bany']],
-      phrases: [['¿Dónde está la estación?', 'On és l\'estació?'], ['Viajo mañana', 'Viatjo demà'], ['El tren llega hoy', 'El tren arriba avui'], ['¿Dónde está el baño?', 'On és el bany?']],
+      phrases: [['¿Dónde está la estación?', 'On és l\'estació?'], ['Viajo mañana', 'Viatjo demà'], ['El tren llega hoy', 'El tren arriba avui'], ['¿Dónde está el baño?', 'On és el bany?'], ['El hotel está cerca', 'L\'hotel és a prop']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: una samarreta blava. "Porto" es "uso / llevo puesto".', points: ['vermell, blau, verd, groc', 'samarreta / pantalons / sabates', 'Porto... = Estoy usando...', 'massa gran / massa petit'] },
+      words: [['rojo', 'vermell'], ['azul', 'blau'], ['verde', 'verd'], ['amarillo', 'groc'], ['negro', 'negre'], ['blanco', 'blanc'], ['remera', 'samarreta'], ['zapatillas', 'sabatilles']],
+      phrases: [['Uso una remera azul', 'Porto una samarreta blava'], ['Me gustan los zapatos negros', 'M\'agraden les sabates negres'], ['Es demasiado grande', 'És massa gran'], ['¿De qué color es?', 'De quin color és?'], ['Quiero algo verde', 'Vull alguna cosa verda']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Quina hora és?" pregunta la hora. "Són les tres" y "És la una i mitja".', points: ['Quina hora és?', 'Són les tres', 'i mitja = y media', 'menys un quart'] },
+      words: [['uno', 'un'], ['dos', 'dos'], ['tres', 'tres'], ['cinco', 'cinc'], ['diez', 'deu'], ['hora', 'hora'], ['minuto', 'minut'], ['reloj', 'rellotge']],
+      phrases: [['¿Qué hora es?', 'Quina hora és?'], ['Son las tres', 'Són les tres'], ['Es la una y media', 'És la una i mitja'], ['Nos vemos a las diez', 'Ens veiem a les deu'], ['Tengo cinco minutos', 'Tinc cinc minuts']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Plou", "Fa fred". Sentimientos: "Estic cansat", "Estic feliç".', points: ['Plou / Fa sol / Fa fred', 'Estic feliç / cansat / trist', 'Em sento = Me siento'] },
+      words: [['lluvia', 'pluja'], ['sol', 'sol'], ['frío', 'fred'], ['calor', 'calor'], ['feliz', 'feliç'], ['cansado', 'cansat'], ['triste', 'trist'], ['viento', 'vent']],
+      phrases: [['Está lloviendo', 'Plou'], ['Hace frío hoy', 'Avui fa fred'], ['Estoy feliz', 'Estic feliç'], ['Estoy cansado', 'Estic cansat'], ['Me siento bien', 'Em sento bé']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Em llevo", "Estudio". Con ella: "treballa".', points: ['Em llevo = Me levanto', 'cada dia', 'al matí / al vespre', 'Ella treballa'] },
+      words: [['despertarse', 'despertar-se'], ['desayunar', 'esmorzar'], ['estudiar', 'estudiar'], ['dormir', 'dormir'], ['cocinar', 'cuinar'], ['limpiar', 'netejar'], ['mañana', 'matí'], ['noche', 'nit']],
+      phrases: [['Me despierto temprano', 'Em desperto d\'hora'], ['Desayuno a las ocho', 'Esmorzo a les vuit'], ['Estudio todas las noches', 'Estudio cada nit'], ['Ella trabaja en casa', 'Ella treballa a casa'], ['Me duermo tarde', 'Me\'n vaig a dormir tard']],
     },
   ],
 }

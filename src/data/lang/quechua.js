@@ -32,5 +32,29 @@ export default {
       words: [['cancha', 'Kancha'], ['choclo', 'Chuqllu'], ['huérfano', 'Wakcha'], ['sobra', 'Puchu'], ['vincha', 'Wincha'], ['trabajo', 'Llamkay'], ['comida', 'Mikuy'], ['camino', 'Ñan']],
       phrases: [['Quiero comer', 'Mikuyta munani'], ['Vamos a trabajar', 'Llamkasunchik'], ['El camino es largo', 'Ñan karumi'], ['Buen trabajo', 'Allin llamkay'], ['La comida está rica', 'Mikuy misk\'imi']],
     },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'Muchos colores andinos son palabras cortas: puka (rojo), q\'umir (verde), yuraq (blanco). El poncho y la vincha ya los usamos en castellano.', points: ['puka = rojo', 'q\'umir = verde', 'yuraq = blanco', 'unka / punchu = prenda / poncho'] },
+      words: [['rojo', 'Puka'], ['azul', 'Anqas'], ['verde', 'Q\'umir'], ['amarillo', 'Q\'illu'], ['negro', 'Yana'], ['blanco', 'Yuraq'], ['poncho', 'Punchu'], ['vincha', 'Wincha']],
+      phrases: [['El poncho es rojo', 'Punchu pukam'], ['Quiero algo verde', 'Q\'umirta munani'], ['La vincha es negra', 'Wincha yanam'], ['Es blanco', 'Yuraqmi'], ['El sol es amarillo', 'Inti q\'illum']],
+    },
+    {
+      title: 'Números y tiempo', level: 'Básico',
+      guide: { intro: 'Huk, iskay, kimsa, tawa, pichqa. El tiempo se marca con -ña (ya) y -raq (todavía). "Ima horataq?" pregunta la hora.', points: ['huk, iskay, kimsa = 1, 2, 3', 'pichqa = cinco, chunka = diez', 'punchaw = día', 'tuta = noche'] },
+      words: [['uno', 'Huk'], ['dos', 'Iskay'], ['tres', 'Kimsa'], ['cinco', 'Pichqa'], ['diez', 'Chunka'], ['día', 'Punchaw'], ['noche', 'Tuta'], ['ahora', 'Kunan']],
+      phrases: [['Son las tres', 'Kimsa horan'], ['Es de noche', 'Tutam'], ['Hoy es un buen día', 'Kunan allin punchawmi'], ['Tengo cinco', 'Pichqayuqmi kani'], ['Ahora trabajo', 'Kunan llamkani']],
+    },
+    {
+      title: 'Clima andino', level: 'Intermedio',
+      guide: { intro: 'En la Puna el clima cambia en un rato: para (lluvia), chiri (frío), ruphay (calor), wayra (viento). "Para kachkan" = está lloviendo.', points: ['Para = lluvia', 'Chiri = frío', 'Ruphay = calor', 'Wayra = viento'] },
+      words: [['lluvia', 'Para'], ['sol', 'Inti'], ['frío', 'Chiri'], ['calor', 'Ruphay'], ['viento', 'Wayra'], ['nieve', 'Rit\'i'], ['nube', 'Phuyu'], ['hielo', 'Chullunku']],
+      phrases: [['Está lloviendo', 'Para kachkan'], ['Hace frío', 'Chiri kachkan'], ['Hay sol', 'Inti kachkan'], ['Hay mucho viento', 'Acha wayra kachkan'], ['Cae nieve', 'Rit\'i uraykamun']],
+    },
+    {
+      title: 'La rutina andina', level: 'Intermedio',
+      guide: { intro: 'Rikchariy (despertar), mikuy (comer), llamkay (trabajar), puñuy (dormir). El quechua pega el tiempo al verbo.', points: ['Rikcharini = Me despierto', 'Mikuni = Como', 'Llamkani = Trabajo', 'Puñuni = Duermo'] },
+      words: [['despertarse', 'Rikchariy'], ['comer', 'Mikuy'], ['estudiar', 'Yachay'], ['dormir', 'Puñuy'], ['cocinar', 'Yanuy'], ['caminar', 'Puriy'], ['mañana', 'Paqarin'], ['noche', 'Tuta']],
+      phrases: [['Me despierto temprano', 'Paqarin rikcharini'], ['Como en casa', 'Wasipi mikuni'], ['Estudio de noche', 'Tutapi yachani'], ['Trabajo todos los días', 'Sapa punchaw llamkani'], ['Me duermo tarde', 'Qhipa puñuni']],
+    },
   ],
 }

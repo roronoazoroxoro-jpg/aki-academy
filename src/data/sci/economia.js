@@ -56,5 +56,49 @@ export default {
       c('Si no entendés un producto financiero, lo más sano es...', ['No meter la plata ahí', 'Poner todos tus ahorros', 'Pedir un crédito para entrar', 'Confiar en un desconocido de internet']),
       m('Uní cada instrumento', [['Plazo fijo', 'Préstamo al banco a tasa fija'], ['Acción', 'Parte de una empresa'], ['Bono', 'Deuda que cobra interés'], ['Efectivo', 'Plata lista para gastar']]),
     ]),
+    unit('Dólar, tipo de cambio y país', 'Intermedio', {
+      intro: 'El tipo de cambio es el precio de una moneda en otra. Si el peso se deprecia, importar se encarece y exportar puede ayudar. En Argentina conviven varias cotizaciones: eso también es economía política.',
+      points: ['Tipo de cambio: pesos por dólar', 'Devaluar: el peso compra menos dólares', 'Reservas: dólares del Banco Central', 'Inflación y dólar se empujan'],
+      code: 'más $ por 1 US$  →  peso más débil',
+    }, [
+      c('Si pasan de $1000 a $1200 por dólar, el peso...', ['Se depreció', 'Se apreció', 'Desapareció', 'Se volvió oro']),
+      c('¿Qué son las reservas?', ['Dólares (y otros activos) que tiene el Banco Central', 'Los sueldos del mes', 'El IVA', 'Las acciones de YPF nomas']),
+      t('¿Cómo se llama el precio de una moneda en términos de otra?', ['tipo de cambio', 'cotización', 'tipo de cambio.']),
+      c('Si importás tecnología y el dólar sube, en pesos te sale...', ['Más caro', 'Más barato', 'Igual siempre', 'Gratis']),
+      c('¿Por qué mucha gente ahorra en dólares acá?', ['Porque el peso suele perder poder de compra', 'Porque el dólar no fluctúa nunca', 'Porque es obligatorio', 'Porque no existe el plazo fijo']),
+    ]),
+    unit('Bancos y crédito', 'Básico', {
+      intro: 'Un banco junta depósitos y presta. El interés del préstamo suele ser mayor que el del plazo fijo: esa diferencia es parte de su negocio. Endeudate solo si podés pagar la cuota.',
+      points: ['TNA / TEA: tasas nominal y efectiva', 'CFT: costo financiero total (mirá este)', 'Tarjeta: crédito caro si no pagás el total', 'Garantía: algo que el banco puede ejecutar'],
+      code: 'CFT > TNA   ←  mirá el CFT',
+    }, [
+      c('¿Qué número conviene mirar al comparar un préstamo?', ['El CFT', 'El logo del banco', 'La TNA nomas', 'El color de la tarjeta']),
+      c('Si pagás el mínimo de la tarjeta...', ['Te cobran intereses altos sobre el resto', 'Te regalan el saldo', 'Se cancela la deuda', 'Baja el CFT a 0']),
+      t('¿Qué significa que un crédito sea “en cuotas”?', ['devolverlo de a partes + interés', 'pagar todo ya', 'no devolverlo']),
+      c('¿Por qué el banco te pide recibo de sueldo?', ['Para estimar si podés pagar', 'Para publicar tu sueldo', 'Es un impuesto', 'Para el IVA']),
+      m('Uní', [['Depósito', 'Tu plata en el banco'], ['Préstamo', 'Plata que devolvés'], ['CFT', 'Costo real'], ['Mínimo de tarjeta', 'Trampa cara']]),
+    ]),
+    unit('Trabajo y pymes', 'Intermedio', {
+      intro: 'Una pyme produce, vende y paga sueldos. El margen es precio menos costos. Si el costo sube más que el precio, el negocio se ahoga aunque “venda mucho”.',
+      points: ['Ingreso − costo = resultado', 'Costo fijo vs. variable', 'Punto de equilibrio: ni gana ni pierde', 'Monotributo / responsable inscripto'],
+      code: 'equilibrio:  ingresos = costos',
+    }, [
+      c('¿Qué es el punto de equilibrio?', ['Donde no se gana ni se pierde', 'El sueldo máximo', 'El IVA al 21%', 'El primer cliente']),
+      c('El alquiler del local es un costo...', ['Fijo (al menos en el corto plazo)', 'Variable por unidad siempre', 'Un ingreso', 'Una reserva']),
+      t('¿Cómo se llama precio menos costo?', ['margen', 'ganancia', 'resultado']),
+      c('Si vendés el doble pero el costo variable también se duplica y el fijo igual...', ['Puede mejorar el resultado (los fijos se diluyen)', 'Siempre perdés', 'Da igual', 'Cierra el local']),
+      c('¿Una factura sirve para...?', ['Registrar la venta y los impuestos', 'Pedir un café', 'Cifrar la red', 'Firmar un gol']),
+    ]),
+    unit('Macro en criollo', 'Avanzado', {
+      intro: 'PBI es lo que produce el país. El desempleo mide quién busca y no encuentra. Un déficit fiscal es gastar más de lo que entra. No hay almuerzo gratis: alguien lo paga (impuestos, deuda o inflación).',
+      points: ['PBI: producción', 'Desempleo: busca y no hay', 'Déficit: gastos > ingresos públicos', 'Deuda: consumo presente, pago futuro'],
+      code: 'gastos > ingresos  →  déficit  →  deuda o emisión',
+    }, [
+      c('¿Qué mide el PBI?', ['Lo que se produce en el país en un período', 'La cantidad de dólares bajo el colchón', 'Los goles de la selección', 'El precio del asado nomas']),
+      c('Una persona que no busca trabajo... ¿está desempleada en la estadística clásica?', ['No: hay que buscar para contar como desempleado', 'Sí, siempre', 'Sí, si es joven', 'Sí, si cobró alguna vez']),
+      t('¿Cómo se llama gastar más de lo que entra el Estado?', ['déficit', 'deficit', 'déficit fiscal']),
+      c('Emitir mucho para pagar gastos, si no hay más bienes, suele...', ['Empujar inflación', 'Bajar todos los precios', 'Crear oro', 'Eliminar el dólar']),
+      c('La deuda pública es...', ['Un compromiso de pagar después', 'Un regalo', 'El PBI', 'Una acción de una pyme']),
+    ]),
   ],
 }

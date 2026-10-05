@@ -59,5 +59,47 @@ export default {
       t('¿Qué comando compila un proyecto de TypeScript? (dos palabras)', ['npx tsc', 'tsc']),
       c('¿Por qué conviene TypeScript en un equipo grande?', ['Documenta el código y evita errores antes de ejecutar', 'Hace la app más rápida al correr', 'Reemplaza las pruebas', 'Ocupa menos espacio']),
     ]),
+    unit('Uniones y narrowing', 'Intermedio', {
+      intro: 'Un tipo unión (string | number) acepta varias formas. El narrowing es estrechar: TypeScript entiende el tipo adentro de un if.',
+      points: ['let x: string | null', 'if (x) { ... x es string }', 'typeof x === "number"', 'in y instanceof también estrechan'],
+      code: 'function largo(x: string | string[]) {\n  if (typeof x === "string") return x.length;\n  return x.join("").length;\n}',
+    }, [
+      c('¿Qué acepta string | number?', ['Un texto o un número', 'Solo texto', 'Solo número', 'Cualquier objeto']),
+      t('Completá el chequeo de tipo:', ['typeof'], 'if (___ x === "string")'),
+      c('Después de if (x !== null), ¿x puede ser null adentro del if?', ['No: TypeScript ya lo descartó', 'Sí, siempre', 'Solo en any', 'Solo en arrays']),
+      c('¿Qué es narrowing?', ['Estrechar un tipo unión a uno más preciso', 'Borrar tipos', 'Convertir a any', 'Minificar']),
+      m('Uní cada guardia', [['typeof', 'Primitivos'], ['instanceof', 'Clases'], ['in', 'Propiedad'], ['!= null', 'Sacar null']]),
+    ]),
+    unit('Tipos de objetos avanzados', 'Avanzado', {
+      intro: 'Partial vuelve opcionales las props. Pick elige algunas. Readonly las congela. Estos utilities evitan copiar interfaces a mano.',
+      points: ['Partial<User>', 'Pick<User, "id" | "nombre">', 'Omit<User, "password">', 'Readonly<User>'],
+      code: 'type User = { id: number; nombre: string; password: string };\ntype Publico = Omit<User, "password">;',
+    }, [
+      c('¿Qué hace Partial<User>?', ['Todas las props pasan a opcionales', 'Borra el tipo', 'Lo hace any', 'Crea una clase']),
+      t('Completá para sacar una propiedad:', ['Omit'], 'type P = ___<User, "password">'),
+      c('¿Pick para qué sirve?', ['Quedarte solo con algunas props', 'Duplicar el archivo', 'Importar tipos', 'Desactivar strict']),
+      c('¿Readonly evita...?', ['Reasignar las props (en tipos)', 'Leer el objeto', 'Compilar', 'Usar JSON']),
+      c('¿Estos utilities existen en runtime?', ['No: solo en tipos, se borran al compilar', 'Sí, son funciones', 'Solo en Node', 'Solo con Babel']),
+    ]),
+    unit('Tipar el DOM y fetch', 'Avanzado', {
+      intro: 'document.querySelector puede devolver null. fetch devuelve unknown hasta que lo valides. Tipá las respuestas de la API para no inventar campos.',
+      points: ['querySelector<HTMLInputElement>("#mail")', 'Respuesta: Promise<Datos>', 'Validá el JSON', 'null es un caso, no lo ignores'],
+      code: 'const input = document.querySelector<HTMLInputElement>("#mail");\nif (!input) throw new Error("falta #mail");\nconst datos: User = await res.json();',
+    }, [
+      c('¿Por qué querySelector puede ser null?', ['Porque el elemento puede no existir', 'Porque TypeScript está roto', 'Porque el DOM es any', 'Porque HTML no tiene ids']),
+      t('Completá el genérico del input:', ['HTMLInputElement'], 'querySelector<___>("#mail")'),
+      c('¿Qué hacés si res.json() puede venir mal?', ['Validás la forma antes de usarlo', 'Le pones as any y listo', 'Lo ignorás', 'Lo convertís a CSS']),
+      c('¿Tipar la respuesta de una API sirve para...?', ['Que el editor te complete los campos reales', 'Que baje más rápido', 'Que no haga falta fetch', 'Que HTTPS sea opcional']),
+    ]),
+    unit('Migrar un proyecto JS', 'Avanzado', {
+      intro: 'No reescribís todo de un saque. Empezá con allowJs, renombrá archivo por archivo a .ts/.tsx y subí strict de a poco.',
+      points: ['allowJs: true para convivir', 'Renombrá .js → .ts de a uno', 'any temporal, después unknown', 'Los tests también se tipan'],
+      code: '// tsconfig inicial\n{ "compilerOptions": { "allowJs": true, "checkJs": false, "strict": false } }',
+    }, [
+      c('¿Cómo migrás un proyecto grande?', ['De a un archivo, sin frenar el equipo', 'Reescribiendo todo el fin de semana', 'Borrando JavaScript', 'Pasando a Python']),
+      t('¿Qué opción deja convivir JS y TS?', ['allowJs', 'allowJs: true']),
+      c('¿Por qué no prender strict el primer día en un legacy enorme?', ['Hay miles de errores de golpe y nadie avanza', 'TypeScript no tiene strict', 'Rompe el navegador', 'Borra node_modules']),
+      c('¿any es el final del camino?', ['No: es un puente, después lo sacás', 'Sí, es lo mejor', 'Es obligatorio', 'Reemplaza a unknown siempre']),
+    ]),
   ],
 }

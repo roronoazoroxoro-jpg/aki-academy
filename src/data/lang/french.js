@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a París', level: 'Avanzado',
       guide: { intro: '"Où est...?" pregunta dónde está algo. El pasado más usado es el "passé composé": "J\'ai visité" (visité).', points: ['Où est la gare? = ¿Dónde está la estación?', "J'ai visité Paris = Visité París", 'Le métro = el subte'] },
       words: [['estación', 'gare'], ['subte', 'métro'], ['calle', 'rue'], ['museo', 'musée'], ['boleto', 'billet'], ['hoy', "aujourd'hui"], ['mañana', 'demain'], ['ciudad', 'ville']],
-      phrases: [['¿Dónde está la estación?', 'Où est la gare?'], ['Visité París', "J'ai visité Paris"], ['Necesito un boleto', "J'ai besoin d'un billet"], ['El museo está cerca', 'Le musée est près']],
+      phrases: [['¿Dónde está la estación?', 'Où est la gare?'], ['Visité París', "J'ai visité Paris"], ['Necesito un boleto', "J'ai besoin d'un billet"], ['El museo está cerca', 'Le musée est près'], ['Hoy camino por la ciudad', "Aujourd'hui je marche dans la ville"]],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después y concuerda: une chemise bleue. "Je porte" es "uso / llevo puesto".', points: ['rouge, bleu, vert, jaune', 't-shirt / pantalon / chaussures', 'Je porte... = Estoy usando...', 'trop grand / trop petit'] },
+      words: [['rojo', 'rouge'], ['azul', 'bleu'], ['verde', 'vert'], ['amarillo', 'jaune'], ['negro', 'noir'], ['blanco', 'blanc'], ['remera', 't-shirt'], ['zapatillas', 'baskets']],
+      phrases: [['Uso una remera azul', 'Je porte un t-shirt bleu'], ['Me gustan los zapatos negros', "J'aime les chaussures noires"], ['Es demasiado grande', "C'est trop grand"], ['¿De qué color es?', 'De quelle couleur est-ce?'], ['Quiero algo verde', 'Je veux quelque chose de vert']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Quelle heure est-il ?" pregunta la hora. "Il est trois heures" y "Il est une heure et demie".', points: ['Quelle heure est-il ?', 'Il est trois heures', 'et demie = y media', 'moins le quart'] },
+      words: [['uno', 'un'], ['dos', 'deux'], ['tres', 'trois'], ['cinco', 'cinq'], ['diez', 'dix'], ['hora', 'heure'], ['minuto', 'minute'], ['reloj', 'horloge']],
+      phrases: [['¿Qué hora es?', 'Quelle heure est-il ?'], ['Son las tres', 'Il est trois heures'], ['Es la una y media', 'Il est une heure et demie'], ['Nos vemos a las diez', 'On se voit à dix heures'], ['Tengo cinco minutos', "J'ai cinq minutes"]],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Il pleut", "Il fait froid". Sentimientos: "Je suis fatigué", "Je suis heureux".', points: ['Il pleut / Il fait soleil / Il fait froid', 'Je suis heureux / fatigué / triste', 'Je me sens = Me siento'] },
+      words: [['lluvia', 'pluie'], ['sol', 'soleil'], ['frío', 'froid'], ['calor', 'chaud'], ['feliz', 'heureux'], ['cansado', 'fatigué'], ['triste', 'triste'], ['viento', 'vent']],
+      phrases: [['Está lloviendo', 'Il pleut'], ['Hace frío hoy', 'Il fait froid aujourd\'hui'], ['Estoy feliz', 'Je suis heureux'], ['Estoy cansado', 'Je suis fatigué'], ['Me siento bien', 'Je me sens bien']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos en présent: "Je me lève", "J\'étudie". Con il/elle: "elle travaille".', points: ['Je me lève = Me levanto', 'tous les jours', 'le matin / le soir', 'Elle travaille'] },
+      words: [['despertarse', 'se réveiller'], ['desayunar', 'prendre le petit-déjeuner'], ['estudiar', 'étudier'], ['dormir', 'dormir'], ['cocinar', 'cuisiner'], ['limpiar', 'nettoyer'], ['mañana', 'matin'], ['noche', 'soir']],
+      phrases: [['Me despierto temprano', 'Je me réveille tôt'], ['Desayuno a las ocho', 'Je prends le petit-déjeuner à huit heures'], ['Estudio todas las noches', "J'étudie tous les soirs"], ['Ella trabaja en casa', 'Elle travaille à la maison'], ['Me duermo tarde', 'Je me couche tard']],
     },
   ],
 }

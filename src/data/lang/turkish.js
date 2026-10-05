@@ -30,7 +30,31 @@ export default {
       title: 'Estambul', level: 'Avanzado',
       guide: { intro: '"Nerede?" pregunta dónde. El tren es "tren" y la estación "istasyon".', points: ['İstasyon nerede?', 'Bugün / yarın = hoy / mañana'] },
       words: [['estación', 'istasyon'], ['tren', 'tren'], ['calle', 'sokak'], ['ciudad', 'şehir'], ['hoy', 'bugün'], ['mañana', 'yarın'], ['hotel', 'otel'], ['baño', 'tuvalet']],
-      phrases: [['¿Dónde está la estación?', 'İstasyon nerede?'], ['Voy mañana', 'Yarın gidiyorum'], ['El tren llega hoy', 'Tren bugün geliyor'], ['¿Dónde está el baño?', 'Tuvalet nerede?']],
+      phrases: [['¿Dónde está la estación?', 'İstasyon nerede?'], ['Voy mañana', 'Yarın gidiyorum'], ['El tren llega hoy', 'Tren bugün geliyor'], ['¿Dónde está el baño?', 'Tuvalet nerede?'], ['El hotel está cerca', 'Otel yakın']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va antes: mavi tişört. "Giyiyorum" es "estoy usando".', points: ['kırmızı, mavi, yeşil, sarı', 'tişört / pantolon / ayakkabı', 'Giyiyorum... = Estoy usando...', 'çok büyük / çok küçük'] },
+      words: [['rojo', 'kırmızı'], ['azul', 'mavi'], ['verde', 'yeşil'], ['amarillo', 'sarı'], ['negro', 'siyah'], ['blanco', 'beyaz'], ['remera', 'tişört'], ['zapatillas', 'spor ayakkabı']],
+      phrases: [['Uso una remera azul', 'Mavi tişört giyiyorum'], ['Me gustan los zapatos negros', 'Siyah ayakkabıları seviyorum'], ['Es demasiado grande', 'Çok büyük'], ['¿De qué color es?', 'Rengi ne?'], ['Quiero algo verde', 'Yeşil bir şey istiyorum']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Saat kaç?" pregunta la hora. "Saat üç" y "Saat bir buçuk".', points: ['Saat kaç?', 'Saat üç', 'buçuk = y media', 'çeyrek'] },
+      words: [['uno', 'bir'], ['dos', 'iki'], ['tres', 'üç'], ['cinco', 'beş'], ['diez', 'on'], ['hora', 'saat'], ['minuto', 'dakika'], ['reloj', 'saat']],
+      phrases: [['¿Qué hora es?', 'Saat kaç?'], ['Son las tres', 'Saat üç'], ['Es la una y media', 'Saat bir buçuk'], ['Nos vemos a las diez', 'Saat onda görüşürüz'], ['Tengo cinco minutos', 'Beş dakikam var']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Yağmur yağıyor", "Hava soğuk". Sentimientos: "Yorgunum", "Mutluyum".', points: ['Yağmur yağıyor / Güneşli / Soğuk', 'Mutluyum / yorgunum / üzgünüm', 'Kendimi ... hissediyorum'] },
+      words: [['lluvia', 'yağmur'], ['sol', 'güneş'], ['frío', 'soğuk'], ['calor', 'sıcak'], ['feliz', 'mutlu'], ['cansado', 'yorgun'], ['triste', 'üzgün'], ['viento', 'rüzgâr']],
+      phrases: [['Está lloviendo', 'Yağmur yağıyor'], ['Hace frío hoy', 'Bugün hava soğuk'], ['Estoy feliz', 'Mutluyum'], ['Estoy cansado', 'Yorgunum'], ['Me siento bien', 'Kendimi iyi hissediyorum']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Uyanıyorum", "Çalışıyorum". Con o: "çalışıyor".', points: ['Uyanıyorum = Me despierto', 'her gün', 'sabah / akşam', 'O çalışıyor'] },
+      words: [['despertarse', 'uyanmak'], ['desayunar', 'kahvaltı yapmak'], ['estudiar', 'çalışmak'], ['dormir', 'uyumak'], ['cocinar', 'yemek yapmak'], ['limpiar', 'temizlemek'], ['mañana', 'sabah'], ['noche', 'akşam']],
+      phrases: [['Me despierto temprano', 'Erken uyanıyorum'], ['Desayuno a las ocho', 'Saat sekizde kahvaltı yapıyorum'], ['Estudio todas las noches', 'Her akşam çalışıyorum'], ['Ella trabaja en casa', 'O evde çalışıyor'], ['Me duermo tarde', 'Geç uyuyorum']],
     },
   ],
 }

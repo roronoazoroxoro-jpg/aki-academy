@@ -39,5 +39,29 @@ export default {
       words: [['estación', 'えき', 'eki'], ['tren', 'でんしゃ', 'densha'], ['baño', 'トイレ', 'toire'], ['hotel', 'ホテル', 'hoteru'], ['dónde', 'どこ', 'doko'], ['hoy', 'きょう', 'kyou'], ['mañana', 'あした', 'ashita'], ['Japón', 'にほん', 'nihon']],
       phrases: [['¿Dónde está la estación?', 'えき は どこ ですか', 'eki wa doko desu ka'], ['Voy a Japón', 'にほん に いきます', 'nihon ni ikimasu'], ['No entiendo', 'わかりません', 'wakarimasen'], ['¿Dónde está el baño?', 'トイレ は どこ ですか', 'toire wa doko desu ka'], ['Mañana voy al hotel', 'あした ホテル に いきます', 'ashita hoteru ni ikimasu']],
     },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'Los colores suelen terminar en い: あかい (rojo), あおい (azul). Para ropa: きています (estoy usando).', points: ['あか / あお / みどり', 'シャツ / くつ', 'きています = estoy usando', 'おおきい / ちいさい'] },
+      words: [['rojo', 'あか', 'aka'], ['azul', 'あお', 'ao'], ['verde', 'みどり', 'midori'], ['amarillo', 'きいろ', 'kiiro'], ['negro', 'くろ', 'kuro'], ['blanco', 'しろ', 'shiro'], ['remera', 'シャツ', 'shatsu'], ['zapatos', 'くつ', 'kutsu']],
+      phrases: [['Uso una remera azul', 'あおい シャツ を きています', 'aoi shatsu wo kiteimasu'], ['Me gustan los zapatos negros', 'くろい くつ が すき です', 'kuroi kutsu ga suki desu'], ['Es grande', 'おおきい です', 'ookii desu'], ['¿De qué color es?', 'なんいろ ですか', 'naniro desu ka'], ['Quiero algo verde', 'みどり が ほしい です', 'midori ga hoshii desu']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = いま なんじ ですか. Las 3 = さんじ. Y media = はん.', points: ['なんじ ですか = ¿qué hora es?', 'じ = hora', 'ふん / ぷん = minutos', 'はん = y media'] },
+      words: [['una', 'いちじ', 'ichiji'], ['dos', 'にじ', 'niji'], ['tres', 'さんじ', 'sanji'], ['cinco', 'ごじ', 'goji'], ['diez', 'じゅうじ', 'juuji'], ['hora', 'じ', 'ji'], ['minuto', 'ふん', 'fun'], ['reloj', 'とけい', 'tokei']],
+      phrases: [['¿Qué hora es?', 'いま なんじ ですか', 'ima nanji desu ka'], ['Son las tres', 'さんじ です', 'sanji desu'], ['Es la una y media', 'いちじはん です', 'ichijihan desu'], ['Nos vemos a las diez', 'じゅうじ に あいましょう', 'juuji ni aimashou'], ['Tengo cinco minutos', 'ごふん あります', 'gofun arimasu']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: あめ です (llueve), さむい です (hace frío). Sentimientos: うれしい, つかれた.', points: ['あめ / はれ / さむい', 'うれしい / つかれた / かなしい', 'きぶん = ánimo'] },
+      words: [['lluvia', 'あめ', 'ame'], ['sol', 'はれ', 'hare'], ['frío', 'さむい', 'samui'], ['calor', 'あつい', 'atsui'], ['feliz', 'うれしい', 'ureshii'], ['cansado', 'つかれた', 'tsukareta'], ['triste', 'かなしい', 'kanashii'], ['viento', 'かぜ', 'kaze']],
+      phrases: [['Está lloviendo', 'あめ です', 'ame desu'], ['Hace frío hoy', 'きょう は さむい です', 'kyou wa samui desu'], ['Estoy feliz', 'うれしい です', 'ureshii desu'], ['Estoy cansado', 'つかれました', 'tsukaremashita'], ['Me siento bien', 'きぶん が いい です', 'kibun ga ii desu']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: おきます (me levanto), べんきょう します (estudio). Con ます es formal.', points: ['おきます = me levanto', 'まいにち = todos los días', 'あさ / よる', 'はたらきます = trabaja'] },
+      words: [['despertarse', 'おきます', 'okimasu'], ['desayunar', 'あさごはん', 'asagohan'], ['estudiar', 'べんきょう', 'benkyou'], ['dormir', 'ねます', 'nemasu'], ['cocinar', 'りょうり', 'ryouri'], ['limpiar', 'そうじ', 'souji'], ['mañana', 'あさ', 'asa'], ['noche', 'よる', 'yoru']],
+      phrases: [['Me despierto temprano', 'はやく おきます', 'hayaku okimasu'], ['Desayuno a las ocho', 'はちじ に あさごはん を たべます', 'hachiji ni asagohan wo tabemasu'], ['Estudio todas las noches', 'まいばん べんきょう します', 'maiban benkyou shimasu'], ['Ella trabaja en casa', 'かのじょ は いえ で はたらきます', 'kanojo wa ie de hatarakimasu'], ['Me duermo tarde', 'おそく ねます', 'osoku nemasu']],
+    },
   ],
 }

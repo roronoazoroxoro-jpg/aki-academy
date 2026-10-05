@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Moscú', level: 'Avanzado',
       guide: { intro: 'Где… (gde) pregunta dónde está algo. Я не понимаю (ya ne panimayu) es "no entiendo". El metro de Moscú es famoso por sus estaciones hermosas.', points: ['Где = ¿dónde?', 'Я не понимаю = no entiendo', 'Метро = subte', 'Вокзал = estación de tren'] },
       words: [['subte', 'Метро', 'metro'], ['estación', 'Вокзал', 'vakzal'], ['hotel', 'Гостиница', 'gastinitsa'], ['calle', 'Улица', 'ulitsa'], ['dónde', 'Где', 'gde'], ['hoy', 'Сегодня', 'sevodnya'], ['mañana', 'Завтра', 'zavtra'], ['ciudad', 'Город', 'gorad']],
-      phrases: [['¿Dónde está el hotel?', 'Где гостиница', 'gde gastinitsa'], ['No entiendo', 'Я не понимаю', 'ya ne panimayu'], ['¿Hablás inglés?', 'Вы говорите по-английски', 'vy gavarite pa angliski'], ['Mañana voy a Moscú', 'Завтра я в Москву', 'zavtra ya v Maskvu']],
+      phrases: [['¿Dónde está el hotel?', 'Где гостиница', 'gde gastinitsa'], ['No entiendo', 'Я не понимаю', 'ya ne panimayu'], ['¿Hablás inglés?', 'Вы говорите по-английски', 'vy gavarite pa angliski'], ['Mañana voy a Moscú', 'Завтра я в Москву', 'zavtra ya v Maskvu'], ['La ciudad es grande', 'Город большой', 'gorad balshoy']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color concuerda: синяя футболка. Я ношу = uso. Слишком большой = demasiado grande.', points: ['красный, синий, зелёный', 'футболка / обувь', 'Я ношу', 'слишком большой'] },
+      words: [['rojo', 'красный', 'krasniy'], ['azul', 'синий', 'siniy'], ['verde', 'зелёный', 'zelyoniy'], ['amarillo', 'жёлтый', 'zholtiy'], ['negro', 'чёрный', 'chorniy'], ['blanco', 'белый', 'beliy'], ['remera', 'футболка', 'futbolka'], ['zapatos', 'обувь', 'obuv']],
+      phrases: [['Uso una remera azul', 'Я ношу синюю футболку', 'ya nashu sinuyu futbolku'], ['Me gustan los zapatos negros', 'Мне нравится чёрная обувь', 'mne nravitsa chornaya obuv'], ['Es demasiado grande', 'Это слишком большой', 'eta slishkam balshoy'], ['¿De qué color es?', 'Какого это цвета', 'kakova eta tsveta'], ['Quiero algo verde', 'Хочу что-то зелёное', 'khachu shto-ta zelyonaye']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = Который час? Las 3 = три часа. Y media = половина второго.', points: ['Который час?', 'час / часа / часов', 'минута', 'половина = y media'] },
+      words: [['uno', 'один', 'adin'], ['dos', 'два', 'dva'], ['tres', 'три', 'tri'], ['cinco', 'пять', 'pyat'], ['diez', 'десять', 'desyat'], ['hora', 'час', 'chas'], ['minuto', 'минута', 'minuta'], ['reloj', 'часы', 'chasi']],
+      phrases: [['¿Qué hora es?', 'Который час', 'katoriy chas'], ['Son las tres', 'Три часа', 'tri chasa'], ['Es la una y media', 'Половина второго', 'palavina vtarova'], ['Nos vemos a las diez', 'Увидимся в десять', 'uvidimsya v desyat'], ['Tengo cinco minutos', 'У меня пять минут', 'u menya pyat minut']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: Идёт дождь, Холодно. Sentimientos: Я счастлив, Я устал.', points: ['дождь / солнечно / холодно', 'счастлив / устал / грустно', 'Я чувствую себя'] },
+      words: [['lluvia', 'дождь', 'dozhd'], ['sol', 'солнце', 'sontse'], ['frío', 'холодно', 'kholadna'], ['calor', 'жарко', 'zharka'], ['feliz', 'счастливый', 'schastliviy'], ['cansado', 'устал', 'ustal'], ['triste', 'грустный', 'grusniy'], ['viento', 'ветер', 'vyeter']],
+      phrases: [['Está lloviendo', 'Идёт дождь', 'idyot dozhd'], ['Hace frío hoy', 'Сегодня холодно', 'sevodnya kholadna'], ['Estoy feliz', 'Я счастлив', 'ya schastliv'], ['Estoy cansado', 'Я устал', 'ya ustal'], ['Me siento bien', 'Я чувствую себя хорошо', 'ya chuvstvuyu sebya kharasho']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: Я просыпаюсь, Я учусь. Каждый день = todos los días.', points: ['Я просыпаюсь', 'каждый день', 'утром / вечером', 'Она работает'] },
+      words: [['despertarse', 'просыпаться', 'prasipatsa'], ['desayunar', 'завтракать', 'zaftrakat'], ['estudiar', 'учиться', 'uchitsa'], ['dormir', 'спать', 'spat'], ['cocinar', 'готовить', 'gatovit'], ['limpiar', 'убирать', 'ubirat'], ['mañana', 'утро', 'utra'], ['noche', 'вечер', 'vecher']],
+      phrases: [['Me despierto temprano', 'Я рано просыпаюсь', 'ya rana prasipayus'], ['Desayuno a las ocho', 'Я завтракаю в восемь', 'ya zaftrakayu v vosem'], ['Estudio todas las noches', 'Я учусь каждый вечер', 'ya uchus kazhdiy vecher'], ['Ella trabaja en casa', 'Она работает дома', 'ana rabotayet doma'], ['Me duermo tarde', 'Я поздно ложусь спать', 'ya pozna lazhu spat']],
     },
   ],
 }

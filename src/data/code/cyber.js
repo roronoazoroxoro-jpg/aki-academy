@@ -58,5 +58,49 @@ export default {
       c('¿Qué principio dice que cada usuario tenga solo los permisos que necesita?', ['Mínimo privilegio', 'Defensa en profundidad', 'Cifrado total', 'Código abierto']),
       o('Ordená el manejo seguro de una contraseña', ['El usuario la escribe por HTTPS', 'El servidor le aplica un hash con sal', 'Se guarda el hash en la base', 'Al ingresar, se compara el hash']),
     ]),
+    unit('WiFi y el celu', 'Básico', {
+      intro: 'La red de un café no es tu casa. Un atacante en la misma WiFi puede intentar mirar tráfico no cifrado. Actualizá el sistema y no cargues banca en redes raras.',
+      points: ['Preferí datos móviles para banca', 'El router de casa: clave fuerte y firmware al día', 'Bluetooth también se puede atacar', 'Un USB desconocido no se enchufa'],
+      code: 'Café + banca  →  mala idea\nCasa + WPA3/WPA2 + clave larga  →  mucho mejor',
+    }, [
+      c('¿Conviene entrar al home banking por el WiFi del bar?', ['No: usá datos o una VPN de confianza', 'Sí, siempre', 'Solo si hay candadito dibujado en una servilleta', 'Sí, si pedís la clave al mozo']),
+      c('¿Qué es una VPN (cuando es seria)?', ['Un túnel cifrado hasta otro punto de internet', 'Una app de fotos', 'Un antivirus gratis', 'Un tipo de USB']),
+      t('¿Qué no enchufás si no sabés de dónde viene?', ['usb', 'un usb']),
+      c('¿El router de casa hay que actualizarlo?', ['Sí: el firmware también tiene parches', 'No, nunca', 'Solo el nombre de la red', 'Solo si es nuevo']),
+      m('Uní cada riesgo', [['WiFi pública', 'Alguien en la misma red'], ['USB desconocido', 'Malware físico'], ['Router viejo', 'Agujeros sin parche'], ['Bluetooth abierto', 'Conexiones raras']]),
+    ]),
+    unit('2FA y recuperá tu cuenta', 'Básico', {
+      intro: 'El segundo factor es algo que tenés (una app, una llave) además de lo que sabés (la contraseña). El SMS es mejor que nada, pero una app autenticadora es más sólida.',
+      points: ['App autenticadora > SMS', 'Guardá los códigos de respaldo offline', 'No aceptes 2FA que no pediste', 'Una llave física (passkey) es excelente'],
+      code: 'algo que sabés + algo que tenés  →  2FA',
+    }, [
+      c('¿Qué es 2FA?', ['Un segundo paso además de la contraseña', 'Una segunda contraseña igual', 'Un antivirus', 'Un correo nuevo']),
+      c('¿Por qué una app es mejor que SMS?', ['El SMS se puede desviar / sim-swap', 'La app es más lenta', 'SMS es ilegal', 'No hay diferencia']),
+      t('¿Cómo se llaman los códigos que guardás por si perdés el celu?', ['códigos de respaldo', 'codigos de respaldo', 'backup codes']),
+      c('Si te llega un código que no pediste...', ['Alguien está intentando entrar: cambiá la clave', 'Lo ignorás y listo para siempre', 'Se lo pasás a un amigo', 'Lo publicás']),
+      c('¿Una passkey qué evita?', ['Tipear la contraseña en un sitio trucho', 'Usar internet', 'Tener email', 'Actualizar el celu']),
+    ]),
+    unit('Backups y ransomware', 'Intermedio', {
+      intro: 'El ransomware cifra tus archivos y pide plata. La defensa de verdad es un backup que no esté enchufado siempre (regla 3-2-1).',
+      points: ['3 copias, 2 medios, 1 afuera', 'Un disco siempre conectado también se cifra', 'No pagues si podés restaurar', 'Probá restaurar, no solo copiar'],
+      code: '3 copias · 2 tipos de disco · 1 fuera de casa',
+    }, [
+      c('¿Qué es ransomware?', ['Malware que cifra tus archivos y pide rescate', 'Un antivirus pago', 'Un tipo de WiFi', 'Un backup en la nube']),
+      t('¿Cuántas copias recomienda la regla 3-2-1?', ['3', 'tres']),
+      c('¿Por qué un disco siempre enchufado no alcanza?', ['El ransomware también lo puede cifrar', 'Pesa mucho', 'Git no lo ve', 'Pierde la garantía']),
+      c('¿Qué tenés que probar además de copiar?', ['Que se pueda restaurar de verdad', 'Que el disco sea rojo', 'Que esté en el escritorio', 'Que tenga meme']),
+      c('Si te cifran todo y tenés backup bueno...', ['Restaurás y formateás el equipo infectado', 'Pagás sin pensar', 'Mandás más archivos', 'Desinstalás el navegador nomas']),
+    ]),
+    unit('Ingeniería social', 'Avanzado', {
+      intro: 'La mayoría de los ataques grandes empiezan con una persona, no con un exploit: apuro, miedo, autoridad falsa. “Tu jefe” pidiendo una transferencia urgente es un clásico.',
+      points: ['Verificá por otro canal', 'El apuro es una bandera roja', 'Nadie serio pide claves por WhatsApp', 'Decí que no: está bien'],
+      code: 'mail urgente + pedido raro + "no le digas a nadie"  →  freno',
+    }, [
+      c('¿Qué es ingeniería social?', ['Manipular a una persona para que entregue acceso', 'Un tipo de firewall', 'Programar en C', 'Un examen de redes']),
+      c('Si “el CEO” pide por mail una transferencia ya...', ['Lo confirmás por otro medio (llamada conocida)', 'La hacés ya', 'Reenviás el mail a todos', 'Contestás la clave']),
+      t('¿Qué emoción usan mucho las estafas para que no pienses?', ['apuro', 'miedo', 'urgencia']),
+      c('¿Un soporte real te pide la contraseña?', ['No', 'Sí, siempre', 'Solo los lunes', 'Solo por SMS']),
+      m('Uní la señal', [['Apuro', 'Bandera roja'], ['Otro canal', 'Verificar'], ['Pedido de clave', 'Estafa'], ['Calma', 'Tu mejor defensa']]),
+    ]),
   ],
 }

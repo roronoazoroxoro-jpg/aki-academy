@@ -72,5 +72,38 @@ export default {
       c('¿Qué describe la teoría del Big Bang?', ['El origen y la expansión del universo', 'La formación de la Luna', 'La muerte del Sol', 'El movimiento de las mareas']),
       c('¿Por qué en el espacio los astronautas flotan?', ['Están en caída libre junto con la nave', 'No hay gravedad en el espacio', 'Pesan menos', 'Los trajes son livianos']),
     ]),
+    unit('Ondas y sonido', 'Intermedio', {
+      intro: 'Una onda transporta energía sin transportar materia. El sonido es una onda mecánica: necesita un medio. En el vacío no se oye.',
+      points: ['Frecuencia: agudo o grave', 'Amplitud: volumen', 'El eco es un rebote', 'La luz también es onda (y partícula)'],
+      code: 'v = f × λ   (velocidad = frecuencia × longitud de onda)',
+    }, [
+      c('¿Por qué no se oye en el espacio?', ['No hay aire (ni medio) para la onda', 'Los oídos no funcionan sin gravedad', 'El sonido es muy lento', 'Las naves aíslan todo siempre']),
+      c('Un sonido más agudo tiene...', ['Más frecuencia', 'Menos frecuencia', 'Más amplitud nomas', 'Menos velocidad siempre']),
+      t('¿Cómo se llama el rebote del sonido?', ['eco']),
+      c('¿Qué es la amplitud en el sonido?', ['Qué tan fuerte se oye', 'Qué tan agudo es', 'La dirección', 'El color']),
+      m('Uní', [['Frecuencia', 'Agudo/grave'], ['Amplitud', 'Volumen'], ['Eco', 'Rebote'], ['Vacío', 'Sin sonido']]),
+    ]),
+    unit('Calor y temperatura', 'Básico', {
+      intro: 'Temperatura no es lo mismo que calor. Temperatura mide qué tan agitado está el movimiento de las partículas. Calor es energía que se transfiere.',
+      points: ['°C: agua hierve a 100 (a 1 atm)', 'Conducción, convección, radiación', 'El metal se siente “más frío” porque conduce mejor', 'Dilatar: al calentar, se agranda'],
+      code: '0 °C hielo  ·  100 °C vapor (a nivel del mar)',
+    }, [
+      c('¿A cuántos °C hierve el agua a nivel del mar?', ['100', '0', '37', '212']),
+      c('¿El calor es...?', ['Energía en tránsito', 'Lo mismo que temperatura', 'Solo fuego', 'Un gas']),
+      t('¿A cuántos °C se congela el agua pura?', ['0', '0°', '0 c']),
+      c('¿Por qué el metal de la mesa se siente más frío que la madera a la misma temperatura?', ['Conduce mejor el calor de tu mano', 'Está más frío de verdad', 'La madera tiene más energía', 'El metal es más oscuro']),
+      c('El sol nos calienta principalmente por...', ['Radiación', 'Convección del espacio', 'Conducción del aire nomas', 'Fricción']),
+    ]),
+    unit('Óptica', 'Intermedio', {
+      intro: 'La luz se refleja (espejo) y se refracta (cambia de medio: el lápiz “quebrado” en el vaso). Un lente concentra o abre el rayo.',
+      points: ['Ángulo de incidencia = ángulo de reflexión', 'Refracción: cambia la dirección', 'Lente convergente: lupa', 'El arcoíris: dispersión'],
+      code: 'aire → agua  =  el rayo se quiebra (refracción)',
+    }, [
+      c('¿Por qué el lápiz se ve quebrado en el vaso?', ['La luz se refracta al pasar al agua', 'El vidrio lo achica', 'El agua está caliente', 'Es un espejo']),
+      c('En un espejo plano, el ángulo de incidencia...', ['Es igual al de reflexión', 'Es el doble', 'Es cero', 'No existe']),
+      t('¿Cómo se llama el cambio de dirección al cambiar de medio?', ['refracción', 'refraccion']),
+      c('Una lupa es un lente...', ['Convergente', 'Divergente', 'Plano nomas', 'Opaco']),
+      c('El arcoíris se forma por...', ['Dispersión de la luz en gotas de agua', 'Pintura en el cielo', 'El sol más cerca', 'El viento']),
+    ]),
   ],
 }

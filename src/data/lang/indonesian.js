@@ -30,7 +30,31 @@ export default {
       title: 'Viaje a Bali', level: 'Avanzado',
       guide: { intro: '"Di mana...?" pregunta dónde. El tren es "kereta" y la estación "stasiun".', points: ['Stasiun di mana?', 'Hari ini / besok = hoy / mañana'] },
       words: [['estación', 'stasiun'], ['tren', 'kereta'], ['calle', 'jalan'], ['ciudad', 'kota'], ['hoy', 'hari ini'], ['mañana', 'besok'], ['hotel', 'hotel'], ['baño', 'toilet']],
-      phrases: [['¿Dónde está la estación?', 'Stasiun di mana?'], ['Viajo mañana', 'Besok saya pergi'], ['El tren llega hoy', 'Kereta datang hari ini'], ['¿Dónde está el baño?', 'Toilet di mana?']],
+      phrases: [['¿Dónde está la estación?', 'Stasiun di mana?'], ['Viajo mañana', 'Besok saya pergi'], ['El tren llega hoy', 'Kereta datang hari ini'], ['¿Dónde está el baño?', 'Toilet di mana?'], ['El hotel está cerca', 'Hotelnya dekat']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: kaus biru. "Saya memakai" es "estoy usando".', points: ['merah, biru, hijau, kuning', 'kaus / celana / sepatu', 'Saya memakai...', 'terlalu besar / terlalu kecil'] },
+      words: [['rojo', 'merah'], ['azul', 'biru'], ['verde', 'hijau'], ['amarillo', 'kuning'], ['negro', 'hitam'], ['blanco', 'putih'], ['remera', 'kaus'], ['zapatillas', 'sepatu']],
+      phrases: [['Uso una remera azul', 'Saya memakai kaus biru'], ['Me gustan los zapatos negros', 'Saya suka sepatu hitam'], ['Es demasiado grande', 'Ini terlalu besar'], ['¿De qué color es?', 'Warnanya apa?'], ['Quiero algo verde', 'Saya mau yang hijau']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Jam berapa?" pregunta la hora. "Jam tiga" y "Jam setengah dua".', points: ['Jam berapa?', 'Jam tiga', 'setengah = y media', 'kurang seperempat'] },
+      words: [['uno', 'satu'], ['dos', 'dua'], ['tres', 'tiga'], ['cinco', 'lima'], ['diez', 'sepuluh'], ['hora', 'jam'], ['minuto', 'menit'], ['reloj', 'jam']],
+      phrases: [['¿Qué hora es?', 'Jam berapa?'], ['Son las tres', 'Jam tiga'], ['Es la una y media', 'Jam setengah dua'], ['Nos vemos a las diez', 'Sampai jumpa jam sepuluh'], ['Tengo cinco minutos', 'Saya punya lima menit']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Hari hujan", "Hari dingin". Sentimientos: "Saya lelah", "Saya senang".', points: ['Hujan / Cerah / Dingin', 'Senang / lelah / sedih', 'Saya merasa = Me siento'] },
+      words: [['lluvia', 'hujan'], ['sol', 'matahari'], ['frío', 'dingin'], ['calor', 'panas'], ['feliz', 'senang'], ['cansado', 'lelah'], ['triste', 'sedih'], ['viento', 'angin']],
+      phrases: [['Está lloviendo', 'Hari hujan'], ['Hace frío hoy', 'Hari ini dingin'], ['Estoy feliz', 'Saya senang'], ['Estoy cansado', 'Saya lelah'], ['Me siento bien', 'Saya merasa baik']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Saya bangun", "Saya belajar". El verbo no cambia.', points: ['Saya bangun = Me despierto', 'setiap hari', 'pagi / malam', 'Dia bekerja'] },
+      words: [['despertarse', 'bangun'], ['desayunar', 'sarapan'], ['estudiar', 'belajar'], ['dormir', 'tidur'], ['cocinar', 'memasak'], ['limpiar', 'membersihkan'], ['mañana', 'pagi'], ['noche', 'malam']],
+      phrases: [['Me despierto temprano', 'Saya bangun pagi'], ['Desayuno a las ocho', 'Saya sarapan jam delapan'], ['Estudio todas las noches', 'Saya belajar setiap malam'], ['Ella trabaja en casa', 'Dia bekerja di rumah'], ['Me duermo tarde', 'Saya tidur larut']],
     },
   ],
 }

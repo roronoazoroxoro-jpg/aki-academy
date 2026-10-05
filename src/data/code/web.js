@@ -82,5 +82,38 @@ export default {
       c('¿Dónde se suelen declarar las variables globales?', [':root', 'body', 'html', '*']),
       c('¿Qué propiedad hace una transición suave?', ['transition', 'animation-smooth', 'ease', 'motion']),
     ]),
+    unit('Accesibilidad', 'Intermedio', {
+      intro: 'Una web accesible la puede usar alguien con lector de pantalla, teclado o poca visión. Semántica + contraste + labels son el 80% del trabajo.',
+      points: ['Un botón es <button>, no un div clickeable', 'alt describe la imagen', 'label + input van juntos', 'Contraste alto entre texto y fondo'],
+      code: '<button type="submit">Enviar</button>\n<label for="mail">Email</label>\n<input id="mail" type="email" />\n<img src="aki.jpg" alt="AKI tomando mate" />',
+    }, [
+      c('¿Por qué no usar un div como botón?', ['El teclado y el lector no lo tratan como botón', 'Es más lento', 'CSS no puede', 'Google lo prohíbe']),
+      t('Completá el atributo que describe la imagen:', ['alt'], '<img src="a.jpg" ___="Robot AKI">'),
+      c('¿Qué hace el contraste alto?', ['Se lee mejor, también al sol o con poca visión', 'Carga más rápido', 'Usa menos CSS', 'Es solo moda']),
+      c('¿Cómo asociás un label a un input?', ['for del label = id del input', 'Con CSS nomas', 'Poniendo el label abajo siempre', 'No hace falta']),
+      m('Uní cada práctica', [['<button>', 'Acción'], ['alt', 'Imagen'], ['label', 'Campo'], ['contraste', 'Lectura']]),
+    ]),
+    unit('Tipografía y espacio', 'Intermedio', {
+      intro: 'El diseño se siente pro cuando hay una escala clara: pocos tamaños de letra, mucho aire y alineación. line-height cómodo (1.4–1.6) cansa menos la vista.',
+      points: ['Una fuente para títulos, otra opcional para texto', 'line-height: 1.5', 'max-width en párrafos (~65 caracteres)', 'El espacio vacío también diseña'],
+      code: 'body { font-family: Nunito, sans-serif; line-height: 1.5; }\nh1 { font-size: 2.4rem; }\n.prosa { max-width: 40rem; }',
+    }, [
+      c('¿Por qué limitar el ancho de un párrafo?', ['Se lee más cómodo', 'Google lo exige', 'CSS no puede más', 'Para usar menos RAM']),
+      c('¿Qué es rem?', ['Unidad relativa al tamaño de fuente raíz', 'Un pixel fijo', 'Un porcentaje del viewport nomas', 'Un color']),
+      t('Completá una altura de línea cómoda:', ['1.5', '1.4', '1.6'], 'line-height: ___;'),
+      c('¿Conviene tener 12 fuentes distintas?', ['No: dos o tres alcanzan', 'Sí, una por palabra', 'Solo serif', 'Solo monospace']),
+      c('¿Qué hace más “pro” una tarjeta?', ['Aire (padding) y alineación', 'Más bordes punteados', 'Texto justificado extremo', 'Parpadeo']),
+    ]),
+    unit('Publicar tu web', 'Avanzado', {
+      intro: 'Para que alguien entre desde el celu: un host estático (GitHub Pages, Netlify, Vercel), un dominio opcional y HTTPS. El archivo principal se llama index.html.',
+      points: ['index.html es la home', 'npm run build genera la carpeta dist', 'HTTPS cifra el viaje', 'Un dominio es el nombre (aki-academy.vercel.app)'],
+      code: 'npm run build\n# subís la carpeta dist\n# o conectás el repo a Vercel',
+    }, [
+      c('¿Qué archivo se abre si alguien entra a tu dominio?', ['index.html', 'app.exe', 'secret.env', 'node_modules']),
+      c('¿Qué es HTTPS?', ['HTTP con conexión cifrada', 'Un tipo de CSS', 'Un host de imágenes', 'Un framework']),
+      t('Completá el comando para generar la web lista:', ['build'], 'npm run ___'),
+      c('¿Vercel para qué sirve acá?', ['Publicar el sitio con cada push', 'Escribir HTML', 'Diseñar logos', 'Cobrar impuestos']),
+      c('¿Por qué no subir node_modules?', ['Es enorme y se instala con npm install', 'Es ilegal', 'No tiene JS', 'Rompe HTTPS']),
+    ]),
   ],
 }

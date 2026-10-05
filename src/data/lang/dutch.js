@@ -30,7 +30,31 @@ export default {
       title: 'En Ámsterdam', level: 'Avanzado',
       guide: { intro: '"Waar is...?" pregunta dónde. La bici es "fiets": en Holanda es el medio de transporte rey.', points: ['Waar is het station?', 'Fiets = bicicleta', 'Vandaag / morgen'] },
       words: [['estación', 'station'], ['bici', 'fiets'], ['calle', 'straat'], ['canal', 'gracht'], ['hoy', 'vandaag'], ['mañana', 'morgen'], ['tren', 'trein'], ['baño', 'toilet']],
-      phrases: [['¿Dónde está la estación?', 'Waar is het station?'], ['Voy en bici', 'Ik ga op de fiets'], ['El tren llega hoy', 'De trein komt vandaag'], ['¿Dónde está el baño?', 'Waar is het toilet?']],
+      phrases: [['¿Dónde está la estación?', 'Waar is het station?'], ['Voy en bici', 'Ik ga op de fiets'], ['El tren llega hoy', 'De trein komt vandaag'], ['¿Dónde está el baño?', 'Waar is het toilet?'], ['El canal está cerca', 'De gracht is dichtbij']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: een blauw T-shirt. "Ik draag" es "uso / llevo puesto".', points: ['rood, blauw, groen, geel', 'T-shirt / broek / schoenen', 'Ik draag... = Estoy usando...', 'te groot / te klein'] },
+      words: [['rojo', 'rood'], ['azul', 'blauw'], ['verde', 'groen'], ['amarillo', 'geel'], ['negro', 'zwart'], ['blanco', 'wit'], ['remera', 'T-shirt'], ['zapatillas', 'sneakers']],
+      phrases: [['Uso una remera azul', 'Ik draag een blauw T-shirt'], ['Me gustan los zapatos negros', 'Ik hou van zwarte schoenen'], ['Es demasiado grande', 'Het is te groot'], ['¿De qué color es?', 'Welke kleur is het?'], ['Quiero algo verde', 'Ik wil iets groens']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Hoe laat is het?" pregunta la hora. "Het is drie uur" y "Het is half twee" (la una y media).', points: ['Hoe laat is het?', 'Het is drie uur', 'half = y media (como en alemán)', 'kwart voor'] },
+      words: [['uno', 'een'], ['dos', 'twee'], ['tres', 'drie'], ['cinco', 'vijf'], ['diez', 'tien'], ['hora', 'uur'], ['minuto', 'minuut'], ['reloj', 'klok']],
+      phrases: [['¿Qué hora es?', 'Hoe laat is het?'], ['Son las tres', 'Het is drie uur'], ['Es la una y media', 'Het is half twee'], ['Nos vemos a las diez', 'Tot tien uur'], ['Tengo cinco minutos', 'Ik heb vijf minuten']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Het regent", "Het is koud". Sentimientos: "Ik ben moe", "Ik ben blij".', points: ['Het regent / Het is zonnig / Het is koud', 'Ik ben blij / moe / verdrietig', 'Ik voel me = Me siento'] },
+      words: [['lluvia', 'regen'], ['sol', 'zon'], ['frío', 'koud'], ['calor', 'warm'], ['feliz', 'blij'], ['cansado', 'moe'], ['triste', 'verdrietig'], ['viento', 'wind']],
+      phrases: [['Está lloviendo', 'Het regent'], ['Hace frío hoy', 'Het is koud vandaag'], ['Estoy feliz', 'Ik ben blij'], ['Estoy cansado', 'Ik ben moe'], ['Me siento bien', 'Ik voel me goed']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Ik word wakker", "Ik studeer". Con zij: "zij werkt".', points: ['Ik word wakker = Me despierto', 'elke dag', 'in de ochtend / \'s avonds', 'Zij werkt'] },
+      words: [['despertarse', 'wakker worden'], ['desayunar', 'ontbijten'], ['estudiar', 'studeren'], ['dormir', 'slapen'], ['cocinar', 'koken'], ['limpiar', 'schoonmaken'], ['mañana', 'ochtend'], ['noche', 'avond']],
+      phrases: [['Me despierto temprano', 'Ik word vroeg wakker'], ['Desayuno a las ocho', 'Ik ontbijt om acht uur'], ['Estudio todas las noches', 'Ik studeer elke avond'], ['Ella trabaja en casa', 'Zij werkt thuis'], ['Me duermo tarde', 'Ik ga laat slapen']],
     },
   ],
 }

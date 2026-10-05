@@ -134,5 +134,41 @@ export default {
       c('En match, ¿qué captura cualquier otro caso?', ['case _:', 'default:', 'else:', 'case *:']),
       b('Armá una comprensión de dobles', ['[', 'x * 2', 'for', 'x', 'in', 'nums', ']'], ['while', '{']),
     ]),
+    unit('Textos y fechas', 'Intermedio', {
+      intro: 'Los strings tienen métodos para cortar, cambiar y buscar. El módulo datetime maneja fechas de verdad: hoy, diferencias, formatos.',
+      points: ['"hola".upper() → HOLA', '"  x ".strip() saca espacios', 'texto.split(",") parte en lista', 'datetime.now() es ahora'],
+      code: 'from datetime import datetime, timedelta\n\nhoy = datetime.now()\nprint(hoy.strftime("%d/%m/%Y"))\nprint("argentina".replace("a", "A"))',
+    }, [
+      c('¿Qué hace "boca".upper()?', ['"BOCA"', '"Boca"', '"boca"', 'Error']),
+      c('¿Qué hace " a,b,c ".strip().split(",")?', ['["a", "b", "c"]', '[" a", "b", "c "]', '"a,b,c"', '3']),
+      t('Completá para reemplazar texto:', ['replace'], '"mate".___("m", "M")'),
+      c('¿Qué módulo usás para fechas?', ['datetime', 'calendar_only', 'timeonly', 'dateutil obligatorio']),
+      c('¿Qué hace strftime("%d/%m/%Y")?', ['Formatea la fecha como 04/10/2026', 'Resta un día', 'Convierte a timestamp nomas', 'Borra la hora']),
+      o('Ordená para mostrar la fecha de hoy', ['from datetime import datetime', 'hoy = datetime.now()', 'print(hoy.strftime("%d/%m/%Y"))']),
+    ]),
+    unit('Módulos y paquetes', 'Intermedio', {
+      intro: 'Un módulo es un archivo .py que podés importar. Un paquete es una carpeta con módulos. pip instala librerías de otras personas (requests, pandas…).',
+      points: ['import math / from math import sqrt', 'pip install nombre', 'if __name__ == "__main__": corre solo si es el archivo principal', 'requirements.txt lista dependencias'],
+      code: 'import math\nfrom random import choice\n\nprint(math.sqrt(9))\nprint(choice(["mate", "café"]))\n\nif __name__ == "__main__":\n    print("Corrí este archivo")',
+    }, [
+      c('¿Qué instala librerías de Python?', ['pip', 'npm', 'apt-get obligatorio', 'git clone nomas']),
+      c('¿Qué hace from math import sqrt?', ['Trae solo la función sqrt', 'Instala math', 'Borra math', 'Crea un archivo']),
+      t('Completá para importar el módulo random:', ['import'], '___ random'),
+      c('¿Para qué sirve if __name__ == "__main__":?', ['Ejecutar código solo cuando corrés ese archivo', 'Importar más rápido', 'Definir una clase', 'Cerrar el programa']),
+      c('¿Qué archivo suele listar las librerías del proyecto?', ['requirements.txt', 'python.cfg', 'libs.json', 'pip.lock.html']),
+      m('Uní cada cosa', [['import', 'Usar un módulo'], ['pip', 'Instalar'], ['paquete', 'Carpeta de módulos'], ['__main__', 'Archivo que corriste']]),
+    ]),
+    unit('Probar tu código', 'Avanzado', {
+      intro: 'Un test es un programa que comprueba que otro programa hace lo que promete. assert falla si la condición es falsa. pytest corre muchos tests de una.',
+      points: ['assert 2 + 2 == 4', 'Un test por cada caso borde', 'pytest descubre los test_*.py', 'TDD: escribís el test antes'],
+      code: 'def promedio(nums):\n    return sum(nums) / len(nums)\n\ndef test_promedio():\n    assert promedio([10, 20]) == 15\n    assert promedio([5]) == 5',
+    }, [
+      c('¿Qué hace assert?', ['Falla el programa si la condición es falsa', 'Imprime siempre', 'Crea un archivo', 'Instala pytest']),
+      c('¿Cómo se suelen llamar los archivos de test?', ['test_algo.py', 'algo.txt', 'main.css', 'prueba.exe']),
+      t('Completá el test:', ['assert'], '___ sumar(2, 3) == 5'),
+      c('¿Qué es un caso borde?', ['Un input raro: lista vacía, cero, texto largo', 'El caso más feliz nomas', 'Un comentario', 'Un color del editor']),
+      c('¿TDD significa...?', ['Escribir el test antes que el código', 'Borrar los tests', 'Testear solo en producción', 'No testear']),
+      c('Si un test falla, ¿qué hacés primero?', ['Leer el error y arreglar el código o el test', 'Borrar el test', 'Reiniciar Windows', 'Subir igual']),
+    ]),
   ],
 }

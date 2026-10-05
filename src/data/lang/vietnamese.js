@@ -30,7 +30,31 @@ export default {
       title: 'Viaje', level: 'Avanzado',
       guide: { intro: '"Ở đâu?" pregunta dónde. El tren es "tàu" y la estación "nhà ga".', points: ['Nhà ga ở đâu?', 'Hôm nay / ngày mai = hoy / mañana'] },
       words: [['estación', 'nhà ga'], ['tren', 'tàu'], ['calle', 'đường'], ['ciudad', 'thành phố'], ['hoy', 'hôm nay'], ['mañana', 'ngày mai'], ['hotel', 'khách sạn'], ['baño', 'nhà vệ sinh']],
-      phrases: [['¿Dónde está la estación?', 'Nhà ga ở đâu?'], ['Viajo mañana', 'Ngày mai tôi đi'], ['El tren llega hoy', 'Tàu đến hôm nay'], ['¿Dónde está el baño?', 'Nhà vệ sinh ở đâu?']],
+      phrases: [['¿Dónde está la estación?', 'Nhà ga ở đâu?'], ['Viajo mañana', 'Ngày mai tôi đi'], ['El tren llega hoy', 'Tàu đến hôm nay'], ['¿Dónde está el baño?', 'Nhà vệ sinh ở đâu?'], ['El hotel está cerca', 'Khách sạn gần đây']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: áo xanh. "Tôi mặc" es uso. "Quá lớn" = demasiado grande.', points: ['đỏ, xanh, xanh lá, vàng', 'áo / giày', 'Tôi mặc', 'quá lớn / quá nhỏ'] },
+      words: [['rojo', 'đỏ'], ['azul', 'xanh dương'], ['verde', 'xanh lá'], ['amarillo', 'vàng'], ['negro', 'đen'], ['blanco', 'trắng'], ['remera', 'áo'], ['zapatos', 'giày']],
+      phrases: [['Uso una remera azul', 'Tôi mặc áo xanh dương'], ['Me gustan los zapatos negros', 'Tôi thích giày đen'], ['Es demasiado grande', 'Nó quá lớn'], ['¿De qué color es?', 'Màu gì vậy?'], ['Quiero algo verde', 'Tôi muốn cái màu xanh lá']],
+    },
+    {
+      title: 'Números y la hora', level: 'Básico',
+      guide: { intro: '"Mấy giờ rồi?" pregunta la hora. "Ba giờ" y "Một giờ rưỡi".', points: ['Mấy giờ rồi?', 'Ba giờ', 'rưỡi = y media', 'phút'] },
+      words: [['uno', 'một'], ['dos', 'hai'], ['tres', 'ba'], ['cinco', 'năm'], ['diez', 'mười'], ['hora', 'giờ'], ['minuto', 'phút'], ['reloj', 'đồng hồ']],
+      phrases: [['¿Qué hora es?', 'Mấy giờ rồi?'], ['Son las tres', 'Ba giờ'], ['Es la una y media', 'Một giờ rưỡi'], ['Nos vemos a las diez', 'Hẹn gặp lúc mười giờ'], ['Tengo cinco minutos', 'Tôi có năm phút']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: "Trời mưa", "Trời lạnh". Sentimientos: "Tôi vui", "Tôi mệt".', points: ['mưa / nắng / lạnh', 'vui / mệt / buồn', 'Tôi cảm thấy'] },
+      words: [['lluvia', 'mưa'], ['sol', 'nắng'], ['frío', 'lạnh'], ['calor', 'nóng'], ['feliz', 'vui'], ['cansado', 'mệt'], ['triste', 'buồn'], ['viento', 'gió']],
+      phrases: [['Está lloviendo', 'Trời mưa'], ['Hace frío hoy', 'Hôm nay trời lạnh'], ['Estoy feliz', 'Tôi vui'], ['Estoy cansado', 'Tôi mệt'], ['Me siento bien', 'Tôi cảm thấy khỏe']],
+    },
+    {
+      title: 'Rutina de todos los días', level: 'Intermedio',
+      guide: { intro: 'Hábitos: "Tôi thức dậy", "Tôi học". Mỗi ngày = todos los días.', points: ['Tôi thức dậy', 'mỗi ngày', 'buổi sáng / buổi tối', 'Cô ấy làm việc'] },
+      words: [['despertarse', 'thức dậy'], ['desayunar', 'ăn sáng'], ['estudiar', 'học'], ['dormir', 'ngủ'], ['cocinar', 'nấu ăn'], ['limpiar', 'dọn dẹp'], ['mañana', 'buổi sáng'], ['noche', 'buổi tối']],
+      phrases: [['Me despierto temprano', 'Tôi thức dậy sớm'], ['Desayuno a las ocho', 'Tôi ăn sáng lúc tám giờ'], ['Estudio todas las noches', 'Tôi học mỗi tối'], ['Ella trabaja en casa', 'Cô ấy làm việc ở nhà'], ['Me duermo tarde', 'Tôi ngủ muộn']],
     },
   ],
 }

@@ -56,5 +56,51 @@ export default {
       o('Ordená el flujo de Git', ['git add .', 'git commit -m "cambios"', 'git push']),
       c('¿Qué framework de React sirve para apps con servidor y SEO?', ['Next.js', 'jQuery', 'Bootstrap', 'Django']),
     ]),
+    unit('Formularios controlados', 'Intermedio', {
+      intro: 'En React un input es controlado cuando su value viene del estado. Así el componente es la única fuente de verdad: sabés qué hay escrito y podés validar.',
+      points: ['value={texto} + onChange', 'e.target.value es lo que tipeó', 'Un form con onSubmit y preventDefault', 'Validá antes de mandar'],
+      code: 'const [mail, setMail] = useState("");\n<form onSubmit={(e) => { e.preventDefault(); enviar(mail); }}>\n  <input value={mail} onChange={(e) => setMail(e.target.value)} />\n</form>',
+    }, [
+      c('¿Qué hace un input controlado?', ['El value viene del estado de React', 'El DOM manda solo', 'No se puede tipear', 'Guarda en CSS']),
+      t('Completá: el texto nuevo está en e.target.___', ['value']),
+      c('¿Por qué e.preventDefault() en el submit?', ['Para que la página no se recargue', 'Para borrar el input', 'Para validar emails', 'Para crear el estado']),
+      c('¿Dónde validarías que el mail tenga @?', ['Antes de llamar a enviar()', 'En el CSS', 'En el nombre del componente', 'En useRef nomas']),
+      o('Ordená el input controlado', ['const [n, setN] = useState("");', '<input value={n}', 'onChange={(e) => setN(e.target.value)} />']),
+      m('Uní cada pieza', [['value', 'Lo que se ve'], ['onChange', 'Cuando tipeás'], ['onSubmit', 'Cuando mandás'], ['useState', 'La memoria']]),
+    ]),
+    unit('Rutas en la app', 'Intermedio', {
+      intro: 'React Router (o el router de Next) muestra una pantalla distinta según la URL. Así /cursos y /perfil son páginas de la misma app, sin recargar todo.',
+      points: ['Una ruta = un path + un componente', 'Link cambia la URL sin recargar', 'useParams lee /curso/:id', 'Una ruta * atrapa el 404'],
+      code: '<Routes>\n  <Route path="/" element={<Home />} />\n  <Route path="/curso/:id" element={<Curso />} />\n  <Route path="*" element={<NoExiste />} />\n</Routes>',
+    }, [
+      c('¿Qué hace un Link de React Router?', ['Cambia la URL sin recargar la página', 'Abre Google', 'Borra el historial', 'Recarga siempre']),
+      c('¿Cómo leés el :id de /curso/:id?', ['useParams()', 'useState()', 'document.title', 'fetch(id)']),
+      t('Completá la ruta que atrapa cualquier URL desconocida:', ['*'], '<Route path="___" element={<NoExiste />} />'),
+      c('¿Qué pasa si no tenés una ruta *?', ['Una URL rara puede quedar en blanco', 'Se crea sola', 'Redirige a Google', 'Tira el servidor']),
+      c('¿Por qué usar rutas y no un if gigante?', ['Cada pantalla tiene URL propia y se puede compartir', 'Es más lento', 'React lo obliga', 'Porque CSS no existe']),
+      c('¿Qué es una ruta anidada?', ['Una página adentro de otra, con su propio outlet', 'Dos servidores', 'Un iframe', 'Un CSS module']),
+    ]),
+    unit('Contexto y estado global', 'Avanzado', {
+      intro: 'Cuando muchos componentes necesitan lo mismo (el usuario, el tema), en vez de pasarlo por 10 props usás Context o una store. useContext lee ese valor desde cualquier nieto.',
+      points: ['createContext + Provider', 'useContext(Contexto)', 'No pongas TODO en contexto', 'Una store (como la de AKI) también sirve'],
+      code: 'const Tema = createContext("claro");\n\nfunction App() {\n  return <Tema.Provider value="oscuro"><Pagina /></Tema.Provider>;\n}\nfunction Boton() {\n  const tema = useContext(Tema);\n}',
+    }, [
+      c('¿Para qué sirve Context?', ['Compartir datos sin pasar props por todos lados', 'Dar estilos', 'Hacer fetch más rápido', 'Compilar TypeScript']),
+      t('Completá el hook para leer el contexto:', ['useContext'], 'const tema = ___(Tema);'),
+      c('¿Quién tiene que envolver a los que leen el contexto?', ['El Provider', 'El CSS', 'window', 'localStorage solo']),
+      c('¿Conviene poner cada tecla del teclado en Context?', ['No: solo datos que muchos necesitan', 'Sí, siempre', 'Solo los viernes', 'React lo exige']),
+      m('Uní cada idea', [['props', 'De padre a hijo'], ['Context', 'A varios nietos'], ['useState', 'Local'], ['localStorage', 'Entre visitas']]),
+    ]),
+    unit('Rendimiento y buenas prácticas', 'Avanzado', {
+      intro: 'React re-renderiza cuando cambia el estado. Si una lista es enorme, useMemo / useCallback y keys estables evitan trabajo de más. La regla de oro: medí primero, no optimices a ciegas.',
+      points: ['key estable (id, no el índice si la lista cambia)', 'useMemo para cálculos caros', 'No crees objetos nuevos en cada render si duelen', 'Un componente chico es más fácil de testear'],
+      code: 'const total = useMemo(() => items.reduce((a, i) => a + i.precio, 0), [items]);',
+    }, [
+      c('¿Cuándo se vuelve a dibujar un componente?', ['Cuando cambia su estado o sus props', 'Cada segundo siempre', 'Nunca', 'Solo al recargar']),
+      c('¿Por qué no usar el índice como key si la lista se reordena?', ['React confunde qué ítem es cuál', 'Es más lento de tipear', 'No compila', 'Rompe CSS']),
+      t('Completá el hook de memoizar:', ['useMemo'], 'const t = ___(() => calc(items), [items]);'),
+      c('¿Qué tenés que hacer antes de optimizar?', ['Medir si de verdad va lento', 'Meter 20 useMemo', 'Borrar componentes', 'Pasar a jQuery']),
+      c('¿Un componente que hace muchas cosas es...?', ['Más difícil de testear y reutilizar', 'Siempre más rápido', 'Obligatorio', 'Más lindo']),
+    ]),
   ],
 }

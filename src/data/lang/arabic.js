@@ -30,7 +30,31 @@ export default {
       title: 'En la ciudad', level: 'Avanzado',
       guide: { intro: 'أين (ayna) pregunta dónde está algo. لا أفهم (la afham) significa "no entiendo". Son las dos frases que más vas a usar al viajar.', points: ['أين = ¿dónde?', 'لا أفهم = no entiendo', 'مطار = aeropuerto', 'فندق = hotel'] },
       words: [['aeropuerto', 'مطار', 'matar'], ['hotel', 'فندق', 'funduq'], ['calle', 'شارع', 'shari'], ['mercado', 'سوق', 'suq'], ['dónde', 'أين', 'ayna'], ['hoy', 'اليوم', 'al-yawm'], ['mañana', 'غدا', 'ghadan'], ['dinero', 'نقود', 'nuqud']],
-      phrases: [['¿Dónde está el hotel?', 'أين الفندق', 'ayna al-funduq'], ['No entiendo', 'لا أفهم', 'la afham'], ['¿Cuánto cuesta?', 'كم الثمن', 'kam ath-thaman'], ['¿Hablás inglés?', 'هل تتكلم الإنجليزية', 'hal tatakallam al-injliziya']],
+      phrases: [['¿Dónde está el hotel?', 'أين الفندق', 'ayna al-funduq'], ['No entiendo', 'لا أفهم', 'la afham'], ['¿Cuánto cuesta?', 'كم الثمن', 'kam ath-thaman'], ['¿Hablás inglés?', 'هل تتكلم الإنجليزية', 'hal tatakallam al-injliziya'], ['El mercado está cerca', 'السوق قريب', 'as-suq qarib']],
+    },
+    {
+      title: 'Colores y ropa', level: 'Básico',
+      guide: { intro: 'El color va después: قميص أزرق. ألبس = uso. كبير جدا = demasiado grande.', points: ['أحمر أزرق أخضر أصفر', 'قميص / حذاء', 'ألبس', 'كبير جدا / صغير جدا'] },
+      words: [['rojo', 'أحمر', 'ahmar'], ['azul', 'أزرق', 'azraq'], ['verde', 'أخضر', 'akhdar'], ['amarillo', 'أصفر', 'asfar'], ['negro', 'أسود', 'aswad'], ['blanco', 'أبيض', 'abyad'], ['remera', 'قميص', 'qamis'], ['zapatos', 'حذاء', 'hidha']],
+      phrases: [['Uso una remera azul', 'ألبس قميصا أزرق', 'albasu qamisan azraq'], ['Me gustan los zapatos negros', 'أحب الحذاء الأسود', 'uhibbu al-hidha al-aswad'], ['Es demasiado grande', 'إنه كبير جدا', 'innahu kabir jiddan'], ['¿De qué color es?', 'ما لونه', 'ma lawnuhu'], ['Quiero algo verde', 'أريد شيئا أخضر', 'ureedu shayan akhdar']],
+    },
+    {
+      title: 'La hora', level: 'Básico',
+      guide: { intro: '¿Qué hora es? = كم الساعة؟ Las 3 = الساعة الثالثة. Y media = والنصف.', points: ['كم الساعة؟', 'ساعة = hora', 'دقيقة = minuto', 'والنصف = y media'] },
+      words: [['uno', 'واحد', 'wahid'], ['dos', 'اثنان', 'ithnan'], ['tres', 'ثلاثة', 'thalatha'], ['cinco', 'خمسة', 'khamsa'], ['diez', 'عشرة', 'ashara'], ['hora', 'ساعة', 'saa'], ['minuto', 'دقيقة', 'daqiqa'], ['reloj', 'ساعة', 'saa']],
+      phrases: [['¿Qué hora es?', 'كم الساعة', 'kam as-saa'], ['Son las tres', 'الساعة الثالثة', 'as-saa ath-thalitha'], ['Es la una y media', 'الساعة الواحدة والنصف', 'as-saa al-wahida wan-nisf'], ['Nos vemos a las diez', 'نلتقي في العاشرة', 'naltaqi fi al-ashira'], ['Tengo cinco minutos', 'عندي خمس دقائق', 'indi khams daqaiq']],
+    },
+    {
+      title: 'Clima y sentimientos', level: 'Intermedio',
+      guide: { intro: 'Clima: إنها تمطر, الجو بارد. Sentimientos: أنا سعيد, أنا متعب.', points: ['مطر / شمس / بارد', 'سعيد / متعب / حزين', 'أشعر = me siento'] },
+      words: [['lluvia', 'مطر', 'matar'], ['sol', 'شمس', 'shams'], ['frío', 'بارد', 'barid'], ['calor', 'حار', 'harr'], ['feliz', 'سعيد', 'said'], ['cansado', 'متعب', 'mutab'], ['triste', 'حزين', 'hazin'], ['viento', 'ريح', 'rih']],
+      phrases: [['Está lloviendo', 'إنها تمطر', 'innaha tumtir'], ['Hace frío hoy', 'الجو بارد اليوم', 'al-jaww barid al-yawm'], ['Estoy feliz', 'أنا سعيد', 'ana said'], ['Estoy cansado', 'أنا متعب', 'ana mutab'], ['Me siento bien', 'أشعر أنني بخير', 'ashuru annani bikhayr']],
+    },
+    {
+      title: 'La rutina diaria', level: 'Intermedio',
+      guide: { intro: 'Hábitos: أستيقظ, أدرس. كل يوم = todos los días. صباحا / مساء.', points: ['أستيقظ = me despierto', 'كل يوم', 'صباحا / مساء', 'هي تعمل'] },
+      words: [['despertarse', 'أستيقظ', 'astayqiz'], ['desayunar', 'أتناول الفطور', 'atanawalu al-futur'], ['estudiar', 'أدرس', 'adrus'], ['dormir', 'أنام', 'anam'], ['cocinar', 'أطبخ', 'atbukh'], ['limpiar', 'أنظف', 'unazzif'], ['mañana', 'صباح', 'sabah'], ['noche', 'مساء', 'masa']],
+      phrases: [['Me despierto temprano', 'أستيقظ مبكرا', 'astayqizu mubakkiran'], ['Desayuno a las ocho', 'أتناول الفطور في الثامنة', 'atanawalu al-futur fi ath-thamina'], ['Estudio todas las noches', 'أدرس كل مساء', 'adrusu kulla masa'], ['Ella trabaja en casa', 'هي تعمل في البيت', 'hiya taamalu fi al-bayt'], ['Me duermo tarde', 'أنام متأخرا', 'anamu mutaakhkhiran']],
     },
   ],
 }

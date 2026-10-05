@@ -71,5 +71,38 @@ export default {
       c('En robótica, ¿qué significa "actuador fallido en modo seguro"?', ['Ante una falla, el robot queda en un estado que no hace daño', 'El robot se apaga para siempre', 'El robot acelera', 'El sensor se reinicia']),
       t('¿Cómo se llama el sistema operativo más usado en robótica profesional? (sigla de 3 letras)', ['ROS', 'ros']),
     ]),
+    unit('Electricidad práctica', 'Básico', {
+      intro: 'Voltaje es “presión”, corriente es “caudal”, resistencia es “angostura”. La ley de Ohm: V = I × R. Un LED siempre lleva resistencia para no quemarse.',
+      points: ['V = I × R', 'El LED no se conecta solo a 5V', 'Tierra (GND) es el retorno', 'Un protoboard no se suelda'],
+      code: '5V -- [resistencia] -- LED -- GND',
+    }, [
+      c('En la ley de Ohm, V es...', ['Voltaje', 'Velocidad', 'Volumen', 'Vueltas']),
+      t('Completá la fórmula: V = I × ___', ['R', 'r']),
+      c('¿Por qué el LED lleva resistencia?', ['Para no quemarse con demasiada corriente', 'Para que brille menos de noche', 'Porque el Arduino lo exige por software', 'Para medir distancia']),
+      c('¿Qué es GND?', ['Tierra / retorno del circuito', 'Un pin de datos', 'La antena WiFi', 'Un motor']),
+      m('Uní cada magnitud', [['Voltaje', 'Presión'], ['Corriente', 'Caudal'], ['Resistencia', 'Angostura'], ['LED', 'Luz']]),
+    ]),
+    unit('Comunicación serial', 'Intermedio', {
+      intro: 'Serial.println te habla desde el robot a la compu. También podés mandar comandos. I2C y SPI conectan varios sensores con pocos cables.',
+      points: ['Serial.begin(9600)', 'println manda texto', 'I2C: varios dispositivos, 2 cables', 'Baudios: velocidad del serial'],
+      code: 'void setup() { Serial.begin(9600); }\nvoid loop() {\n  Serial.println(analogRead(A0));\n  delay(200);\n}',
+    }, [
+      c('¿Qué hace Serial.println("hola")?', ['Manda "hola" a la computadora', 'Mueve un servo', 'Prende el pin 13', 'Mide distancia']),
+      t('Completá para iniciar el serial:', ['begin'], 'Serial.___(9600);'),
+      c('¿9600 qué es?', ['La velocidad en baudios', 'El pin', 'Los voltios', 'El ID del sensor']),
+      c('¿I2C para qué sirve?', ['Hablar con varios sensores con pocos cables', 'Alimentar motores', 'Cargar la notebook', 'Soldar']),
+      c('Si ves caracteres locos en el monitor serial...', ['El baud rate no coincide', 'Se rompió Python', 'Falta CSS', 'El LED está al revés nomas']),
+    ]),
+    unit('Proyecto: evita obstáculos', 'Avanzado', {
+      intro: 'Un proyecto cierra el círculo: ultrasónico adelante, dos motores atrás, if de umbral. Calibrás, probás, ajustás. Eso es ingeniería.',
+      points: ['Definí el umbral en cm', 'Frená antes de girar', 'Probá en el piso real', 'Documentá los pines'],
+      code: 'si distancia < 15 cm → frenar → girar\nsi no → avanzar',
+    }, [
+      c('¿Qué sensor usa un evita-obstáculos simple?', ['Ultrasónico (eco)', 'GPS', 'Termómetro', 'Micrófono nomas']),
+      t('Si el umbral es 15, ¿a cuántos cm empieza a frenar?', ['15', '15 cm', '15cm']),
+      c('¿Por qué calibrar en el piso real?', ['La luz y el suelo cambian las lecturas', 'El Arduino se rompe adentro', 'Los motores no giran en casa', 'I2C no funciona en baldosas']),
+      c('¿Qué documentarías en el código?', ['Qué pin es cada sensor/motor', 'Tu contraseña de WiFi', 'El precio del servo', 'La fecha de la facu']),
+      o('Ordená el loop', ['Medir distancia', 'Comparar con el umbral', 'Frenar o avanzar', 'Pequeño delay para estabilizar']),
+    ]),
   ],
 }

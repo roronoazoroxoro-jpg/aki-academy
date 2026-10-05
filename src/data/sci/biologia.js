@@ -84,5 +84,38 @@ export default {
       c('¿Es correcto decir que "el hombre viene del mono"?', ['No: compartimos un antepasado común', 'Sí, de los chimpancés actuales', 'Sí, de los gorilas', 'No, no hay relación alguna']),
       c('¿Qué estudió Gregor Mendel?', ['Las leyes de la herencia', 'Los fósiles', 'Las vacunas', 'La fotosíntesis']),
     ]),
+    unit('Microbios y salud', 'Intermedio', {
+      intro: 'Bacterias, virus y hongos pueden enfermar o ayudar (tu flora). Un antibiótico mata bacterias, no virus. Por eso no “cura” una gripe.',
+      points: ['Virus: necesita una célula para copiarse', 'Vacuna: entrena al sistema inmune', 'Higiene de manos = menos contagio', 'No te automediques antibióticos'],
+      code: 'gripe = virus  →  antibiótico no sirve\nbacteria = a veces antibiótico (indicado)',
+    }, [
+      c('¿Un antibiótico sirve para la gripe?', ['No: la gripe es un virus', 'Sí, siempre', 'Solo si hay fiebre', 'Solo en invierno']),
+      c('¿Qué hace una vacuna?', ['Prepara al sistema inmune sin darte la enfermedad fuerte', 'Es un antibiótico', 'Mata todos los microbios del cuerpo', 'Reemplaza el lavado de manos']),
+      t('¿Qué microbio necesita una célula huésped para copiarse?', ['virus', 'un virus']),
+      c('¿Por qué no hay que automedicarse antibióticos?', ['Generan bacterias resistentes y pueden no hacer falta', 'Son gratis', 'No existen en Argentina', 'Solo duran un día']),
+      m('Uní', [['Virus', 'Gripe'], ['Bacteria', 'A veces antibiótico'], ['Vacuna', 'Prevención'], ['Manos limpias', 'Menos contagio']]),
+    ]),
+    unit('Sangre y circulación', 'Básico', {
+      intro: 'El corazón es una bomba. Arterias salen, venas vuelven. La sangre lleva oxígeno, nutrientes y defensas. Los glóbulos rojos transportan O₂ con hemoglobina.',
+      points: ['Aurículas y ventrículos', 'Pulmones oxigenan', 'Glóbulos blancos: defensa', 'Plaquetas: coagulan'],
+      code: 'pulmón → corazón → cuerpo → corazón → pulmón',
+    }, [
+      c('¿Qué hacen los glóbulos rojos?', ['Transportan oxígeno', 'Combaten virus nomas', 'Coagulan', 'Producen hueso']),
+      c('Las arterias...', ['Salen del corazón', 'Solo van a los pulmones', 'No tienen sangre', 'Son huesos']),
+      t('¿Cómo se llama la proteína que carga oxígeno?', ['hemoglobina']),
+      c('¿Las plaquetas para qué sirven?', ['Tapar heridas (coagular)', 'Pensar', 'Digerir', 'Ver']),
+      c('¿Cuántas cámaras tiene el corazón humano?', ['4', '2', '3', '1']),
+    ]),
+    unit('Reproducción y desarrollo', 'Avanzado', {
+      intro: 'La meiosis produce óvulos y espermatozoides con la mitad de cromosomas (23). Al juntarse, el cigoto vuelve a 46. El ADN de los dos se mezcla: por eso no sos clon de tus viejos.',
+      points: ['Mitosis: copiar el cuerpo', 'Meiosis: gametos', '23 + 23 = 46', 'Embarazo: el cigoto se implanta y crece'],
+      code: 'meiosis → 23  +  23 → cigoto 46',
+    }, [
+      c('¿Cuántos cromosomas tiene una célula humana normal?', ['46', '23', '92', '2']),
+      c('¿La meiosis para qué sirve?', ['Formar gametos con la mitad de cromosomas', 'Curar heridas', 'Hacer fotosíntesis', 'Bombear sangre']),
+      t('¿Cómo se llama la célula que resulta de unir óvulo y espermatozoide?', ['cigoto', 'zigoto']),
+      c('¿Por qué los hermanos no son idénticos (salvo mellizos idénticos)?', ['Se mezclan y recombinan genes distintos', 'El horóscopo', 'La comida de la mamá nomas', 'El orden de nacimiento siempre']),
+      c('La mitosis sirve para...', ['Crecer y reparar tejidos', 'Hacer óvulos nomas', 'Respirar', 'Pensar']),
+    ]),
   ],
 }

@@ -32,5 +32,29 @@ export default {
       words: [['yo soy', 'Sum'], ['él es', 'Est'], ['nosotros somos', 'Sumus'], ['ellos son', 'Sunt'], ['grande', 'Magnus'], ['bueno', 'Bonus'], ['nuevo', 'Novus'], ['ama', 'Amat']],
       phrases: [['Yo soy argentino', 'Argentinus sum'], ['Nosotros somos amigos', 'Amici sumus'], ['El libro es bueno', 'Liber bonus est'], ['La madre ama', 'Mater amat'], ['Ellos son grandes', 'Magni sunt']],
     },
+    {
+      title: 'Colores y el cuerpo', level: 'Básico',
+      guide: { intro: 'Muchos colores del español vienen del latín: albus (blanco), niger (negro), viridis (verde). El cuerpo también: caput, manus, pes.', points: ['ruber / caeruleus / viridis', 'caput = cabeza → capital', 'manus = mano → manual', 'pes = pie → peatón'] },
+      words: [['rojo', 'Ruber'], ['azul', 'Caeruleus'], ['verde', 'Viridis'], ['amarillo', 'Flavus'], ['negro', 'Niger'], ['blanco', 'Albus'], ['cabeza', 'Caput'], ['mano', 'Manus']],
+      phrases: [['El libro es rojo', 'Liber ruber est'], ['La casa es blanca', 'Domus alba est'], ['La mano es pequeña', 'Manus parva est'], ['La cabeza es grande', 'Caput magnum est'], ['El cielo es azul', 'Caelum caeruleum est']],
+    },
+    {
+      title: 'Números y tiempo', level: 'Básico',
+      guide: { intro: 'Unus, duo, tres... de ahí vienen uni-, bi-, tri-. Hora, dies, nox: la hora, el día y la noche.', points: ['unus, duo, tres, quinque, decem', 'hora / dies / nox', 'Nunc = ahora', 'Cras = mañana'] },
+      words: [['uno', 'Unus'], ['dos', 'Duo'], ['tres', 'Tres'], ['cinco', 'Quinque'], ['diez', 'Decem'], ['hora', 'Hora'], ['día', 'Dies'], ['noche', 'Nox']],
+      phrases: [['Son tres horas', 'Tres horae sunt'], ['El día es largo', 'Dies longus est'], ['La noche es oscura', 'Nox obscura est'], ['Ahora estudio', 'Nunc studeo'], ['Mañana viajo', 'Cras iter facio']],
+    },
+    {
+      title: 'Naturaleza y clima', level: 'Intermedio',
+      guide: { intro: 'Sol, luna, pluvia, ventus: el cielo latino sigue vivo en español. "Pluit" = llueve. "Frigus est" = hace frío.', points: ['Sol / Luna', 'Pluit = llueve', 'Ventus = viento', 'Frigus / calor'] },
+      words: [['sol', 'Sol'], ['luna', 'Luna'], ['lluvia', 'Pluvia'], ['viento', 'Ventus'], ['frío', 'Frigus'], ['calor', 'Calor'], ['estrella', 'Stella'], ['cielo', 'Caelum']],
+      phrases: [['El sol brilla', 'Sol lucet'], ['Está lloviendo', 'Pluit'], ['El viento es fuerte', 'Ventus validus est'], ['Hace frío', 'Frigus est'], ['La estrella es bella', 'Stella pulchra est']],
+    },
+    {
+      title: 'La vida cotidiana', level: 'Intermedio',
+      guide: { intro: 'Como en español: laboro, studeo, dormio, ceno. El verbo suele ir al final: Ego mane laboro.', points: ['Laboro = trabajo', 'Studeo = estudio', 'Dormio = duermo', 'Mane / vespere = mañana / tarde'] },
+      words: [['trabajar', 'Laboro'], ['estudiar', 'Studeo'], ['dormir', 'Dormio'], ['comer', 'Ceno'], ['cocinar', 'Coquo'], ['caminar', 'Ambulo'], ['mañana', 'Mane'], ['tarde', 'Vespere']],
+      phrases: [['Trabajo por la mañana', 'Mane laboro'], ['Estudio de noche', 'Nocte studeo'], ['Como en casa', 'Domi ceno'], ['Camino a la ciudad', 'Ad urbem ambulo'], ['Duermo tarde', 'Sero dormio']],
+    },
   ],
 }
