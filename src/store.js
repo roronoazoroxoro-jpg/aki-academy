@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react'
+import { CARDS, figusForLesson, ownedCount } from './data/cards'
 
 const KEY = 'aki-academy-v1'
 export const MAX_HEARTS = 5
@@ -43,16 +44,35 @@ const initial = () => ({
   league: { week: weekId(), xp: 0 },
   labRuns: 0,
   labSolved: [],
+  cardPts: 0,
+  figuGrant: false,
+  deck: { owned: { original: 1 }, shine: 'original' },
   sound: true,
   theme: 'light',
   createdAt: Date.now(),
 })
 
+function lessonsDone(progress) {
+  return Object.values(progress || {}).reduce((n, p) => n + Object.keys(p.done || {}).length, 0)
+}
+
+function withDeck(s) {
+  const done = lessonsDone(s.progress)
+  const deck = s.deck || { owned: { original: 1 }, shine: 'original' }
+  if (!s.figuGrant) {
+    return { ...s, figuGrant: true, figuBackfill: true, cardPts: (s.cardPts || 0) + Math.min(400, done * 12), deck }
+  }
+  if (!s.figuBackfill && (s.cardPts || 0) === 0 && done > 0) {
+    return { ...s, figuBackfill: true, cardPts: Math.min(400, done * 12), deck }
+  }
+  return { ...s, deck }
+}
+
 function load() {
   try {
     const raw = localStorage.getItem(KEY)
     if (!raw) return initial()
-    return { ...initial(), ...JSON.parse(raw) }
+    return withDeck({ ...initial(), ...JSON.parse(raw) })
   } catch {
     return initial()
   }
@@ -109,6 +129,8 @@ export function refreshDaily() {
 
   const hearts = computeHearts(s)
   if (hearts.hearts !== s.hearts) Object.assign(patch, hearts)
+
+  if (!s.figuGrant) Object.assign(patch, withDeck(s))
 
   if (Object.keys(patch).length) setState(patch)
 }
@@ -168,10 +190,12 @@ export function completeLesson({ courseId, lessonKey, xp, perfect, maxCombo, mis
 
   const q = s.quests.day === today ? s.quests : { day: today, xp: 0, lessons: 0, combo: 0, perfect: 0, claimed: [] }
   const quests = { ...q, xp: q.xp + xp, lessons: q.lessons + 1, combo: Math.max(q.combo, maxCombo), perfect: q.perfect + (perfect ? 1 : 0) }
+  const figus = figusForLesson(perfect, practice)
 
   setState({
     xp: s.xp + xp,
     gems: s.gems + (perfect ? 10 : 5),
+    cardPts: (s.cardPts || 0) + figus,
     streak, longestStreak, lastActive, activeDays,
     xpByDay: { ...s.xpByDay, [today]: (s.xpByDay[today] || 0) + xp },
     progress,
@@ -182,7 +206,31 @@ export function completeLesson({ courseId, lessonKey, xp, perfect, maxCombo, mis
   })
 
   const unlocked = checkAchievements()
-  return { streakExtended, streak, unlocked }
+  return { streakExtended, streak, unlocked, figus }
+}
+
+export function redeemCard(id) {
+  const card = CARDS.find((c) => c.id === id)
+  if (!card) return { ok: false }
+  const s = state
+  const copies = s.deck?.owned?.[id] || 0
+  if (copies > 0) return { ok: false, reason: 'owned' }
+  if (!card.free && (s.cardPts || 0) < card.cost) return { ok: false, reason: 'poor' }
+  setState({
+    cardPts: card.free ? (s.cardPts || 0) : (s.cardPts || 0) - card.cost,
+    deck: {
+      owned: { ...(s.deck?.owned || {}), [id]: 1 },
+      shine: s.deck?.shine || id,
+    },
+  })
+  const unlocked = checkAchievements()
+  return { ok: true, unlocked }
+}
+
+export function setShine(id) {
+  const s = state
+  if (!(s.deck?.owned?.[id])) return
+  setState({ deck: { ...s.deck, shine: id } })
 }
 
 export function addXp(xp, gems = 0) {
@@ -228,6 +276,9 @@ export const ACHIEVEMENTS = [
   { id: 'perfect', icon: '💎', title: 'De diez', desc: 'Lección perfecta', test: (s) => s.quests.perfect >= 1 || s.achievements.includes('perfect') },
   { id: 'scientist', icon: '🔬', title: 'Científico criollo', desc: 'Empezá un curso de ciencia', test: (s) => ['matematica', 'fisica', 'quimica', 'biologia', 'astronomia', 'economia', 'historia'].some((id) => s.progress[id]) },
   { id: 'polyglot', icon: '🗣️', title: 'Políglota', desc: 'Empezá 5 cursos de idiomas', test: (s) => Object.keys(s.progress).filter((id) => ['english', 'spanish', 'italian', 'portuguese', 'french', 'german', 'catalan', 'dutch', 'swedish', 'polish', 'japanese', 'chinese', 'korean', 'russian', 'ukrainian', 'arabic', 'hebrew', 'hindi', 'turkish', 'greek', 'latin', 'vietnamese', 'thai', 'indonesian', 'quechua'].includes(id)).length >= 5 },
+  { id: 'figu1', icon: '🃏', title: 'Primera figu', desc: 'Canjeá tu primera carta de disfraz', test: (s) => CARDS.filter((c) => c.set === 'disfraz' && s.deck?.owned?.[c.id]).length >= 1 },
+  { id: 'figu10', icon: '🧢', title: 'Coleccionista', desc: 'Completá las 10 cartas de disfraces', test: (s) => CARDS.filter((c) => c.set === 'disfraz' && s.deck?.owned?.[c.id]).length >= 10 },
+  { id: 'album', icon: '📒', title: 'Álbum lleno', desc: 'Juntá las 20 cartas del mazo', test: (s) => ownedCount(s.deck) >= 20 },
 ]
 
 export function checkAchievements() {

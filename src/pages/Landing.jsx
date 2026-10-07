@@ -24,6 +24,7 @@ const FEATURES = [
   { pose: 'languages', title: '25 idiomas, con audio y su bandera', text: 'Desde inglés y japonés hasta hebreo, tailandés, ucraniano y quechua. Escuchá la pronunciación, armá frases y escribí en su propio alfabeto. También el español argentino: vos, che y lunfardo.' },
   { pose: 'streak', title: 'Ciencia, números e historia del país', text: 'Matemáticas, física, química, biología, astronomía, economía y la historia argentina. Explicado como te hubiera gustado que te lo cuenten en la escuela.' },
   { pose: 'streak', title: 'Mantené la racha, che', text: 'Sumá XP, cuidá tus vidas, ganá medialunas, abrí cofres, cumplí misiones diarias y subí de liga: del Potrero hasta Campeón del Mundo. Cinco minutos por día alcanzan.' },
+  { card: '/img/cards/card-futbol.jpg', title: 'Mazo de cartas AKI', text: 'Cada lección te da figus. Canjealas por figuritas de AKI vestido de futbolista, chef, soldado, skater, astronauta, gaucho y más. Armá tu álbum de 20.' },
 ]
 
 export default function Landing() {
@@ -91,7 +92,9 @@ export default function Landing() {
             <p>{f.text}</p>
             <button className="btn white sm" onClick={start}>Probar ahora</button>
           </div>
-          <Aki pose={f.pose} className="floaty" />
+          {f.card
+            ? <img src={f.card} alt="" className="deck-feature-card" />
+            : <Aki pose={f.pose} className="floaty" />}
         </section>
       ))}
 

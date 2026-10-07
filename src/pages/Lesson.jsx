@@ -229,6 +229,7 @@ function Result({ result, practice }) {
         <div className="rstat cel" style={{ animationDelay: '0.1s' }}><div className="lab">Precisión</div><div className="val">🎯 <Count to={result.accuracy} suffix="%" /></div></div>
         <div className="rstat cel" style={{ animationDelay: '0.2s' }}><div className="lab">Tiempo</div><div className="val">⏱️ {fmtTime(result.time)}</div></div>
         <div className="rstat" style={{ animationDelay: '0.3s' }}><div className="lab">Medialunas</div><div className="val">🥐 +<Count to={result.perfect ? 10 : 5} /></div></div>
+        <div className="rstat cel" style={{ animationDelay: '0.4s' }}><div className="lab">Figus</div><div className="val">🃏 +<Count to={result.figus || 0} /></div></div>
       </div>
       {unlocked.length > 0 && (
         <div className="card" style={{ borderColor: 'var(--oro)', background: 'var(--oro-soft)' }}>
@@ -236,7 +237,8 @@ function Result({ result, practice }) {
           {unlocked.map((a) => <div key={a.id} style={{ fontWeight: 800 }}>{a.icon} {a.title} <span className="muted">· +50 🥐</span></div>)}
         </div>
       )}
-      <div className="check-bar"><div className="inner" style={{ justifyContent: 'flex-end' }}>
+      <div className="check-bar"><div className="inner" style={{ justifyContent: 'flex-end', gap: 10, flexWrap: 'wrap' }}>
+        <button className="btn white" onClick={() => go('mazo')}>Ver mazo</button>
         <button className="btn gold" onClick={() => go('aprender')}>Continuar</button>
       </div></div>
     </div>

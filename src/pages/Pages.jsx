@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { useStore, setState, QUESTS, claimQuest, ACHIEVEMENTS, MAX_HEARTS, hasUnlimitedHearts, resetAll, todayStr, checkAchievements, toggleTheme } from '../store'
 import { COURSES, GROUPS, courseStats } from '../data/courses'
+import { ownedCount } from '../data/cards'
 import { go } from '../router'
 import { Aki, Bar, Modal, Confetti, CourseIcon } from '../components/ui'
 import { leagueTable, tierFor, TIERS } from '../league'
@@ -226,6 +227,17 @@ export function Profile() {
         <div className="stat-box"><span className="e">🥐</span><div><b>{s.gems}</b><span>Medialunas</span></div></div>
         <div className="stat-box"><span className="e">📚</span><div><b>{started.length}</b><span>Cursos empezados</span></div></div>
         <div className="stat-box"><span className="e">💻</span><div><b>{s.labSolved.length}</b><span>Desafíos resueltos</span></div></div>
+        <div className="stat-box"><span className="e">🃏</span><div><b>{ownedCount(s.deck)} / 20</b><span>Cartas del mazo</span></div></div>
+        <div className="stat-box"><span className="e">🧢</span><div><b>{s.cardPts || 0}</b><span>Figus</span></div></div>
+      </div>
+
+      <div className="card" style={{ margin: '8px 0 22px', display: 'flex', alignItems: 'center', gap: 14, cursor: 'pointer' }} onClick={() => go('mazo')}>
+        <span style={{ fontSize: 36 }}>🃏</span>
+        <div style={{ flex: 1 }}>
+          <h3 style={{ margin: 0 }}>Tu mazo de cartas</h3>
+          <p className="muted" style={{ margin: '4px 0 0', fontWeight: 700 }}>Canjeá figus por AKI futbolista, chef, gaucho y más.</p>
+        </div>
+        <button className="btn sm gold" type="button">Abrir álbum</button>
       </div>
 
       <h2 className="section-title">Mis cursos</h2>

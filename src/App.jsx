@@ -9,8 +9,9 @@ import Learn from './pages/Learn'
 import Lesson from './pages/Lesson'
 import Lab from './pages/Lab'
 import { Courses, League, Quests, Shop, Profile } from './pages/Pages'
+import Deck from './pages/Deck'
 
-const PAGES = { aprender: Learn, cursos: Courses, lab: Lab, liga: League, misiones: Quests, tienda: Shop, perfil: Profile }
+const PAGES = { aprender: Learn, cursos: Courses, lab: Lab, liga: League, misiones: Quests, mazo: Deck, tienda: Shop, perfil: Profile }
 
 export default function App() {
   const { path, params } = useRoute()

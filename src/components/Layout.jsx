@@ -5,6 +5,7 @@ import { go } from '../router'
 import { Aki, Bar, Modal, fmtTime, CourseIcon, Ring } from './ui'
 import { MateGlow } from './Decor'
 import { leagueTable, tierFor } from '../league'
+import { ownedCount } from '../data/cards'
 
 export const NAV = [
   { id: 'aprender', label: 'Aprender', ico: '🏠' },
@@ -12,6 +13,7 @@ export const NAV = [
   { id: 'lab', label: 'Laboratorio', ico: '💻' },
   { id: 'liga', label: 'Liga', ico: '🏆' },
   { id: 'misiones', label: 'Misiones', ico: '🎯' },
+  { id: 'mazo', label: 'Mazo', ico: '🃏' },
   { id: 'tienda', label: 'Tienda', ico: '🥐' },
   { id: 'perfil', label: 'Perfil', ico: '🧉' },
 ]
@@ -33,6 +35,9 @@ export function Stats({ compact = false }) {
         </button>
         <button className="stat gem" onClick={() => go('tienda')} title="Medialunas">
           <span className="em">🥐</span>{s.gems}
+        </button>
+        <button className="stat" onClick={() => go('mazo')} title="Figus del mazo">
+          <span className="em">🃏</span>{s.cardPts || 0}
         </button>
         <button className="stat heart" onClick={() => setOpen('hearts')} title="Vidas">
           <span className="em">❤️</span>{unlimited ? '∞' : s.hearts}
@@ -150,6 +155,27 @@ function QuestsMini() {
   )
 }
 
+function DeckMini() {
+  const s = useStore()
+  const n = ownedCount(s.deck)
+  return (
+    <div className="card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h3>Mazo AKI</h3>
+        <button className="btn ghost sm" onClick={() => go('mazo')}>Ver álbum</button>
+      </div>
+      <div className="row">
+        <span style={{ fontSize: 36 }}>🃏</span>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontWeight: 800, marginBottom: 6 }}>{n} / 20 cartas · {s.cardPts || 0} figus</div>
+          <Bar value={n} max={20} cel style={{ height: 10 }} />
+          <div className="small muted" style={{ fontWeight: 700, marginTop: 6 }}>Canjeá disfraces: futbolista, chef, gaucho…</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function LeagueMini() {
   const s = useStore()
   const tier = tierFor(s.xp)
@@ -211,6 +237,7 @@ export function Layout({ active, children }) {
       <aside className="rightbar">
         <Stats />
         <DailyGoal />
+        <DeckMini />
         <LeagueMini />
         <QuestsMini />
         <div className="card" style={{ background: 'linear-gradient(120deg, var(--celeste-soft), #fff)' }}>
