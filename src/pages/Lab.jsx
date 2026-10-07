@@ -298,7 +298,7 @@ export default function Lab() {
   return (
     <>
       <div className="page-head">
-        <Aki pose="code" />
+        <Aki pose="code" h={96} idle={false} />
         <div>
           <h1>Laboratorio</h1>
           <p>Programá de verdad: Python real, desafíos con corrección automática y webs en vivo. Sin instalar nada.</p>

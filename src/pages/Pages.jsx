@@ -9,7 +9,7 @@ import { sfx } from '../fx'
 function Head({ pose, title, sub }) {
   return (
     <div className="page-head">
-      <Aki pose={pose} />
+      <Aki pose={pose} h={96} idle={false} />
       <div><h1>{title}</h1><p>{sub}</p></div>
     </div>
   )
@@ -35,7 +35,7 @@ export function Courses() {
   }
   return (
     <>
-      <Head pose="mascot" title="Cursos" sub={`${COURSES.length} cursos gratis, de 8 a 12 unidades cada uno. Tu progreso se guarda en cada uno.`} />
+      <Head pose="wave" title="Cursos" sub={`${COURSES.length} cursos gratis, cada uno con un camino largo de unidades. Tu progreso se guarda acá.`} />
       {GROUPS.map((g) => (
         <section key={g.id}>
           <div className="group-title">{g.icon} {g.title}</div>
@@ -56,7 +56,7 @@ export function League() {
   const daysLeft = 7 - ((now.getDay() + 6) % 7)
   return (
     <>
-      <Head pose="streak" title={`Liga ${tier.name} ${tier.icon}`} sub={`Los 5 primeros ascienden. Quedan ${daysLeft} ${daysLeft === 1 ? 'día' : 'días'} de esta semana.`} />
+      <Head pose="hero" title={`Liga ${tier.name} ${tier.icon}`} sub={`Los 5 primeros ascienden. Quedan ${daysLeft} ${daysLeft === 1 ? 'día' : 'días'} de esta semana.`} />
       <div className="tiers">{TIERS.map((t) => <div key={t.name} className={`tier ${t.name === tier.name ? 'on' : ''}`} title={`${t.name} · desde ${t.min} XP`}>{t.icon}</div>)}</div>
       <div className="card">
         <div className="list">
@@ -86,7 +86,7 @@ export function Quests() {
   const today = s.xpByDay[todayStr()] || 0
   return (
     <>
-      <Head pose="celebrate" title="Misiones del día" sub="Cumplilas antes de la medianoche y ganá medialunas." />
+      <Head pose="cheer" title="Misiones del día" sub="Cumplilas antes de la medianoche y ganá medialunas." />
       <div className="card">
         {QUESTS.map((q) => {
           const target = q.target(s)
@@ -117,7 +117,7 @@ export function Quests() {
         <Modal onClose={() => setWon(null)}>
           <Confetti count={40} />
           <div style={{ textAlign: 'center' }}>
-            <Aki pose="celebrate" h={160} />
+            <Aki pose="victory" h={150} idle={false} />
             <h2>¡Misión cumplida!</h2>
             <p style={{ fontSize: 26, fontWeight: 900, color: 'var(--oro-2)' }}>+{won} 🥐</p>
             <button className="btn gold block" onClick={() => setWon(null)}>¡Joya!</button>
@@ -147,7 +147,7 @@ export function Shop() {
   ]
   return (
     <>
-      <Head pose="mascot" title="Tienda" sub={`Tenés ${s.gems} 🥐 medialunas. Las ganás con lecciones, misiones, cofres y logros.`} />
+      <Head pose="shop" title="Tienda" sub={`Tenés ${s.gems} 🥐 medialunas. Las ganás con lecciones, misiones, cofres y logros.`} />
       <div className="card">
         {items.map((it) => (
           <div className="shop-item" key={it.title}>
@@ -160,7 +160,7 @@ export function Shop() {
       {msg && (
         <Modal onClose={() => setMsg(null)}>
           <div style={{ textAlign: 'center' }}>
-            <Aki pose={msg.startsWith('No') ? 'sad' : 'celebrate'} h={150} />
+            <Aki pose={msg.startsWith('No') ? 'oops' : 'victory'} h={150} idle={false} />
             <p style={{ fontWeight: 800, fontSize: 18 }}>{msg}</p>
             <button className="btn block" onClick={() => setMsg(null)}>Dale</button>
           </div>
@@ -215,7 +215,7 @@ export function Profile() {
               style={{ width: 28, height: 28, borderRadius: '50%', background: c, border: s.avatarColor === c ? '3px solid var(--tinta)' : '2px solid #fff', boxShadow: '0 0 0 1px var(--gris)' }} />)}
           </div>
         </div>
-        <Aki pose="streak" h={130} />
+        <Aki pose="mate" h={130} />
       </div>
 
       <h2 className="section-title">Estadísticas</h2>

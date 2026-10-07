@@ -32,7 +32,7 @@ export default function Onboarding() {
       </div>
       <div className="onb-body">
         <div className="speech">
-          <Aki pose={step === 0 ? 'mascot' : step === 1 ? 'streak' : 'celebrate'} />
+          <Aki pose={step === 0 ? 'wave' : step === 1 ? 'think' : 'mate'} />
           <div className="bubble">{lines[step]}</div>
         </div>
 

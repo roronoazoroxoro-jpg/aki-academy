@@ -74,7 +74,7 @@ function SpeakBtn({ text, lang, slow }) {
 }
 
 function Prompt({ ex }) {
-  const pose = ex.courseId && ex.lang ? 'languages' : 'code'
+  const pose = ex.listen ? 'wave' : ex.type === 'type' ? 'think' : ex.courseId && ex.lang ? 'languages' : 'code'
   return (
     <>
       <div className="ex-tag">{labelFor(ex)}</div>

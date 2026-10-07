@@ -3,6 +3,7 @@ import { useStore, QUESTS, MAX_HEARTS, nextHeartIn, hasUnlimitedHearts, todayStr
 import { getCourse } from '../data/courses'
 import { go } from '../router'
 import { Aki, Bar, Modal, fmtTime, CourseIcon, Ring } from './ui'
+import { MateGlow } from './Decor'
 import { leagueTable, tierFor } from '../league'
 
 export const NAV = [
@@ -87,7 +88,7 @@ export function HeartsModal({ onClose }) {
   return (
     <Modal onClose={onClose}>
       <div style={{ textAlign: 'center' }}>
-        <Aki pose={s.hearts > 0 || unlimited ? 'mascot' : 'sad'} h={140} />
+        <Aki pose={s.hearts > 0 || unlimited ? 'mate' : 'oops'} h={140} />
         <h2>Vidas</h2>
         <div style={{ fontSize: 34, letterSpacing: 4 }}>
           {Array.from({ length: MAX_HEARTS }, (_, i) => <span key={i} style={{ opacity: unlimited || i < s.hearts ? 1 : 0.2 }}>❤️</span>)}
@@ -188,6 +189,10 @@ export function Layout({ active, children }) {
           <img src="/img/aki-icon.jpg" alt="AKI" />
           <b>AKI<span>-Academy</span></b>
         </a>
+        <div className="side-aki">
+          <Aki pose="mate" h={86} />
+          <MateGlow />
+        </div>
         {NAV.map((n) => (
           <button key={n.id} className={`nav-item ${active === n.id ? 'active' : ''}`} onClick={() => go(n.id)}>
             <span className="ico">{n.ico}</span><span className="label">{n.label}</span>
@@ -210,7 +215,7 @@ export function Layout({ active, children }) {
         <QuestsMini />
         <div className="card" style={{ background: 'linear-gradient(120deg, var(--celeste-soft), #fff)' }}>
           <div className="row">
-            <Aki pose="code" h={80} />
+            <Aki pose="teach" h={80} />
             <div>
               <h3 style={{ marginBottom: 4 }}>Laboratorio</h3>
               <p className="small muted" style={{ margin: '0 0 8px', fontWeight: 700 }}>Programá Python y webs de verdad en el navegador.</p>

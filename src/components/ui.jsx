@@ -1,4 +1,5 @@
 import { Component, useEffect, useMemo, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 // Transparent cutouts built from the renders by scripts/cutout.py.
 export const IMG = {
@@ -8,13 +9,35 @@ export const IMG = {
   sad: '/img/aki-sad.webp',
   languages: '/img/aki-languages.webp',
   streak: '/img/aki-streak.webp',
+  wave: '/img/aki-mascot.webp',
+  think: '/img/aki-code.webp',
+  mate: '/img/aki-streak.webp',
+  shop: '/img/aki-shop.jpg',
+  cheer: '/img/aki-celebrate.webp',
+  teach: '/img/aki-teach.jpg',
+  hero: '/img/aki-hero.jpg',
+  oops: '/img/aki-oops.jpg',
+  victory: '/img/aki-victory.jpg',
+  flag: '/img/aki-flag.jpg',
+  power: '/img/aki-power.jpg',
+  patio: '/img/aki-patio.jpg',
+  avatar: '/img/aki-mascot.webp',
   icon: '/img/aki-icon.jpg',
 }
 
-// The cutouts have different aspect ratios, so `h` (height) sizes them consistently.
-export function Aki({ pose = 'mascot', className = '', h, style, alt = 'AKI, el robot que toma mate' }) {
-  const size = h ? { height: h, width: 'auto', ...style } : style
-  return <img src={IMG[pose]} alt={alt} className={`mascot ${className}`} style={size} draggable={false} />
+const FALLBACK = IMG.mascot
+
+export function Aki({ pose = 'mascot', className = '', h, style, alt = 'AKI, el robot que toma mate', idle = true }) {
+  const size = { height: h || 120, width: 'auto', maxHeight: h || 120, objectFit: 'contain', ...style }
+  return (
+    <img
+      src={IMG[pose] || FALLBACK}
+      alt={alt}
+      className={`mascot ${idle ? 'aki-idle' : ''} ${className}`}
+      style={size}
+      draggable={false}
+    />
+  )
 }
 
 // Windows doesn't render flag emojis, so language courses use flag images instead.
@@ -27,10 +50,13 @@ export function CourseIcon({ course, size = 32 }) {
 }
 
 export function Modal({ children, onClose }) {
-  return (
-    <div className="overlay" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>{children}</div>
-    </div>
+  return createPortal(
+    <div className="overlay" onClick={onClose} role="presentation">
+      <div className="modal" onClick={(e) => e.stopPropagation()} role="dialog">
+        {children}
+      </div>
+    </div>,
+    document.body,
   )
 }
 

@@ -42,19 +42,37 @@ import vietnamese from './lang/vietnamese'
 import thai from './lang/thai'
 import indonesian from './lang/indonesian'
 import quechua from './lang/quechua'
+import langExtras from './lang/extras'
+import langExtras2 from './lang/extras2'
+import langExtras3 from './lang/extras3'
+import stemExtras from './stemExtras'
+import stemMore from './stemMore'
+import stemPack3 from './stemPack3'
 
-export const CODE_COURSES = [python, javascript, web, react, typescript, sql, git, ai, robotica, cyber]
-export const SCI_COURSES = [matematica, fisica, quimica, biologia, astronomia, economia, historia]
+function attach(course) {
+  const extra = [
+    ...(langExtras[course.id] || []),
+    ...(langExtras2[course.id] || []),
+    ...(langExtras3[course.id] || []),
+    ...(stemExtras[course.id] || []),
+    ...(stemMore[course.id] || []),
+    ...(stemPack3[course.id] || []),
+  ]
+  return extra.length ? { ...course, units: [...course.units, ...extra] } : course
+}
+
+export const CODE_COURSES = [python, javascript, web, react, typescript, sql, git, ai, robotica, cyber].map(attach)
+export const SCI_COURSES = [matematica, fisica, quimica, biologia, astronomia, economia, historia].map(attach)
 export const LANG_COURSES = [
   english, spanish, italian, portuguese, french, german, catalan, dutch, swedish, polish,
   japanese, chinese, korean, russian, ukrainian, arabic, hebrew, hindi, turkish, greek, latin,
   vietnamese, thai, indonesian, quechua,
-]
+].map(attach)
 
 export const GROUPS = [
-  { id: 'code', title: 'Programación y tecnología', icon: '💻', sub: 'De tu primera línea de código a publicar tu propia app.', courses: CODE_COURSES },
-  { id: 'sci', title: 'Ciencia, números y el país', icon: '🔬', sub: 'Mate, física, química, biología, cielo, plata e historia argentina.', courses: SCI_COURSES },
-  { id: 'lang', title: 'Idiomas', icon: '🌎', sub: '25 idiomas con bandera, audio y escritura real.', courses: LANG_COURSES },
+  { id: 'code', title: 'Programación y tecnología', icon: '💻', sub: 'Caminos largos: de tu primera línea a publicar, testear y pensar como un equipo.', courses: CODE_COURSES },
+  { id: 'sci', title: 'Ciencia, números y el país', icon: '🔬', sub: 'Mate, física, química, biología, cielo, plata e historia argentina. Unidad por unidad.', courses: SCI_COURSES },
+  { id: 'lang', title: 'Idiomas', icon: '🌎', sub: '25 idiomas con bandera, audio y un camino largo: viajes, deporte, ropa, emociones y más.', courses: LANG_COURSES },
 ]
 
 export const COURSES = GROUPS.flatMap((g) => g.courses)

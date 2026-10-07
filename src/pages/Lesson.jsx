@@ -124,7 +124,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
       <div className="lesson-top">
         <button className="x" onClick={() => setQuit(true)} aria-label="Salir">✕</button>
         <Bar value={idx + (status === 'idle' ? 0 : 1)} max={queue.length} />
-        {combo >= 3 && <span className="combo" key={combo}>🔥 {combo} seguidas</span>}
+        {combo >= 3 && <span className="combo gold-flash" key={combo}>🔥 {combo} seguidas</span>}
         <span className="stat heart" style={{ padding: 0 }}><span className="em">❤️</span>{practice || unlimited ? '∞' : s.hearts}</span>
       </div>
 
@@ -144,6 +144,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
           ) : (
             <>
               <div className="feedback">
+                <Aki pose={status === 'ok' ? 'celebrate' : 'sad'} h={64} idle={false} />
                 <div className="badge">{status === 'ok' ? '🧉' : '💔'}{status === 'ok' && <Sparks />}</div>
                 <div>
                   <h3>{msg}</h3>
@@ -164,7 +165,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
       {quit && (
         <Modal onClose={() => setQuit(false)}>
           <div style={{ textAlign: 'center' }}>
-            <Aki pose="sad" h={150} />
+            <Aki pose="oops" h={150} />
             <h2>¿Te vas, che?</h2>
             <p className="muted" style={{ fontWeight: 700 }}>Si salís ahora vas a perder el progreso de esta lección.</p>
             <div style={{ display: 'grid', gap: 10 }}>
@@ -178,7 +179,7 @@ export default function Lesson({ courseId, u, l, practice = false }) {
       {outOfHearts && (
         <Modal onClose={() => {}}>
           <div style={{ textAlign: 'center' }}>
-            <Aki pose="sad" h={160} />
+            <Aki pose="oops" h={160} />
             <h2>¡Te quedaste sin vidas!</h2>
             <p className="muted" style={{ fontWeight: 700 }}>Se recargan solas con el tiempo, o podés recargarlas ya con medialunas.</p>
             <div style={{ display: 'grid', gap: 10 }}>
@@ -220,7 +221,7 @@ function Result({ result, practice }) {
   return (
     <div className="result">
       <Confetti />
-      <Aki pose="celebrate" className="hero" />
+      <Aki pose={result.perfect ? 'cheer' : 'celebrate'} className="hero" />
       <h1>{practice ? '¡Práctica completa!' : result.perfect ? '¡Lección perfecta!' : '¡Lección completa!'}</h1>
       <p className="muted" style={{ fontWeight: 700 }}>{result.perfect ? 'Ni un error. Sos un fenómeno.' : 'Cada día un poquito mejor, che.'}</p>
       <div className="result-stats">

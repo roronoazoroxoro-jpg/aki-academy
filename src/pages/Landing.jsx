@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { go } from '../router'
 import { Aki, CourseIcon } from '../components/ui'
-import { COURSES, GROUPS } from '../data/courses'
+import { COURSES, GROUPS, LESSONS_PER_UNIT } from '../data/courses'
 import { useStore, toggleTheme } from '../store'
+import { Patio } from '../components/Decor'
 
 function useReveal() {
   const ref = useRef(null)
@@ -21,7 +22,7 @@ function useReveal() {
 const FEATURES = [
   { pose: 'code', title: 'Programá de verdad, desde el navegador', text: 'Python, JavaScript, TypeScript, webs, apps con React, SQL, Git, Inteligencia Artificial, ciberseguridad y robótica. Con un Laboratorio donde ejecutás Python real y armás páginas en vivo, sin instalar nada.' },
   { pose: 'languages', title: '25 idiomas, con audio y su bandera', text: 'Desde inglés y japonés hasta hebreo, tailandés, ucraniano y quechua. Escuchá la pronunciación, armá frases y escribí en su propio alfabeto. También el español argentino: vos, che y lunfardo.' },
-  { pose: 'mascot', title: 'Ciencia, números e historia del país', text: 'Matemáticas, física, química, biología, astronomía, economía y la historia argentina. Explicado como te hubiera gustado que te lo cuenten en la escuela.' },
+  { pose: 'streak', title: 'Ciencia, números e historia del país', text: 'Matemáticas, física, química, biología, astronomía, economía y la historia argentina. Explicado como te hubiera gustado que te lo cuenten en la escuela.' },
   { pose: 'streak', title: 'Mantené la racha, che', text: 'Sumá XP, cuidá tus vidas, ganá medialunas, abrí cofres, cumplí misiones diarias y subí de liga: del Potrero hasta Campeón del Mundo. Cinco minutos por día alcanzan.' },
 ]
 
@@ -31,9 +32,11 @@ export default function Landing() {
   const ref = useReveal()
   const cta = onboarded ? 'Seguir aprendiendo' : 'Empezar gratis'
   const start = () => go(onboarded ? 'aprender' : 'empezar')
+  const lessons = COURSES.reduce((n, c) => n + c.units.length * LESSONS_PER_UNIT, 0)
 
   return (
     <div className="landing" ref={ref}>
+      <Patio />
       <div className="aurora"><i /><i /><i /></div>
 
       <nav className="land-nav">
@@ -50,22 +53,23 @@ export default function Landing() {
       <section className="hero">
         <div className="hero-art">
           <span className="halo" />
-          <Aki pose="mascot" className="floaty" />
+          <Aki pose="wave" className="floaty" />
           <span className="chip c1">🔥 Racha</span>
           <span className="chip c2">⚡ +10 XP</span>
           <span className="chip c3">🥐 Medialunas</span>
+          <span className="chip c2" style={{ top: '72%', right: '8%', animationDelay: '-3s' }}>🧉 Mate listo</span>
         </div>
         <div>
           <span className="badge-pill"><img src="https://flagcdn.com/ar.svg" alt="" /> Hecho en Argentina · 100% gratis</span>
           <h1>Aprendé a <em>programar</em>, <em>idiomas</em> y <em>ciencia</em>. <strong>A la argentina.</strong></h1>
-          <p>Lecciones cortitas, rachas, ligas y un robot que toma mate y te acompaña desde cero hasta nivel avanzado.</p>
+          <p>Caminos largos, un robot con gorra y mate, y lecciones que se sienten vivas. Hecho en un patio criollo, no en una fábrica de apps genéricas.</p>
           <div className="cta">
             <button className="btn gold block pulse" onClick={start}>{cta}</button>
           </div>
           <div className="hero-stats">
             <div><b>{COURSES.length}</b><span>cursos</span></div>
             <div><b>{GROUPS.find((g) => g.id === 'lang').courses.length}</b><span>idiomas</span></div>
-            <div><b>+2.000</b><span>ejercicios</span></div>
+            <div><b>+{Math.round(lessons / 100) * 100}</b><span>lecciones</span></div>
           </div>
         </div>
       </section>
@@ -90,6 +94,24 @@ export default function Landing() {
           <Aki pose={f.pose} className="floaty" />
         </section>
       ))}
+
+      <section className="aki-gallery on-scroll">
+        <h2>AKI, en todas sus caras</h2>
+        <p>No es un búho verde. Es un robot con gorra celeste, Sol de Mayo y mate. Te espera en cada lección.</p>
+        <div className="aki-strip">
+          {['mascot', 'celebrate', 'code', 'sad', 'languages', 'streak'].map((p) => (
+            <Aki key={p} pose={p} h={132} />
+          ))}
+        </div>
+        <div className="aki-stage">
+          {[['hero', 'Campeón'], ['victory', 'Golazo'], ['flag', 'Argentina'], ['power', 'A full'], ['patio', 'El mate'], ['teach', 'Profe']].map(([p, label]) => (
+            <div className="aki-card" key={p}>
+              <Aki pose={p} h={168} idle={false} />
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="catalog on-scroll">
         <h2>Todo lo que podés aprender</h2>

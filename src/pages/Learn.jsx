@@ -6,7 +6,7 @@ import { Aki, Modal, Code, Bar, Confetti, CourseIcon } from '../components/ui'
 import { HeartsModal } from '../components/Layout'
 import { sfx } from '../fx'
 
-const OFFSETS = [0, 44, 70, 44, 0, -44, -70, -44]
+const ZIG = ['z0', 'z1', 'z2', 'z3', 'z4', 'z5', 'z6', 'z7']
 const POSES = ['mascot', 'code', 'streak', 'languages', 'celebrate']
 // Each unit gets its own colour so the path reads like a journey, not a list.
 const HUES = ['#2E7FC2', '#E0A106', '#19A974', '#8B5CF6', '#E06C2B', '#D14A6B', '#0E9BA8', '#6B7FD7']
@@ -40,9 +40,9 @@ export default function Learn() {
   let nodeIndex = 0
   return (
     <div className="path-wrap">
-      <div className="card" style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+      <div className="card course-head">
         <CourseIcon course={course} size={40} />
-        <div style={{ flex: 1 }}>
+        <div className="course-head-copy">
           <div style={{ fontWeight: 900, fontSize: 18 }}>{course.title}</div>
           <div className="small muted" style={{ fontWeight: 700, marginBottom: 6 }}>{stats.completed} de {stats.total} lecciones · {stats.pct}%</div>
           <Bar value={stats.pct} cel style={{ height: 12 }} />
@@ -56,21 +56,41 @@ export default function Learn() {
         return (
           <section key={u} style={{ '--unit': HUES[u % HUES.length] }}>
             <div className={`unit-banner ${unitUnlocked ? '' : 'locked'}`}>
-              <span className="sun">☀️</span>
-              <div>
+              <div className="unit-copy">
                 <div className="lvl">Unidad {u + 1} · {un.level}</div>
                 <h2>{un.title}</h2>
               </div>
-              <button className="btn white sm" onClick={() => setGuide(u)}>📖 Guía</button>
+              <button className="btn white sm" onClick={() => setGuide(guide === u ? null : u)}>
+                {guide === u ? 'Cerrar' : '📖 Guía'}
+              </button>
             </div>
+            {guide === u && (
+              <div className="guide-panel" role="region" aria-label={`Guía de ${un.title}`}>
+                <Aki pose={course.kind === 'code' ? 'code' : course.kind === 'lang' ? 'languages' : 'streak'} h={88} idle={false} />
+                <div className="guide-panel-body">
+                  <div className="ex-tag">Guía · Unidad {u + 1}</div>
+                  <p>{un.guide.intro}</p>
+                  <ul className="guide-points">{un.guide.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
+                  {un.guide.code && <Code>{un.guide.code}</Code>}
+                  {course.kind === 'lang' && un.words?.length > 0 && (
+                    <div className="guide-words">
+                      {un.words.map((w, i) => (
+                        <span key={i} className="tile" style={{ fontSize: 14 }}>{w[1]} <span className="muted">· {w[0]}</span></span>
+                      ))}
+                    </div>
+                  )}
+                  <button className="btn sm" onClick={() => setGuide(null)}>¡Entendido!</button>
+                </div>
+              </div>
+            )}
             <div className="path">
               {Array.from({ length: LESSONS_PER_UNIT + 1 }, (_, l) => {
-                const off = OFFSETS[nodeIndex++ % OFFSETS.length]
+                const zig = ZIG[nodeIndex++ % ZIG.length]
                 const isChest = l === LESSONS_PER_UNIT
                 if (isChest) {
                   const opened = chests[u]
                   return (
-                    <div className="node-row" key={l} style={{ transform: `translateX(${off}px)` }}>
+                    <div className={`node-row ${zig}`} key={l}>
                       <button className={`node chest ${unitDone ? '' : 'locked'}`} disabled={!unitDone || opened}
                         onClick={() => openChest(u)} title={opened ? 'Cofre abierto' : 'Cofre de medialunas'}>
                         {opened ? '📭' : '🎁'}
@@ -81,16 +101,36 @@ export default function Learn() {
                 const isDone = !!done[lessonKey(u, l)]
                 const isCur = cur && cur.u === u && cur.l === l
                 const locked = !isDone && !isCur
+                const open = pick && pick.u === u && pick.l === l
                 return (
-                  <div className={`node-row ${isCur ? 'has-bubble' : ''}`} key={l} style={{ transform: `translateX(${off}px)` }}>
-                    {isCur && <div className="start-bubble">EMPEZAR</div>}
-                    <button className={`node ${isDone ? 'done' : ''} ${isCur ? 'current' : ''} ${locked ? 'locked' : ''}`}
-                      onClick={() => locked ? null : setPick({ u, l })} aria-label={`Lección ${l + 1}`}>
+                  <div className={`node-row ${zig} ${isCur ? 'has-bubble' : ''} ${open ? 'has-pick' : ''}`} key={l}>
+                    {isCur && (
+                      <button type="button" className="start-bubble" onClick={() => start(u, l)}>EMPEZAR</button>
+                    )}
+                    <button className={`node ${isDone ? 'done' : ''} ${isCur ? 'current' : ''} ${locked ? 'locked' : ''} ${open ? 'open' : ''}`}
+                      onClick={() => {
+                        if (locked) return
+                        if (isCur) start(u, l)
+                        else setPick(open ? null : { u, l })
+                      }} aria-label={`Lección ${l + 1}`}>
                       {isDone ? '⭐' : l === 2 ? '🏆' : locked ? '🔒' : l === 0 ? '🧉' : '💪'}
                     </button>
+                    {open && (
+                      <div className="lesson-pop" role="dialog">
+                        <Aki pose={l === 2 ? 'streak' : 'mascot'} h={72} idle={false} />
+                        <div>
+                          <div className="ex-tag">{LESSON_NAMES[l]}</div>
+                          <p>{isDone ? 'Repasar suma XP igual.' : 'Unos minutos y listo.'}</p>
+                          <button className="btn sm block" onClick={() => start(u, l)}>
+                            {isDone ? 'Repasar +XP' : 'Empezar +10 XP'}
+                          </button>
+                        </div>
+                        <button type="button" className="pop-x" onClick={() => setPick(null)} aria-label="Cerrar">✕</button>
+                      </div>
+                    )}
                     {l === 1 && (
-                      <Aki pose={POSES[u % POSES.length]} className="path-mascot"
-                        style={{ [u % 2 ? 'left' : 'right']: 'calc(50% - 260px)', opacity: unitUnlocked ? 1 : 0.35 }} />
+                      <Aki pose={POSES[u % POSES.length]} className={`path-mascot ${u % 2 ? 'left' : 'right'}`}
+                        idle={false} h={110} style={{ opacity: unitUnlocked ? 1 : 0.35 }} />
                     )}
                   </div>
                 )
@@ -102,60 +142,18 @@ export default function Learn() {
 
       {!cur && (
         <div className="card" style={{ textAlign: 'center', marginTop: 40 }}>
-          <Aki pose="celebrate" h={200} />
+          <Aki pose="victory" h={180} idle={false} />
           <h2>¡Terminaste {course.title}! Sos un crack 🏆</h2>
           <p className="muted" style={{ fontWeight: 700 }}>Seguí practicando para no oxidarte o arrancá otro curso.</p>
           <button className="btn gold" onClick={() => go('cursos')}>Elegir otro curso</button>
         </div>
       )}
 
-      {guide !== null && (
-        <Modal onClose={() => setGuide(null)}>
-          <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
-            <Aki pose={course.kind === 'code' ? 'code' : 'languages'} h={100} />
-            <div>
-              <div className="ex-tag">Guía · Unidad {guide + 1}</div>
-              <h2>{course.units[guide].title}</h2>
-            </div>
-          </div>
-          <p style={{ fontWeight: 600, fontSize: 17 }}>{course.units[guide].guide.intro}</p>
-          <ul className="guide-points">{course.units[guide].guide.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
-          {course.units[guide].guide.code && <Code>{course.units[guide].guide.code}</Code>}
-          {course.kind === 'lang' && (
-            <>
-              <div className="group-title">Vocabulario</div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {course.units[guide].words.map((w, i) => (
-                  <span key={i} className="tile" style={{ fontSize: 14 }}>{w[1]} <span className="muted">· {w[0]}</span></span>
-                ))}
-              </div>
-            </>
-          )}
-          <button className="btn block" style={{ marginTop: 18 }} onClick={() => setGuide(null)}>¡Entendido!</button>
-        </Modal>
-      )}
-
-      {pick && (
-        <Modal onClose={() => setPick(null)}>
-          <div style={{ textAlign: 'center' }}>
-            <Aki pose={pick.l === 2 ? 'streak' : 'mascot'} h={130} />
-            <div className="ex-tag" style={{ justifyContent: 'center' }}>Unidad {pick.u + 1} · {course.units[pick.u].title}</div>
-            <h2>{LESSON_NAMES[pick.l]}</h2>
-            <p className="muted" style={{ fontWeight: 700 }}>
-              {done[lessonKey(pick.u, pick.l)] ? 'Ya la hiciste. ¿La repasamos? Suma XP igual.' : pick.l === 2 ? 'Mezcla todo lo de la unidad y un poco de la anterior.' : 'Unos minutos y listo. ¡Vamos, che!'}
-            </p>
-            <button className="btn block" onClick={() => start(pick.u, pick.l)}>
-              {done[lessonKey(pick.u, pick.l)] ? 'Repasar +XP' : 'Empezar +10 XP'}
-            </button>
-          </div>
-        </Modal>
-      )}
-
       {chest !== null && (
         <Modal onClose={() => setChest(null)}>
           <Confetti count={50} />
           <div style={{ textAlign: 'center' }}>
-            <Aki pose="celebrate" h={170} />
+            <Aki pose="victory" h={150} idle={false} />
             <h2>¡Cofre abierto!</h2>
             <p style={{ fontSize: 28, fontWeight: 900, color: 'var(--oro-2)', margin: '8px 0 18px' }}>+{chest} 🥐</p>
             <button className="btn gold block" onClick={() => setChest(null)}>¡Joya!</button>
